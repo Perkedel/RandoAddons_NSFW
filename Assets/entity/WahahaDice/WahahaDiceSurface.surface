@@ -4,7 +4,7 @@
   "Description": "Use to dice rolling",
   "Friction": 1,
   "Elasticity": 0.8,
-  "Density": 2000,
+  "Density": 250,
   "RollingResistance": 0,
   "BounceThreshold": 12,
   "FluidLinearDrag": 0.1,

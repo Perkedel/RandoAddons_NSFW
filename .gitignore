@@ -27,3 +27,6 @@ code/Properties/*
 
 # Exported / standalone games
 Exports/
+
+
+# Some ports based on paywalled Assets. Ignore only the original files from the buy package, not the derivative ports!

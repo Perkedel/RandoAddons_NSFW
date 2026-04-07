@@ -1,24 +1,20 @@
 {
-  "tags": [
-    "cube",
-    "dice"
-  ],
   "publish": {
-    "Enabled": false,
+    "Enabled": true,
     "ProjectConfig": {
-      "Title": "Wahahadice",
+      "Title": "Wahaha Dice Prop",
       "Type": "model",
-      "Org": "local",
-      "Ident": "wahahadice",
+      "Org": "perkedel",
+      "Ident": "wahahadice_vmdl",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": null,
-      "EditorReferences": [],
+      "EditorReferences": null,
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "src/blender/wahahadice.vmdl"
+        "SingleAssetSource": "entity/wahahadice/wahahadice.vmdl"
       }
     }
   }
