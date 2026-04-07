@@ -1,0 +1,24 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Valveedit",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "valveedit",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "perkedel.wahahadice_vmdl#182937"
+      ],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "scenes/valveedit.vmap",
+        "ParentPackage": "facepunch.sandbox"
+      }
+    }
+  }
+}
