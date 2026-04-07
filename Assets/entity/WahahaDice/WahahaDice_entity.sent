@@ -1,0 +1,9 @@
+{
+  "Prefab": "entity/wahahadice/wahahadice.prefab",
+  "Title": "Wahaha Dice Entity",
+  "Description": "Throw Dice",
+  "Category": null,
+  "IncludeCode": true,
+  "__references": [],
+  "__version": 0
+}

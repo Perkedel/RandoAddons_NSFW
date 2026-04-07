@@ -1,0 +1,21 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Wahahadice Entity",
+      "Type": "sent",
+      "Org": "perkedel",
+      "Ident": "wahahadice_entity",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/wahahadice/wahahadice_entity.sent"
+      }
+    }
+  }
+}
