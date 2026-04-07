@@ -10,5 +10,5 @@ We also make the Surface be like so, coz it feels perfect for Physics Gun, or wh
 
 ## Controls
 
-- Use Physics Gun to drag & drop. It'll bounce sporadically that eventually lands on a surface, giving Physical Bouncing Pseudorandom effect.
+- Use Physics Gun to drag & drop. It'll bounce sporadically that eventually stops on a surface, giving Physical Bouncing Pseudorandom effect.
 - ~~Interact. Make it jump and roll~~ Coming soon.
