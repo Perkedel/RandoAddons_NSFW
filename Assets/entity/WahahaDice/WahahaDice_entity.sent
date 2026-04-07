@@ -2,7 +2,7 @@
   "Prefab": "entity/wahahadice/wahahadice.prefab",
   "Title": "Wahaha Dice Entity",
   "Description": "Throw Dice",
-  "Category": null,
+  "Category": "Toys & Fun",
   "IncludeCode": true,
   "__references": [],
   "__version": 0

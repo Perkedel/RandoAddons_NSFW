@@ -24,3 +24,4 @@ Package used in Editors
 | [Fab Quixel Bridge](...) | divined | ??? | aaa |
 | [Source 1 BSP Import](...) | divined | ??? | aaa |
 | [File-Lib](...) | Workbot 3000 | ??? | aaa |
+| [Zed Editor Support](https://sbox.game/umblestudio/zed_editor) | umble studio | ??? | aaa |
