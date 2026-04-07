@@ -69,13 +69,40 @@
       }
     },
     {
-      "__guid": "798ac9ac-ef57-40c8-9c47-ef5546991432",
+      "__guid": "60ccb187-3b51-48d8-a3e5-e98c92aecf92",
+      "__version": 2,
+      "__Prefab": "entity/wahahadice/wahahadice.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "d3972606-2d8c-4026-a782-637e90cf6b1a"
+            },
+            "Property": "Position",
+            "Value": "158.1941,0,182.805"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "d3972606-2d8c-4026-a782-637e90cf6b1a": "60ccb187-3b51-48d8-a3e5-e98c92aecf92",
+        "20096378-d948-4c57-833f-d8489fada4cd": "6970dcb6-40bb-40a1-982b-b34ae7c0e5dd",
+        "097b2f9b-b6e9-4a86-b786-e5f9446c9be5": "468ca0e2-226b-465e-b248-e0148451accb",
+        "3e27fc73-35f6-48ea-931f-0857fc91ece3": "814d8322-83d2-48e1-b67b-9b00b756176e",
+        "30d22c90-e8bd-419a-8324-ababc9689895": "3c6f8d30-457b-4bc8-9c1b-3ccfa20dbef5"
+      }
+    },
+    {
+      "__guid": "d5c0df91-b267-479a-b405-5ee23f0ec477",
       "__version": 2,
       "Flags": 0,
-      "Name": "Plane",
-      "Position": "0,0,-76.92405",
+      "Name": "PenFarm",
+      "Position": "0,0,0",
       "Rotation": "0,0,0,1",
-      "Scale": "50,50,50",
+      "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -83,63 +110,82 @@
       "NetworkOrphaned": 0,
       "NetworkTransmit": true,
       "OwnerTransfer": 1,
-      "Components": [
+      "Components": [],
+      "Children": [
         {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "75581565-b81b-476d-8f4c-e35959ee580e",
-          "__enabled": true,
+          "__guid": "798ac9ac-ef57-40c8-9c47-ef5546991432",
+          "__version": 2,
           "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "models/dev/plane.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.PlaneCollider",
-          "__guid": "c0208cc0-20bb-44b9-a42e-ae5b86371402",
-          "__enabled": true,
-          "Flags": 0,
-          "Center": "0,0,0",
-          "ColliderFlags": 0,
-          "Elasticity": null,
-          "Friction": null,
-          "IsTrigger": false,
-          "Normal": "0,0,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "RollingResistance": null,
-          "Scale": "100,100",
-          "Static": true,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
+          "Name": "Plane",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "50,50,50",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "75581565-b81b-476d-8f4c-e35959ee580e",
+              "__enabled": true,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": null,
+              "Model": "models/dev/plane.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.PlaneCollider",
+              "__guid": "c0208cc0-20bb-44b9-a42e-ae5b86371402",
+              "__enabled": true,
+              "Flags": 0,
+              "Center": "0,0,0",
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": false,
+              "Normal": "0,0,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "RollingResistance": null,
+              "Scale": "100,100",
+              "Static": true,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          ],
+          "Children": []
         }
-      ],
-      "Children": []
+      ]
     }
   ],
   "SceneProperties": {
@@ -163,7 +209,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "95b402f8-33de-46d0-82f9-2bc7b4fb5846"
+          "$blob": "5411eead-aeae-4eae-9a5e-b7de4bed6871"
         }
       },
       "Sandbox.MovieMaker.MovieRecorderSystem": {

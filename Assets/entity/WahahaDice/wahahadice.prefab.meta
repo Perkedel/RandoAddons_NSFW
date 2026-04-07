@@ -1,0 +1,21 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Wahaha Dice .125",
+      "Type": "prefab",
+      "Org": "perkedel",
+      "Ident": "wahahadice",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/wahahadice/wahahadice.prefab"
+      }
+    }
+  }
+}

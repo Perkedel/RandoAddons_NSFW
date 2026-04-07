@@ -1,0 +1,16 @@
+{
+  "Title": "File-Lib",
+  "Type": "library",
+  "Org": "workbot",
+  "Ident": "filelib",
+  "Schema": 1,
+  "IncludeSourceFiles": true,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Mounts": null,
+  "IsStandaloneOnly": false,
+  "Metadata": {
+    "CsProjName": ""
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "Title": "Git Client",
+  "Type": "library",
+  "Org": "brax",
+  "Ident": "gitclient",
+  "Schema": 1,
+  "IncludeSourceFiles": false,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Mounts": null,
+  "IsStandaloneOnly": false,
+  "Metadata": {}
+}
