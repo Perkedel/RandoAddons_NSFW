@@ -1,0 +1,22 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Minimal Pen",
+      "Type": "map",
+      "Org": "perkedel",
+      "Ident": "minimumpen",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": null,
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "scenes/minimumpen.scene",
+        "ParentPackage": "facepunch.sandbox"
+      }
+    }
+  }
+}

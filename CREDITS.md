@@ -9,6 +9,7 @@ Stuffs like 3D Models, SFX, Codes, etc. we make, edit hack, etc.
 | Assets | Author | License | Descriptions |
 | - | - | - | - |
 | aaa | bbb | ??? | aaa |
+| [Kenney.nl Public Domain stuffs](https://kenney.nl) | Kenney | CC0 | One of the few modern Public Domain assets for game developers |
 
 ## Libraries
 

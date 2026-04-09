@@ -1,0 +1,89 @@
+{
+  "RootObject": {
+    "__guid": "1a879214-a885-464b-9ea3-9c1284d715f2",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "fench center",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "66bafbe5-758b-4909-a6e9-46bd135b89b8",
+        "__version": 2,
+        "__Prefab": "entity/common/fenchplane.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "54ff3f5c-8e31-428d-8a12-59e31feaf749"
+              },
+              "Property": "Position",
+              "Value": "-5000,0,100"
+            },
+            {
+              "Target": {
+                "Type": "Component",
+                "IdValue": "ace20a57-26a8-47e4-9162-5bafe829a359"
+              },
+              "Property": "__type",
+              "Value": "Sandbox.BoxCollider"
+            },
+            {
+              "Target": {
+                "Type": "Component",
+                "IdValue": "ace20a57-26a8-47e4-9162-5bafe829a359"
+              },
+              "Property": "Scale",
+              "Value": "100,100,20"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "54ff3f5c-8e31-428d-8a12-59e31feaf749": "66bafbe5-758b-4909-a6e9-46bd135b89b8",
+          "0c3f8cd9-156c-4d41-8b6d-c563c50ead36": "bc31e355-355e-48e0-8957-01737018ccc5",
+          "ace20a57-26a8-47e4-9162-5bafe829a359": "3d3808d3-2eaa-4335-80bc-5615356ceedf"
+        }
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

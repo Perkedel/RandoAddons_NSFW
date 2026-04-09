@@ -97,96 +97,38 @@
       }
     },
     {
-      "__guid": "d5c0df91-b267-479a-b405-5ee23f0ec477",
+      "__guid": "6b683f70-1c4e-402b-801e-a87941c8e75c",
       "__version": 2,
-      "Flags": 0,
-      "Name": "PenFarm",
-      "Position": "0,0,0",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [],
-      "Children": [
-        {
-          "__guid": "798ac9ac-ef57-40c8-9c47-ef5546991432",
-          "__version": 2,
-          "Flags": 0,
-          "Name": "Plane",
-          "Position": "0,0,0",
-          "Rotation": "0,0,0,1",
-          "Scale": "50,50,50",
-          "Tags": "",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
-          "NetworkTransmit": true,
-          "OwnerTransfer": 1,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "75581565-b81b-476d-8f4c-e35959ee580e",
-              "__enabled": true,
-              "Flags": 0,
-              "BodyGroups": 18446744073709551615,
-              "CreateAttachments": false,
-              "LodOverride": null,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Materials": null,
-              "Model": "models/dev/plane.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.PlaneCollider",
-              "__guid": "c0208cc0-20bb-44b9-a42e-ae5b86371402",
-              "__enabled": true,
-              "Flags": 0,
-              "Center": "0,0,0",
-              "ColliderFlags": 0,
-              "Elasticity": null,
-              "Friction": null,
-              "IsTrigger": false,
-              "Normal": "0,0,1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "RollingResistance": null,
-              "Scale": "100,100",
-              "Static": true,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            }
-          ],
-          "Children": []
-        }
-      ]
+      "__Prefab": "entity/common/penfarm.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "a7cc0c87-1f70-4ebb-8da1-4ca8503781a1": "6b683f70-1c4e-402b-801e-a87941c8e75c",
+        "9b001617-5126-49f3-84ca-48541585c010": "ba12abd8-8cbe-44eb-ab1c-9f6447921a2f",
+        "ca7b44a6-63e4-4dca-a531-7800e3209f73": "fba32582-c6fc-41dc-8871-9fd8e3d754e0",
+        "3636f809-d9b3-48ec-8fa5-69fd4c5cde76": "38c60873-579d-4d20-b480-e33ab46a595f",
+        "d5731b96-e7fc-4c66-801f-1f161cf600f8": "4fbd325d-90b5-49a1-870a-3e1923b58cb1",
+        "79f285ad-f0fb-42d7-833f-64c942b6a6dd": "60b4fa97-15cd-47e0-b8d2-584e9e12ab48",
+        "4309f8d4-ec8e-443d-a195-811344e568e8": "f326b53e-6548-4eac-8803-ab7e977c739d",
+        "28af2086-8d7d-47ca-8193-0d2c30143a9a": "c121803d-a1cf-4d04-b1a5-c506a15f5795",
+        "a09e2f7e-fc66-4230-8e80-60b126c98597": "30bc256f-91ee-470a-91c9-3b3a61cdd846",
+        "5f1c1da6-15c9-4acd-8026-6b6b641e0d10": "85278265-18fa-4d0f-8116-59c6bc97f3f3",
+        "9a21e155-a4b1-4faf-8df7-cef48c5348a3": "c5a7d6ae-3f66-462f-9d39-63ae1a4769ff",
+        "4265813f-c145-4054-83d0-5885991faaae": "4055c4bd-93b9-4e0c-bc7b-fd5ca3a45c64",
+        "6bb3368d-2c2e-41eb-b653-d5349b757389": "d3c1d2f8-fc3a-4821-86ae-cbf3674c8909",
+        "a837ed13-a03b-41de-9356-5aa6dd76a79e": "22ebcb3a-810b-46ad-a993-3dde48e0a462",
+        "c1d022a5-6452-4d66-b62b-cf25a709f8a9": "e32cb280-c44a-441a-b663-7cb82fd2a848",
+        "084d6768-1328-473c-82ef-8103f20f244d": "ec582478-b487-4631-88c0-d14a9cde659d",
+        "455c4058-070a-477e-96b6-51417eb00550": "c005baad-3f36-4e2a-8861-e2f8874b0388",
+        "7657b046-f626-406b-8419-6033503c2fc6": "80b55c87-93eb-4f7a-b07d-669f1bafe1f3",
+        "a0be49ee-627b-4d97-9a51-152c50d8cac3": "458b2882-3518-46dc-bf1a-a62371554142",
+        "70b81bd3-a9b5-4678-bd72-fe0a24fb73e7": "ef1c3953-484b-4252-9a2d-e260f31a5b3b",
+        "f118e248-c210-4f72-93e8-95e9f00abae1": "c078b649-81c1-43e5-8596-2a2b0ed937b4"
+      }
     }
   ],
   "SceneProperties": {
@@ -213,7 +155,7 @@
       },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "bc9cf884-289b-41a2-9268-7d876ca76ca7"
+          "$blob": "cc841bab-1730-44a2-916a-0f908657f6df"
         }
       }
     }

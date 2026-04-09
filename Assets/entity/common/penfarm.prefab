@@ -1,0 +1,267 @@
+{
+  "RootObject": {
+    "__guid": "a7cc0c87-1f70-4ebb-8da1-4ca8503781a1",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "penfarm",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "9b001617-5126-49f3-84ca-48541585c010",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "Plane",
+        "Position": "0,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "100,100,100",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "ca7b44a6-63e4-4dca-a531-7800e3209f73",
+            "__enabled": true,
+            "Flags": 0,
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "LodOverride": null,
+            "MaterialGroup": null,
+            "MaterialOverride": "materials/perkedel/minimam.vmat",
+            "Materials": null,
+            "Model": "models/dev/plane.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.PlaneCollider",
+            "__guid": "3636f809-d9b3-48ec-8fa5-69fd4c5cde76",
+            "__enabled": true,
+            "Flags": 0,
+            "Center": "0,0,0",
+            "ColliderFlags": 0,
+            "Elasticity": null,
+            "Friction": null,
+            "IsTrigger": false,
+            "Normal": "0,0,1",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "OnObjectTriggerEnter": null,
+            "OnObjectTriggerExit": null,
+            "OnTriggerEnter": null,
+            "OnTriggerExit": null,
+            "RollingResistance": null,
+            "Scale": "100,100",
+            "Static": true,
+            "Surface": null,
+            "SurfaceVelocity": "0,0,0"
+          }
+        ],
+        "Children": []
+      },
+      {
+        "__guid": "d5731b96-e7fc-4c66-801f-1f161cf600f8",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "SideBarriers",
+        "Position": "0,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [],
+        "Children": [
+          {
+            "__guid": "79f285ad-f0fb-42d7-833f-64c942b6a6dd",
+            "__version": 2,
+            "__Prefab": "entity/common/fench center.prefab",
+            "__PrefabInstancePatch": {
+              "AddedObjects": [],
+              "RemovedObjects": [],
+              "PropertyOverrides": [],
+              "MovedObjects": []
+            },
+            "__PrefabIdToInstanceId": {
+              "1a879214-a885-464b-9ea3-9c1284d715f2": "79f285ad-f0fb-42d7-833f-64c942b6a6dd",
+              "66bafbe5-758b-4909-a6e9-46bd135b89b8": "4309f8d4-ec8e-443d-a195-811344e568e8",
+              "bc31e355-355e-48e0-8957-01737018ccc5": "28af2086-8d7d-47ca-8193-0d2c30143a9a",
+              "3d3808d3-2eaa-4335-80bc-5615356ceedf": "a09e2f7e-fc66-4230-8e80-60b126c98597"
+            }
+          },
+          {
+            "__guid": "5f1c1da6-15c9-4acd-8026-6b6b641e0d10",
+            "__version": 2,
+            "__Prefab": "entity/common/fench center.prefab",
+            "__PrefabInstancePatch": {
+              "AddedObjects": [],
+              "RemovedObjects": [],
+              "PropertyOverrides": [
+                {
+                  "Target": {
+                    "Type": "GameObject",
+                    "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
+                  },
+                  "Property": "Name",
+                  "Value": "Fench Center (1)"
+                },
+                {
+                  "Target": {
+                    "Type": "GameObject",
+                    "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
+                  },
+                  "Property": "Position",
+                  "Value": "0,0,0.00001525879"
+                },
+                {
+                  "Target": {
+                    "Type": "GameObject",
+                    "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
+                  },
+                  "Property": "Rotation",
+                  "Value": "0,0,0.7071068,0.7071068"
+                }
+              ],
+              "MovedObjects": []
+            },
+            "__PrefabIdToInstanceId": {
+              "1a879214-a885-464b-9ea3-9c1284d715f2": "5f1c1da6-15c9-4acd-8026-6b6b641e0d10",
+              "66bafbe5-758b-4909-a6e9-46bd135b89b8": "9a21e155-a4b1-4faf-8df7-cef48c5348a3",
+              "bc31e355-355e-48e0-8957-01737018ccc5": "4265813f-c145-4054-83d0-5885991faaae",
+              "3d3808d3-2eaa-4335-80bc-5615356ceedf": "6bb3368d-2c2e-41eb-b653-d5349b757389"
+            }
+          },
+          {
+            "__guid": "a837ed13-a03b-41de-9356-5aa6dd76a79e",
+            "__version": 2,
+            "__Prefab": "entity/common/fench center.prefab",
+            "__PrefabInstancePatch": {
+              "AddedObjects": [],
+              "RemovedObjects": [],
+              "PropertyOverrides": [
+                {
+                  "Target": {
+                    "Type": "GameObject",
+                    "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
+                  },
+                  "Property": "Name",
+                  "Value": "Fench Center (2)"
+                },
+                {
+                  "Target": {
+                    "Type": "GameObject",
+                    "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
+                  },
+                  "Property": "Rotation",
+                  "Value": "0,0,1,-0.00000004371139"
+                }
+              ],
+              "MovedObjects": []
+            },
+            "__PrefabIdToInstanceId": {
+              "1a879214-a885-464b-9ea3-9c1284d715f2": "a837ed13-a03b-41de-9356-5aa6dd76a79e",
+              "66bafbe5-758b-4909-a6e9-46bd135b89b8": "c1d022a5-6452-4d66-b62b-cf25a709f8a9",
+              "bc31e355-355e-48e0-8957-01737018ccc5": "084d6768-1328-473c-82ef-8103f20f244d",
+              "3d3808d3-2eaa-4335-80bc-5615356ceedf": "455c4058-070a-477e-96b6-51417eb00550"
+            }
+          },
+          {
+            "__guid": "7657b046-f626-406b-8419-6033503c2fc6",
+            "__version": 2,
+            "__Prefab": "entity/common/fench center.prefab",
+            "__PrefabInstancePatch": {
+              "AddedObjects": [],
+              "RemovedObjects": [],
+              "PropertyOverrides": [
+                {
+                  "Target": {
+                    "Type": "GameObject",
+                    "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
+                  },
+                  "Property": "Name",
+                  "Value": "Fench Center (3)"
+                },
+                {
+                  "Target": {
+                    "Type": "GameObject",
+                    "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
+                  },
+                  "Property": "Rotation",
+                  "Value": "0,-0,-0.7071068,0.7071068"
+                }
+              ],
+              "MovedObjects": []
+            },
+            "__PrefabIdToInstanceId": {
+              "1a879214-a885-464b-9ea3-9c1284d715f2": "7657b046-f626-406b-8419-6033503c2fc6",
+              "66bafbe5-758b-4909-a6e9-46bd135b89b8": "a0be49ee-627b-4d97-9a51-152c50d8cac3",
+              "bc31e355-355e-48e0-8957-01737018ccc5": "70b81bd3-a9b5-4678-bd72-fe0a24fb73e7",
+              "3d3808d3-2eaa-4335-80bc-5615356ceedf": "f118e248-c210-4f72-93e8-95e9f00abae1"
+            }
+          }
+        ]
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

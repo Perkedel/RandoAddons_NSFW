@@ -1,0 +1,175 @@
+{
+  "__guid": "f49f36b5-1c5f-4bb0-9894-51803d28131d",
+  "GameObjects": [
+    {
+      "__guid": "c4ba1d05-a0f7-43d2-919b-ef40d98dd2f1",
+      "__version": 2,
+      "__Prefab": "entity/common/penfarm.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "a09e2f7e-fc66-4230-8e80-60b126c98597"
+            },
+            "Property": "__type",
+            "Value": "Sandbox.PlaneCollider"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "a09e2f7e-fc66-4230-8e80-60b126c98597"
+            },
+            "Property": "Normal",
+            "Value": "0,0,1"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "a09e2f7e-fc66-4230-8e80-60b126c98597"
+            },
+            "Property": "Scale",
+            "Value": "0,0"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "a7cc0c87-1f70-4ebb-8da1-4ca8503781a1": "c4ba1d05-a0f7-43d2-919b-ef40d98dd2f1",
+        "9b001617-5126-49f3-84ca-48541585c010": "a7de8b71-6aad-4881-8838-b0b7f29e71ce",
+        "ca7b44a6-63e4-4dca-a531-7800e3209f73": "d0036101-6731-440d-b308-3ae3056ca998",
+        "3636f809-d9b3-48ec-8fa5-69fd4c5cde76": "ecca65ea-631f-44c1-bb23-afe9f1f78d81",
+        "4309f8d4-ec8e-443d-a195-811344e568e8": "e0491236-e4e0-4e2b-9928-ae6f1d54d2c4",
+        "28af2086-8d7d-47ca-8193-0d2c30143a9a": "9ed4ddb9-0956-4df1-a409-398d7b2ee585",
+        "a09e2f7e-fc66-4230-8e80-60b126c98597": "53af9c9e-3c79-4d5e-8498-2853c9265f83",
+        "79f285ad-f0fb-42d7-833f-64c942b6a6dd": "28a69555-df46-4a5f-92cf-f434558fe6a3",
+        "5f1c1da6-15c9-4acd-8026-6b6b641e0d10": "63f6a430-8424-4efd-b87f-41677c95cbad",
+        "9a21e155-a4b1-4faf-8df7-cef48c5348a3": "236af7fa-15b0-4f18-8e56-2e9382c066fa",
+        "4265813f-c145-4054-83d0-5885991faaae": "da61aa60-e08f-45f7-ab40-58ca2a6d1ca3",
+        "6bb3368d-2c2e-41eb-b653-d5349b757389": "5e8baee9-7925-4fe7-aeb6-6f9dc648ba5b",
+        "a837ed13-a03b-41de-9356-5aa6dd76a79e": "fe176d47-cc8c-46fe-b446-36037f4045cd",
+        "c1d022a5-6452-4d66-b62b-cf25a709f8a9": "0b4afb29-36ef-4df7-a954-aaba31f143d7",
+        "084d6768-1328-473c-82ef-8103f20f244d": "270df76f-a0e1-44e6-a5ff-20a095bdfdf4",
+        "455c4058-070a-477e-96b6-51417eb00550": "ffa8da52-72e9-4487-95aa-30cbd34fca35",
+        "7657b046-f626-406b-8419-6033503c2fc6": "3e778a79-f857-449b-be92-fe339ffa1051",
+        "a0be49ee-627b-4d97-9a51-152c50d8cac3": "c3869762-5ada-4e3d-a76d-c6e87ac2224f",
+        "70b81bd3-a9b5-4678-bd72-fe0a24fb73e7": "c23afb72-7e51-41b6-a6a3-544379bdd827",
+        "f118e248-c210-4f72-93e8-95e9f00abae1": "7d1d9029-7c23-4b22-93ca-eafff1a17f6e",
+        "d5731b96-e7fc-4c66-801f-1f161cf600f8": "45bf9290-3dee-4e3f-b45b-d2a2ede00021"
+      }
+    },
+    {
+      "__guid": "0217b991-a071-4f4f-9bf0-f3442f883e7d",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Sun",
+      "Position": "-64.83682,-71.75235,202.0212",
+      "Rotation": "-0.1669113,0.6151835,0.2017607,0.7436278",
+      "Scale": "1,1,1",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "7086e51d-4efe-4a98-9741-7562268fb22c",
+          "__enabled": true,
+          "Flags": 0,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "ShadowBias": 0.0005,
+          "ShadowCascadeCount": 4,
+          "ShadowCascadeSplitRatio": 0.91,
+          "ShadowHardness": 0,
+          "Shadows": true,
+          "SkyColor": "0,1,0.98333,0",
+          "Visualizer": {}
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "3a451c0b-6698-465d-adb0-6f448156ccce",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "skybox",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "bf14d9ca-8b60-4768-996a-6b3bc9fc8c25",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "SkyIndirectLighting": true,
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    }
+  ],
+  "SceneProperties": {
+    "NetworkInterpolation": true,
+    "TimeScale": 1,
+    "WantsSystemScene": true,
+    "Metadata": {},
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": false,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": "",
+      "CustomBounds": false
+    },
+    "GameObjectSystems": {
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "c080a33a-5f90-4543-ac0a-b4540490f540"
+        }
+      }
+    }
+  },
+  "ResourceVersion": 3,
+  "Title": null,
+  "Description": null,
+  "__references": [
+    "facepunch.sandbox#181124"
+  ],
+  "__version": 3
+}

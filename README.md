@@ -23,7 +23,7 @@ Checkout these source code of what we make, edit, hack, & even ruin, for Source2
   - \* Not all games will have Source Code URL nand/nor FreeLibre license! Always check `license` file in their source code!
 - Familiarity. Similar to Unity, its editor packs with features and UX that's familiar with your previous engine you tried. As well as the coding system, **powered by .NET**, hence you can adapt your **C#** experiences to here.
   - You can also make Machinima with `Movie Maker` (`View` top menu, enable `Movie Maker`) here. **Bring your legacy SFM vmdl to here?**
-  - Pls test if SFM files e.g. in [SFMLab](https://sfmlab.com) can be directly opened here!
+  - Pls test if SFM files e.g. in [SFMLab](https://sfmlab.com) can be directly opened here! Every SFM models (& basically Source1 is) have `.mdl` files, with its descriptor under `.vtx`.
 
 ## Other Mods
 
