@@ -1,0 +1,408 @@
+{
+  "RootObject": {
+    "__guid": "73552c12-989d-4a3a-9865-6655c4b5c56a",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "spawnrihals",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "0c2cf523-be48-494b-89d6-be8565ddbbed",
+        "__version": 2,
+        "__Prefab": "entity/common/spawnarrayam.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120": "0c2cf523-be48-494b-89d6-be8565ddbbed",
+          "561f7af8-999c-4548-9ff8-9dd404548dea": "7a901595-fe81-4a0f-b6d1-b5412fb8fe36",
+          "82151bda-2a8f-4775-aed2-683cca0c10c8": "90503563-60a8-4e82-bd92-3643b03cda0c",
+          "568f25d6-d33a-41a6-a417-6093bbb5da06": "16e19e92-acf3-4183-9ad7-b640b3241557",
+          "72c58030-113f-41ca-8919-2a2bac6180c0": "741af7b4-bcf6-48b4-a2a9-c62fdfec23ca",
+          "364c9cfb-a080-4deb-9ffb-8932ff5a9cb5": "01f4957a-ab2d-4083-8b2d-1b2e5a1df013",
+          "45edced8-706f-4f9f-8880-2674937975ad": "1128ff85-bfdb-4c73-95a3-556b0d8a5d09",
+          "839e8ba8-7b17-43d3-a048-865ad89a7925": "f0a4c372-05a6-4ef0-b6b3-4199b1bae06a",
+          "08ac8c5a-6e75-4f5e-9e67-1ce882b9dd9f": "7e5097d5-310b-45e7-8e5f-2cf05d22e584",
+          "90e71307-32a7-4ede-9598-53840aade201": "ad8069f8-80c0-404f-916e-904d95cd01e9",
+          "727102f4-014f-40b6-b68c-3ede373d7721": "2efc94f2-2371-4556-bf63-6cc452680619",
+          "51b7f9b5-b848-4c89-b1e5-59932092b2f8": "f47baa5a-e8cc-477d-933c-bf1289a11a37",
+          "d25665ee-26c8-4e13-93d2-8bfcff5aebd9": "3ed77a9a-82af-4934-86e1-718edd8b8671",
+          "d412f387-b5bd-48c3-ba60-4a6fbdbd1162": "b6562a49-e530-443b-be31-9589425d62f2",
+          "cd474a26-7332-48a8-879f-7cd8f06100f3": "c9515244-c2e6-4aa4-a10e-a7fc0cb56e01",
+          "9396c326-a35b-49ac-9391-6e4a7c90ac52": "7d80a419-de61-41db-b272-c55e3ac8b599",
+          "42dfa0d1-d606-4572-8368-9e6c76e1f182": "68719aaf-725a-418f-a2db-83015f23b8bb",
+          "de3de16a-c46a-4f1c-bc5b-5b5f00640afd": "96909cf2-1e41-4fef-9169-f4f451c16ed6",
+          "6c32126a-9890-47fe-afd0-11aec21324a4": "26462b8e-cdb1-4dd2-bd16-f3a1e9e879cf"
+        }
+      },
+      {
+        "__guid": "3a8bd329-08db-48cf-b9be-aadbd714ef16",
+        "__version": 2,
+        "__Prefab": "entity/common/spawnarrayam.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120"
+              },
+              "Property": "Position",
+              "Value": "-32,0,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120": "3a8bd329-08db-48cf-b9be-aadbd714ef16",
+          "561f7af8-999c-4548-9ff8-9dd404548dea": "eae745b7-c8c1-41ce-b5cd-d28222ed2e56",
+          "82151bda-2a8f-4775-aed2-683cca0c10c8": "94b4e494-3424-4875-b89c-795f7d4276cc",
+          "568f25d6-d33a-41a6-a417-6093bbb5da06": "bc9f8500-69ab-4894-a92c-3a455bfd0e85",
+          "72c58030-113f-41ca-8919-2a2bac6180c0": "f6789c4e-e129-4e60-baa0-7738c094072d",
+          "364c9cfb-a080-4deb-9ffb-8932ff5a9cb5": "2f05721d-5bf5-45d9-a86b-de649eca406e",
+          "45edced8-706f-4f9f-8880-2674937975ad": "c3986e43-cecf-46d4-93cb-1aef5d89fae5",
+          "839e8ba8-7b17-43d3-a048-865ad89a7925": "afc82a7d-8f1c-4bce-89f7-8109657f2b7a",
+          "08ac8c5a-6e75-4f5e-9e67-1ce882b9dd9f": "9aadb4bc-1402-4258-9f67-36bb4768ed9f",
+          "90e71307-32a7-4ede-9598-53840aade201": "29142915-0c7d-4548-b8d5-3acffe224f6c",
+          "727102f4-014f-40b6-b68c-3ede373d7721": "5ad0ab7e-0a1e-4fd1-8040-2627d31da1b4",
+          "51b7f9b5-b848-4c89-b1e5-59932092b2f8": "cc731053-7e10-4456-8eba-a838c3e94605",
+          "d25665ee-26c8-4e13-93d2-8bfcff5aebd9": "577a6deb-66d5-4094-beaf-d5dcf0ffe6b8",
+          "d412f387-b5bd-48c3-ba60-4a6fbdbd1162": "8583353d-0be4-46ef-a07e-aac451eb1292",
+          "cd474a26-7332-48a8-879f-7cd8f06100f3": "b2d6a512-6a2f-4f2a-b443-804ab9b56429",
+          "9396c326-a35b-49ac-9391-6e4a7c90ac52": "a8a41ac0-2557-41fd-ae82-d90a48a8155b",
+          "42dfa0d1-d606-4572-8368-9e6c76e1f182": "14041e50-a329-4623-8cff-2bdeb0d64d3f",
+          "de3de16a-c46a-4f1c-bc5b-5b5f00640afd": "bf43d5a1-0882-4ad7-8367-a1162d48edec",
+          "6c32126a-9890-47fe-afd0-11aec21324a4": "486ebe87-8894-498d-9054-2f48e205481a"
+        }
+      },
+      {
+        "__guid": "93e6c5ec-2dc5-4651-bca0-c5529ce485f6",
+        "__version": 2,
+        "__Prefab": "entity/common/spawnarrayam.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120"
+              },
+              "Property": "Position",
+              "Value": "-64,0,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120": "93e6c5ec-2dc5-4651-bca0-c5529ce485f6",
+          "561f7af8-999c-4548-9ff8-9dd404548dea": "eefbcd28-d10f-4874-afa3-68875743a05a",
+          "82151bda-2a8f-4775-aed2-683cca0c10c8": "6409f3ca-6b42-4bb6-9e55-3a3ab8586ece",
+          "568f25d6-d33a-41a6-a417-6093bbb5da06": "3988d2a8-5b90-44ce-81bf-b4f7b44a806a",
+          "72c58030-113f-41ca-8919-2a2bac6180c0": "693cdf39-e180-4ad3-a3f8-062d21d2880f",
+          "364c9cfb-a080-4deb-9ffb-8932ff5a9cb5": "2c5da2a3-9d9e-40f6-a77f-19590f8ac444",
+          "45edced8-706f-4f9f-8880-2674937975ad": "72d4aab5-a6ea-4285-9dd5-da337d4a1c3b",
+          "839e8ba8-7b17-43d3-a048-865ad89a7925": "41dd0312-51a9-4def-b4cf-18c030ec3242",
+          "08ac8c5a-6e75-4f5e-9e67-1ce882b9dd9f": "b6a17caa-aea2-40a6-adb1-c698d81c0167",
+          "90e71307-32a7-4ede-9598-53840aade201": "7cf55e16-8f5b-4255-bfc0-2cebb73b77ae",
+          "727102f4-014f-40b6-b68c-3ede373d7721": "af758067-4977-4ed1-aff0-6e9cc5984b98",
+          "51b7f9b5-b848-4c89-b1e5-59932092b2f8": "6378f300-13e9-4ac6-8017-2c7e1fcd5124",
+          "d25665ee-26c8-4e13-93d2-8bfcff5aebd9": "86ac5330-43ce-41cf-afe0-5ca7aa7f1f55",
+          "d412f387-b5bd-48c3-ba60-4a6fbdbd1162": "1647e5ed-0275-4ff5-98b3-c437f99ec740",
+          "cd474a26-7332-48a8-879f-7cd8f06100f3": "0daf5882-6a03-45dd-bd77-d9846487fd69",
+          "9396c326-a35b-49ac-9391-6e4a7c90ac52": "a6a1aa14-125e-4503-b845-8b70134cb43b",
+          "42dfa0d1-d606-4572-8368-9e6c76e1f182": "e8db2e7c-9698-4f69-ae8f-229a31d65f4c",
+          "de3de16a-c46a-4f1c-bc5b-5b5f00640afd": "0cc62883-eef7-4db2-a16b-722593337315",
+          "6c32126a-9890-47fe-afd0-11aec21324a4": "eca3cc8c-e91a-4c8d-9525-d5fc3cd62a88"
+        }
+      },
+      {
+        "__guid": "88500419-6a6b-4646-b4aa-c470617f7f15",
+        "__version": 2,
+        "__Prefab": "entity/common/spawnarrayam.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120"
+              },
+              "Property": "Position",
+              "Value": "-96,0,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120": "88500419-6a6b-4646-b4aa-c470617f7f15",
+          "561f7af8-999c-4548-9ff8-9dd404548dea": "6a21dd80-73f9-44fc-b3e2-b1ceb6027883",
+          "82151bda-2a8f-4775-aed2-683cca0c10c8": "b07d5433-d3cb-4281-8822-6b14c6241505",
+          "568f25d6-d33a-41a6-a417-6093bbb5da06": "dac91583-5698-4576-94a3-4cd9806ae9ff",
+          "72c58030-113f-41ca-8919-2a2bac6180c0": "7b92df70-a2ed-4fc9-b3b9-e92cc74c7c63",
+          "364c9cfb-a080-4deb-9ffb-8932ff5a9cb5": "eb095827-085c-4f3f-b743-571224bde4a1",
+          "45edced8-706f-4f9f-8880-2674937975ad": "4e58e7c8-b7cd-4cf4-9534-793d02931fbe",
+          "839e8ba8-7b17-43d3-a048-865ad89a7925": "70f52639-be11-4691-b174-2d5db8ad9d9b",
+          "08ac8c5a-6e75-4f5e-9e67-1ce882b9dd9f": "07e435ce-8e8c-40d3-bed3-f17df934fd55",
+          "90e71307-32a7-4ede-9598-53840aade201": "0ec3573f-9da5-45a0-bb2d-a55909fc2066",
+          "727102f4-014f-40b6-b68c-3ede373d7721": "6554d079-df07-4470-989b-8da4f00ba96a",
+          "51b7f9b5-b848-4c89-b1e5-59932092b2f8": "b6eb9f66-ea8e-493b-8f6d-38adf1c0ca16",
+          "d25665ee-26c8-4e13-93d2-8bfcff5aebd9": "4a9abb5c-45c3-4fd7-8d1d-d166cf2656ca",
+          "d412f387-b5bd-48c3-ba60-4a6fbdbd1162": "7fb2f7f4-a918-4d69-8b2e-d606cdd22ac5",
+          "cd474a26-7332-48a8-879f-7cd8f06100f3": "50490601-ee6e-4eae-8b94-cfb7b82521e1",
+          "9396c326-a35b-49ac-9391-6e4a7c90ac52": "507c13f7-c728-4d0f-add3-6fa75b775f7e",
+          "42dfa0d1-d606-4572-8368-9e6c76e1f182": "b0625692-1f47-456f-84ff-e1c9bb167238",
+          "de3de16a-c46a-4f1c-bc5b-5b5f00640afd": "6c76453a-4214-4ff8-9a56-741edaa7f5e0",
+          "6c32126a-9890-47fe-afd0-11aec21324a4": "b7c69456-bbd1-4c6c-a08b-9ad24fe87d53"
+        }
+      },
+      {
+        "__guid": "ca558cc0-326c-41d8-abd4-fad9af262867",
+        "__version": 2,
+        "__Prefab": "entity/common/spawnarrayam.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120"
+              },
+              "Property": "Position",
+              "Value": "32,0,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120": "ca558cc0-326c-41d8-abd4-fad9af262867",
+          "561f7af8-999c-4548-9ff8-9dd404548dea": "dd518258-a229-458d-988e-05ad8cf570ca",
+          "82151bda-2a8f-4775-aed2-683cca0c10c8": "9a7b3568-79bd-4b25-a929-0e932e5f872a",
+          "568f25d6-d33a-41a6-a417-6093bbb5da06": "42c8b4b9-bf6a-43b7-8d8c-495d031fc840",
+          "72c58030-113f-41ca-8919-2a2bac6180c0": "6702c1c9-6dd8-47b3-bfb3-e2542a2ca012",
+          "364c9cfb-a080-4deb-9ffb-8932ff5a9cb5": "9904cfc9-f34a-4e21-baf9-ab9be83fd951",
+          "45edced8-706f-4f9f-8880-2674937975ad": "9a303be5-cc81-4e07-8d1e-e218a3bd7622",
+          "839e8ba8-7b17-43d3-a048-865ad89a7925": "fd79001a-a21a-4cb3-8e3d-481bd8501859",
+          "08ac8c5a-6e75-4f5e-9e67-1ce882b9dd9f": "01cf67f7-8b16-4f1a-b6d2-46ec619927df",
+          "90e71307-32a7-4ede-9598-53840aade201": "f6e382aa-8bd5-48d8-b41f-4f2e311d70dd",
+          "727102f4-014f-40b6-b68c-3ede373d7721": "53fb0764-e9db-4afc-9966-dc5c4665168e",
+          "51b7f9b5-b848-4c89-b1e5-59932092b2f8": "0270a97e-a2e4-4c25-a3f0-75b5d43d4b4c",
+          "d25665ee-26c8-4e13-93d2-8bfcff5aebd9": "9442d4fc-68b8-455e-bdff-1b3cc40e1b4b",
+          "d412f387-b5bd-48c3-ba60-4a6fbdbd1162": "a0ca0dd0-709d-4fde-8431-4db2a5c25075",
+          "cd474a26-7332-48a8-879f-7cd8f06100f3": "308a1a6c-821c-43ff-b718-f12fab027873",
+          "9396c326-a35b-49ac-9391-6e4a7c90ac52": "6cd757b7-6578-4565-afdc-1fe412797b04",
+          "42dfa0d1-d606-4572-8368-9e6c76e1f182": "78e305cf-7a02-47e8-ba7d-758c362ac052",
+          "de3de16a-c46a-4f1c-bc5b-5b5f00640afd": "12b6b931-c3a2-41f0-8875-81ad99489552",
+          "6c32126a-9890-47fe-afd0-11aec21324a4": "46a8f5d2-5ddb-4638-9e49-949796afcfa7"
+        }
+      },
+      {
+        "__guid": "fefb7221-007f-40f2-a8f1-fb6fc5e9343e",
+        "__version": 2,
+        "__Prefab": "entity/common/spawnarrayam.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120"
+              },
+              "Property": "Position",
+              "Value": "64,0,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120": "fefb7221-007f-40f2-a8f1-fb6fc5e9343e",
+          "561f7af8-999c-4548-9ff8-9dd404548dea": "f06c946b-0422-4038-a005-e7b9d53fdbfd",
+          "82151bda-2a8f-4775-aed2-683cca0c10c8": "ebae1717-d648-42b3-9e5e-fdfc6f2190db",
+          "568f25d6-d33a-41a6-a417-6093bbb5da06": "bf5c6ece-c012-4a43-b6f1-51facd0845e6",
+          "72c58030-113f-41ca-8919-2a2bac6180c0": "a5a3224d-e99c-464f-973e-86a05aa88b6a",
+          "364c9cfb-a080-4deb-9ffb-8932ff5a9cb5": "dfc6b0dc-1ccb-4a3c-8da6-11a7a255034e",
+          "45edced8-706f-4f9f-8880-2674937975ad": "b1e40cfd-ed1a-4ec3-8da5-d2fda624515f",
+          "839e8ba8-7b17-43d3-a048-865ad89a7925": "c43852b0-f0b5-41e8-b5f2-17adca411986",
+          "08ac8c5a-6e75-4f5e-9e67-1ce882b9dd9f": "c3d27746-70b2-4eb1-b67b-1af9f5cb0bdb",
+          "90e71307-32a7-4ede-9598-53840aade201": "23a14bf6-eea8-4986-892b-c237398a63bd",
+          "727102f4-014f-40b6-b68c-3ede373d7721": "0e34058b-3ffb-4835-99d2-c887d8896998",
+          "51b7f9b5-b848-4c89-b1e5-59932092b2f8": "2ac880d8-82f0-48da-b5e2-fbb57c2cfbe6",
+          "d25665ee-26c8-4e13-93d2-8bfcff5aebd9": "3715c4bc-6da0-40b8-acfd-eb2ccffaf046",
+          "d412f387-b5bd-48c3-ba60-4a6fbdbd1162": "066dcb04-3d1f-445b-9f75-17c56501a26b",
+          "cd474a26-7332-48a8-879f-7cd8f06100f3": "c3d855bc-fbb2-414e-924a-de5f65a84a7a",
+          "9396c326-a35b-49ac-9391-6e4a7c90ac52": "3a91cfdd-2d39-4874-ba04-f17441a19896",
+          "42dfa0d1-d606-4572-8368-9e6c76e1f182": "091ad93b-5089-429b-b77e-4541ac136005",
+          "de3de16a-c46a-4f1c-bc5b-5b5f00640afd": "abc635aa-4e77-4267-83be-80bfe796ff06",
+          "6c32126a-9890-47fe-afd0-11aec21324a4": "834b85fb-b67d-45f1-9202-ce684dd9be20"
+        }
+      },
+      {
+        "__guid": "b8f9d4f6-3c39-43e9-9c9a-98653241d4eb",
+        "__version": 2,
+        "__Prefab": "entity/common/spawnarrayam.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120"
+              },
+              "Property": "Position",
+              "Value": "96,0,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120": "b8f9d4f6-3c39-43e9-9c9a-98653241d4eb",
+          "561f7af8-999c-4548-9ff8-9dd404548dea": "23f0b8f5-a1d6-4762-b81e-76800a459fb7",
+          "82151bda-2a8f-4775-aed2-683cca0c10c8": "14cd23b6-94a2-48bf-bfd6-c3006b152345",
+          "568f25d6-d33a-41a6-a417-6093bbb5da06": "893e8f50-7043-43ad-b55c-c59baa94a304",
+          "72c58030-113f-41ca-8919-2a2bac6180c0": "00b209d8-fdad-4e2b-b556-b0e85904665a",
+          "364c9cfb-a080-4deb-9ffb-8932ff5a9cb5": "00543781-f429-4b18-b263-7ceff47c07ac",
+          "45edced8-706f-4f9f-8880-2674937975ad": "58f9bfbe-cffa-438a-acd0-265682719634",
+          "839e8ba8-7b17-43d3-a048-865ad89a7925": "23587458-ff6e-4e3a-bb86-fdbeb4ff2cc0",
+          "08ac8c5a-6e75-4f5e-9e67-1ce882b9dd9f": "7e700a44-dae8-4089-93a3-2665971a2651",
+          "90e71307-32a7-4ede-9598-53840aade201": "ec11a0a1-cef1-4ce9-95e2-f2de6201b883",
+          "727102f4-014f-40b6-b68c-3ede373d7721": "87c47a6d-5018-483d-988d-d0f075146ea6",
+          "51b7f9b5-b848-4c89-b1e5-59932092b2f8": "a6237ae9-086d-4c9f-9877-ce3bf1aa2fc1",
+          "d25665ee-26c8-4e13-93d2-8bfcff5aebd9": "c8402a81-a913-46de-a743-fd514ebb0735",
+          "d412f387-b5bd-48c3-ba60-4a6fbdbd1162": "4e1722b6-4159-490c-b5bf-189dae725fb5",
+          "cd474a26-7332-48a8-879f-7cd8f06100f3": "1e91550c-1dcf-4afb-905b-16ba47963eeb",
+          "9396c326-a35b-49ac-9391-6e4a7c90ac52": "08a84b44-228a-43cc-9344-475c098065a5",
+          "42dfa0d1-d606-4572-8368-9e6c76e1f182": "4a0dc86d-04c0-466e-93d0-0cb386d0c880",
+          "de3de16a-c46a-4f1c-bc5b-5b5f00640afd": "b2671adf-94f1-45b2-b051-abb689267c57",
+          "6c32126a-9890-47fe-afd0-11aec21324a4": "bc751a63-b34e-4b3d-92af-8f8d7e7b4b48"
+        }
+      },
+      {
+        "__guid": "cf11bae8-b38b-497d-af0c-54cfae210e87",
+        "__version": 2,
+        "__Prefab": "entity/common/spawnarrayam.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120"
+              },
+              "Property": "Position",
+              "Value": "-128,0,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120": "cf11bae8-b38b-497d-af0c-54cfae210e87",
+          "561f7af8-999c-4548-9ff8-9dd404548dea": "5b042467-b831-48f4-9cde-686decf0c065",
+          "82151bda-2a8f-4775-aed2-683cca0c10c8": "9aac9dc7-8442-40d7-ad82-3ad224162f58",
+          "568f25d6-d33a-41a6-a417-6093bbb5da06": "362851d7-3edb-4011-92a6-c9b14e90787e",
+          "72c58030-113f-41ca-8919-2a2bac6180c0": "9cbd96e5-e578-4245-ae7b-71bd66129735",
+          "364c9cfb-a080-4deb-9ffb-8932ff5a9cb5": "0a4f0532-4bb0-4b11-9a13-7fc021a0484a",
+          "45edced8-706f-4f9f-8880-2674937975ad": "6a13b99c-fd22-4a41-aa9a-ef115e759581",
+          "839e8ba8-7b17-43d3-a048-865ad89a7925": "698d16d7-52bc-46e9-b1a7-9c2d7e9d05a0",
+          "08ac8c5a-6e75-4f5e-9e67-1ce882b9dd9f": "2ee304ef-cb68-427a-ab26-d43345d58b6e",
+          "90e71307-32a7-4ede-9598-53840aade201": "5b1bd5ca-1b4e-4f3d-aa86-3f8ba2dd289d",
+          "727102f4-014f-40b6-b68c-3ede373d7721": "e7dd829e-d95d-408f-8288-db643242d8cf",
+          "51b7f9b5-b848-4c89-b1e5-59932092b2f8": "c40e4fba-d5a0-4c7e-b462-b164b426c91a",
+          "d25665ee-26c8-4e13-93d2-8bfcff5aebd9": "ed8a576e-7a51-4125-9938-fdab6b5ddd59",
+          "d412f387-b5bd-48c3-ba60-4a6fbdbd1162": "b28eeb5e-7f08-48e1-b533-1f338b4066bc",
+          "cd474a26-7332-48a8-879f-7cd8f06100f3": "18ef139d-b0ff-47fa-becd-cdef7c67a6de",
+          "9396c326-a35b-49ac-9391-6e4a7c90ac52": "0bf8ff6d-130e-49c8-a486-2dbaa41f0cf4",
+          "42dfa0d1-d606-4572-8368-9e6c76e1f182": "1477f7a9-7254-44d4-945b-b29b82f725e8",
+          "de3de16a-c46a-4f1c-bc5b-5b5f00640afd": "4ef60d2c-a287-4a78-af70-12890f58645b",
+          "6c32126a-9890-47fe-afd0-11aec21324a4": "e93baa1b-8252-430b-81a4-0da26b19c9f9"
+        }
+      },
+      {
+        "__guid": "ba1074dc-f236-40d2-ac2b-59b03520661e",
+        "__version": 2,
+        "__Prefab": "entity/common/spawnarrayam.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120"
+              },
+              "Property": "Position",
+              "Value": "128,0,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "cbfa78d2-36d6-4cd6-816d-5df6c6f7c120": "ba1074dc-f236-40d2-ac2b-59b03520661e",
+          "561f7af8-999c-4548-9ff8-9dd404548dea": "dc733263-1e69-40a1-92db-dff6b2476797",
+          "82151bda-2a8f-4775-aed2-683cca0c10c8": "4617f498-4fb9-4f9d-bae5-cd1fb7b5a6b0",
+          "568f25d6-d33a-41a6-a417-6093bbb5da06": "f035affc-be8e-4af9-8fb1-3b7c6c534aed",
+          "72c58030-113f-41ca-8919-2a2bac6180c0": "73373e98-6d89-4c92-9145-509883f5f596",
+          "364c9cfb-a080-4deb-9ffb-8932ff5a9cb5": "a8c595ef-e3a5-4f70-a935-9c944b93c718",
+          "45edced8-706f-4f9f-8880-2674937975ad": "38a6ab7a-fa97-4dff-9135-310d57517c30",
+          "839e8ba8-7b17-43d3-a048-865ad89a7925": "c2ca7904-b518-4262-9868-4037ab435720",
+          "08ac8c5a-6e75-4f5e-9e67-1ce882b9dd9f": "b60140dd-20aa-40ef-a4d4-1d18f0f8ce45",
+          "90e71307-32a7-4ede-9598-53840aade201": "a8206ea6-a297-4eef-ba01-da9611607431",
+          "727102f4-014f-40b6-b68c-3ede373d7721": "8ccceba2-e224-4d2d-86de-e9d513e1f5b1",
+          "51b7f9b5-b848-4c89-b1e5-59932092b2f8": "37950b91-8dbe-49d7-b816-c7f6bdfc618c",
+          "d25665ee-26c8-4e13-93d2-8bfcff5aebd9": "713d0102-6dac-4393-9bdc-cf4b749b3aa4",
+          "d412f387-b5bd-48c3-ba60-4a6fbdbd1162": "1b6e5073-1200-4a16-92b8-ad71b5a8014a",
+          "cd474a26-7332-48a8-879f-7cd8f06100f3": "ad2371d0-f5a0-4538-8dbd-dc28ab993006",
+          "9396c326-a35b-49ac-9391-6e4a7c90ac52": "7751e0bf-ea8d-4030-b7c3-56a96b43989c",
+          "42dfa0d1-d606-4572-8368-9e6c76e1f182": "eb923874-d18a-403f-9e2c-be5f5fde2c8f",
+          "de3de16a-c46a-4f1c-bc5b-5b5f00640afd": "d02a1075-c6e6-4b69-b298-a5448a6b950f",
+          "6c32126a-9890-47fe-afd0-11aec21324a4": "4c891b77-429a-450e-a8a2-e5ec7c4b5ae9"
+        }
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}
