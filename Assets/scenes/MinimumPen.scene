@@ -61,45 +61,46 @@
       }
     },
     {
-      "__guid": "0217b991-a071-4f4f-9bf0-f3442f883e7d",
+      "__guid": "6de357d6-7202-4705-9761-eb4cec7b679b",
       "__version": 2,
-      "Flags": 0,
-      "Name": "Sun",
-      "Position": "-64.83682,-71.75235,202.0212",
-      "Rotation": "-0.1669113,0.6151835,0.2017607,0.7436278",
-      "Scale": "1,1,1",
-      "Tags": "light_directional,light",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.DirectionalLight",
-          "__guid": "7086e51d-4efe-4a98-9741-7562268fb22c",
-          "__enabled": true,
-          "Flags": 0,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "ShadowBias": 0.0005,
-          "ShadowCascadeCount": 4,
-          "ShadowCascadeSplitRatio": 0.91,
-          "ShadowHardness": 0,
-          "Shadows": true,
-          "SkyColor": "0,1,0.98333,0",
-          "Visualizer": {}
-        }
-      ],
-      "Children": []
+      "__Prefab": "entity/sun_adjustable/sun_adjustable.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "9a9dedab-4ec1-4772-9a07-4ab9ab3ff540"
+            },
+            "Property": "Position",
+            "Value": "-55.82758,-66.4751,147.2867"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "9a9dedab-4ec1-4772-9a07-4ab9ab3ff540"
+            },
+            "Property": "Rotation",
+            "Value": "-0.1669113,0.6151835,0.2017607,0.7436278"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "9a9dedab-4ec1-4772-9a07-4ab9ab3ff540": "6de357d6-7202-4705-9761-eb4cec7b679b",
+        "a80ce081-5ae0-4cd4-9a9f-ad85a7b1e627": "c4894989-b9eb-4ed9-afae-9668889bdd76",
+        "e1e2e1e2-a52a-418c-8d44-c19defb7f9ea": "c769c14c-33b4-420e-93b7-69a5881bcf50",
+        "03949bbd-890f-498f-8b37-ccaccf1c98ba": "92153ac9-7a57-4204-b7be-5e35409cde59",
+        "cc78c083-6cc2-4028-89a3-460d75c0f1e9": "20c3e34a-6cf9-4691-ad90-0fd95218630a",
+        "a2c9aeeb-0f14-4785-9f09-6a240fee5df2": "691b1581-7fa7-4c39-b8a8-fbde370c1297",
+        "f1dcedfd-8d0a-40ed-a8b9-805554c034ef": "66ddf451-5f87-4b48-8478-3d46acdab568",
+        "6e54f2a5-30ba-4dea-9768-651214158187": "d122665a-f53f-4662-a338-9321bc7a9767",
+        "e3beb431-5bc9-42e3-a975-63167b3a7dd9": "620ad1db-fd08-457a-b5f5-dbd0bd081385",
+        "4fe4d941-3a03-4fb2-ba3c-74983ae79dbf": "b920abc9-3944-40c0-9642-30501177d37b",
+        "7280f7da-bbf9-447c-931c-57057d3dcd77": "4b53f561-42da-4aca-bd67-0a15c9f90d0f",
+        "b1bdd41d-f7e9-4a9f-8b92-bf4e5ffd24b3": "b2a4d73a-edff-422d-86da-4331fed9b79e"
+      }
     },
     {
       "__guid": "3a451c0b-6698-465d-adb0-6f448156ccce",
@@ -159,14 +160,14 @@
           "__version": 1,
           "BakedTexture": "scenes/minimumpen_scene_data/envmap/bake_d3121e83-b693-4e5f-a766-1258faa556ea.vtex",
           "Bounds": {
-            "Mins": "-10000,-10000,-15",
+            "Mins": "-10000,-10000,-20",
             "Maxs": "10000,10000,5000"
           },
           "DelayBetweenUpdates": 0.1,
           "Feathering": 0.02,
           "FrameInterval": 5,
           "MaxDistance": 512,
-          "Mode": "Baked",
+          "Mode": "Realtime",
           "MultiBounce": false,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -370,6 +371,89 @@
         "a8206ea6-a297-4eef-ba01-da9611607431": "7c3b442f-1d7e-491c-935e-1f24780653e1",
         "4c891b77-429a-450e-a8a2-e5ec7c4b5ae9": "dfe55d3e-58c8-4c89-afef-8dd586dfcfa1"
       }
+    },
+    {
+      "__guid": "63f93b49-d205-4c25-9589-8c687670a576",
+      "__version": 2,
+      "__Prefab": "entity/usualmatball/shineball.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "63f93b49-d205-4c25-9589-8c687670a576"
+            },
+            "Property": "Name",
+            "Value": "Shineball"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "63f93b49-d205-4c25-9589-8c687670a576"
+            },
+            "Property": "Position",
+            "Value": "-218.4288,352,191.8217"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "7305dd9b-383f-415b-9f96-7140e94cf531": "f357dc75-66ad-441c-87a0-e641896d3aaf"
+      }
+    },
+    {
+      "__guid": "9a06ace9-2f19-4c10-b90b-21723fc5951a",
+      "__version": 2,
+      "__Prefab": "entity/usualmatball/usualball.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "c0ec48da-11bb-4fdb-a15d-26ef7a4bf2bd"
+            },
+            "Property": "Position",
+            "Value": "-128,352,192"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "c0ec48da-11bb-4fdb-a15d-26ef7a4bf2bd": "9a06ace9-2f19-4c10-b90b-21723fc5951a",
+        "fb37e9eb-a9cf-42c8-9b69-bda494d48172": "619deb0a-10cf-4660-85ad-2c8d1b9f60ce",
+        "e0f746b4-d17a-405c-9554-0eef45840560": "ed756690-ba55-45ca-adc7-c24f2499d8c7",
+        "f4ff07d5-43fa-472d-9020-1bc9d3c152e6": "0b057129-3f0c-4342-acb5-5e5d6cce099b"
+      }
+    },
+    {
+      "__guid": "d9069208-f9ef-4a34-8b74-6cad55fc9100",
+      "__version": 2,
+      "__Prefab": "entity/usualmatball/smoothball_a.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "f821bb4e-b2f7-4b90-b468-3ed6aa8acb34"
+            },
+            "Property": "Position",
+            "Value": "-32,352,192"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "f821bb4e-b2f7-4b90-b468-3ed6aa8acb34": "d9069208-f9ef-4a34-8b74-6cad55fc9100",
+        "7069bb42-7acd-4e6b-8b34-1d0fb7e48364": "ad8ce066-df06-4b88-9e8d-7181ab3d25c4",
+        "142f3204-6105-4046-92e9-f10ee168af14": "e1aea174-305e-4d98-9ee9-3b3d126a14d7",
+        "ba245262-012a-4bf7-bcbf-559b3cf4cfe1": "dd43401f-6301-4800-970f-5c40de20070a"
+      }
     }
   ],
   "SceneProperties": {
@@ -391,13 +475,13 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "4d14cd5a-db83-407d-96d4-cad2fa7380cd"
+          "$blob": "804d4744-f330-4582-8cec-75b9a3f191f4"
         }
+      },
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
       }
     }
   },
@@ -405,7 +489,7 @@
   "Title": null,
   "Description": null,
   "__references": [
-    "facepunch.sandbox#184021"
+    "facepunch.sandbox#185033"
   ],
   "__version": 3
 }
