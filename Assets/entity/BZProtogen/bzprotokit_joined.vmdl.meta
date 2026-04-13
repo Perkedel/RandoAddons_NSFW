@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "BZ Protogen (Ragdoll)",
+      "Type": "model",
+      "Org": "perkedel",
+      "Ident": "bz_protogen_ragdoll",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": [
+        "facepunch.sandbox#185033"
+      ],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/bzprotogen/bzprotokit_joined.vmdl"
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@ Stuffs like 3D Models, SFX, Codes, etc. we make, edit hack, etc.
 | - | - | - | - |
 | aaa | bbb | ??? | aaa |
 | [Kenney.nl Public Domain stuffs](https://kenney.nl) | Kenney | CC0 | One of the few modern Public Domain assets for game developers |
+| [TriwaveBZ Protogen](https://odysee.com/@X0P1R4T3-33NSVREENMNT-0FFICIAL:f/BZ-Protogen-RAW:5) | TriwaveBZ | ??? | The only "Free to use" & Gratis Protogen 3D model I could find. |
 
 ## Libraries
 
