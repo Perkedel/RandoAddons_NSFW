@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Wahaha Board (Model, Ludo)",
+      "Type": "model",
+      "Org": "perkedel",
+      "Ident": "wahahaboard_model",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": [
+        "facepunch.sandbox#185033"
+      ],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/wahahadice/wahahaboard.vmdl"
+      }
+    }
+  }
+}
