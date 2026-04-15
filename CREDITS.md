@@ -27,3 +27,12 @@ Package used in Editors
 | [Source 1 BSP Import](...) | divined | ??? | aaa |
 | [File-Lib](...) | Workbot 3000 | ??? | aaa |
 | [Zed Editor Support](https://sbox.game/umblestudio/zed_editor) | umble studio | ??? | aaa |
+
+## Utilities
+
+| Utilities | Author | License | Descriptions |
+| - | - | - | - |
+| aaa | bbb | ??? | aaa |
+| [Source2 Viewer](https://s2v.app/) | Valve Resource Format | MIT | [**Source Code!**](https://github.com/ValveResourceFormat/ValveResourceFormat) Valve's Source 2 resource file format parser, renderer, decompiler, and exporter. **For Source2**. The library component is called **ValveResourceFormat (VRF)**. [Referred by ZaqMacaw](https://steamcommunity.com/groups/CrowbarTool/discussions/0/1741139653396823076/), of vF's discussion. [Extra Decompile](https://github.com/Penguinwizzard/Source2ResourceDecompiler)? |
+| [ZaqMacaw's Crowbar](https://github.com/ZeqMacaw/Crowbar) | ZaqMacaw | [CC3.0-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/) | GoldSource and Source Engine Modding Tool. **For Source1**. [Valve's Wiki Article](https://developer.valvesoftware.com/wiki/Crowbar) |
+| [Source2 Converter](https://github.com/REDxEYE/Source2Converter) | REDxEYE | ??? | Toolset for converting Source1 props to Source2. [Valve Wiki Hub Article how to port Source1 to Source2](https://developer.valvesoftware.com/wiki/Source_2/Docs/Porting_Legacy_Content). |
