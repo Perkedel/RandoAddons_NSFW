@@ -3,7 +3,7 @@
     "__guid": "63f93b49-d205-4c25-9589-8c687670a576",
     "__version": 2,
     "Flags": 0,
-    "Name": "Shineball",
+    "Name": "shineball",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
@@ -99,11 +99,31 @@
         "Radius": 32,
         "RollingResistance": null,
         "Static": false,
-        "Surface": null,
+        "Surface": "surfaces/metal.surface",
         "SurfaceVelocity": "0,0,0"
       }
     ],
-    "Children": []
+    "Children": [],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,

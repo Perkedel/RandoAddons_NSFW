@@ -29,33 +29,6 @@
       }
     },
     {
-      "__guid": "60ccb187-3b51-48d8-a3e5-e98c92aecf92",
-      "__version": 2,
-      "__Prefab": "entity/wahahadice/wahahadice.prefab",
-      "__PrefabInstancePatch": {
-        "AddedObjects": [],
-        "RemovedObjects": [],
-        "PropertyOverrides": [
-          {
-            "Target": {
-              "Type": "GameObject",
-              "IdValue": "d3972606-2d8c-4026-a782-637e90cf6b1a"
-            },
-            "Property": "Position",
-            "Value": "158.1941,0,14.31773"
-          }
-        ],
-        "MovedObjects": []
-      },
-      "__PrefabIdToInstanceId": {
-        "d3972606-2d8c-4026-a782-637e90cf6b1a": "60ccb187-3b51-48d8-a3e5-e98c92aecf92",
-        "20096378-d948-4c57-833f-d8489fada4cd": "6970dcb6-40bb-40a1-982b-b34ae7c0e5dd",
-        "097b2f9b-b6e9-4a86-b786-e5f9446c9be5": "468ca0e2-226b-465e-b248-e0148451accb",
-        "3e27fc73-35f6-48ea-931f-0857fc91ece3": "814d8322-83d2-48e1-b67b-9b00b756176e",
-        "30d22c90-e8bd-419a-8324-ababc9689895": "3c6f8d30-457b-4bc8-9c1b-3ccfa20dbef5"
-      }
-    },
-    {
       "__guid": "6b683f70-1c4e-402b-801e-a87941c8e75c",
       "__version": 2,
       "__Prefab": "entity/common/penfarm.prefab",
@@ -11967,6 +11940,175 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "fa51a351-8e9f-461f-967c-ac8c1c4a7e16",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "couch",
+      "Position": "150.5648,212.1705,0.482451",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "17053e9e-7d32-462e-aeb9-e592b2e79582",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 100,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/props/couch/couch.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "1073b2e5-0812-4f68-bdc3-f2b3766abe42",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/props/couch/couch.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "fd5fe234-183e-4a76-ba5c-876337e0e3b6",
+          "__enabled": true,
+          "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/props/couch/couch.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "72d37087-a739-42b6-be7f-f6acbd70a2c6",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 25,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 85,
+          "MinImpactDamageSpeed": 400,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "0e1b6538-a142-40a3-be74-a08e950a0baf",
+      "__version": 2,
+      "__Prefab": "entity/wahahadice/wahahadice.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "d3972606-2d8c-4026-a782-637e90cf6b1a"
+            },
+            "Property": "Name",
+            "Value": "wahahadice (1)"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "d3972606-2d8c-4026-a782-637e90cf6b1a"
+            },
+            "Property": "Position",
+            "Value": "163.9603,2.392578,6.536995"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "d3972606-2d8c-4026-a782-637e90cf6b1a"
+            },
+            "Property": "Rotation",
+            "Value": "0,0,0,0.9999999"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "d3972606-2d8c-4026-a782-637e90cf6b1a": "0e1b6538-a142-40a3-be74-a08e950a0baf",
+        "20096378-d948-4c57-833f-d8489fada4cd": "6358dbe3-de4a-4dcc-b77e-5bdc33cb53c5",
+        "097b2f9b-b6e9-4a86-b786-e5f9446c9be5": "778fef82-dd3c-4582-bf51-06942578c815",
+        "30d22c90-e8bd-419a-8324-ababc9689895": "ead7b6d1-1ccf-45e2-a760-c451e11691b2",
+        "3e27fc73-35f6-48ea-931f-0857fc91ece3": "523a31db-3e67-48d4-ac98-b0f653081f6c"
+      }
     }
   ],
   "SceneProperties": {
@@ -11993,7 +12135,7 @@
       },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "efadeb63-daf3-4597-b232-7cb8b6403fdf"
+          "$blob": "70769aa0-e58b-4926-8019-2a1c5ae347d5"
         }
       }
     }
@@ -12002,6 +12144,7 @@
   "Title": null,
   "Description": null,
   "__references": [
+    "facepunch.couch#139679",
     "facepunch.sandbox#185033",
     "fdhou.femmepyro#78430"
   ],

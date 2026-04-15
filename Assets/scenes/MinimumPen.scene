@@ -373,7 +373,7 @@
       }
     },
     {
-      "__guid": "63f93b49-d205-4c25-9589-8c687670a576",
+      "__guid": "c5c0fc50-9312-469c-828f-f6a49337b01b",
       "__version": 2,
       "__Prefab": "entity/usualmatball/shineball.prefab",
       "__PrefabInstancePatch": {
@@ -400,7 +400,10 @@
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
-        "7305dd9b-383f-415b-9f96-7140e94cf531": "f357dc75-66ad-441c-87a0-e641896d3aaf"
+        "63f93b49-d205-4c25-9589-8c687670a576": "c5c0fc50-9312-469c-828f-f6a49337b01b",
+        "60370d64-a5cd-49d2-bcc6-2d052e82fff7": "2df8ff87-2780-4312-be8d-585a9c3c2252",
+        "5aca326f-c495-4371-878b-5f3f1e3d1610": "3978044f-2d56-4890-ad37-349f10d4c54b",
+        "2a64a851-c224-4249-a2b4-533c2f2e1d7d": "e31ff9bf-484b-4d9d-b9b5-dc3f04dd1bf2"
       }
     },
     {
@@ -454,6 +457,37 @@
         "142f3204-6105-4046-92e9-f10ee168af14": "e1aea174-305e-4d98-9ee9-3b3d126a14d7",
         "ba245262-012a-4bf7-bcbf-559b3cf4cfe1": "dd43401f-6301-4800-970f-5c40de20070a"
       }
+    },
+    {
+      "__guid": "a56ce56d-b2ee-4da5-83ea-5b8855d6934d",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "PenComponent",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "PenComponent",
+          "__guid": "c323ec46-a474-4c19-b88b-5063bbc44f98",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -475,13 +509,13 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "804d4744-f330-4582-8cec-75b9a3f191f4"
-        }
-      },
       "Sandbox.MovieMaker.MovieRecorderSystem": {
         "DisableClientRecording": false
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "d3047113-a044-4635-8cc3-92edfb3fbd60"
+        }
       }
     }
   },

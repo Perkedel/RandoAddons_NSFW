@@ -4,6 +4,7 @@
   "Description": "Throw Dice",
   "Category": "Toys & Fun",
   "IncludeCode": true,
+  "Developer": false,
   "__references": [],
   "__version": 0
 }

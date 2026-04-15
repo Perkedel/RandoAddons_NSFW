@@ -3,7 +3,7 @@
     "__guid": "f821bb4e-b2f7-4b90-b468-3ed6aa8acb34",
     "__version": 2,
     "Flags": 0,
-    "Name": "Smoothball (2)",
+    "Name": "smoothball_a",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
@@ -99,11 +99,31 @@
         "Radius": 32,
         "RollingResistance": null,
         "Static": false,
-        "Surface": null,
+        "Surface": "surfaces/plastic.surface",
         "SurfaceVelocity": "0,0,0"
       }
     ],
-    "Children": []
+    "Children": [],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,
