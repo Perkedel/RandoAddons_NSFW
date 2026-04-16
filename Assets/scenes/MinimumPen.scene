@@ -2,6 +2,44 @@
   "__guid": "f49f36b5-1c5f-4bb0-9894-51803d28131d",
   "GameObjects": [
     {
+      "__guid": "87901410-98d5-427f-bac0-2740f2a03fee",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Scene Information",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.SceneInformation",
+          "__guid": "78cfea99-ccdc-4f2e-b9bc-6f528588e6d3",
+          "__enabled": true,
+          "Flags": 0,
+          "Author": "JOELwindows7",
+          "Changes": null,
+          "Description": "Minimum Test Map\n\nUse this map to test anything minimally, with minimum overhead as much as possible.",
+          "Group": null,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "SceneTags": "test,minimal,nolag",
+          "Title": "Minimal Pen",
+          "Version": null
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "c4ba1d05-a0f7-43d2-919b-ef40d98dd2f1",
       "__version": 2,
       "__Prefab": "entity/common/penfarm.prefab",
@@ -74,7 +112,7 @@
               "IdValue": "9a9dedab-4ec1-4772-9a07-4ab9ab3ff540"
             },
             "Property": "Position",
-            "Value": "-55.82758,-66.4751,147.2867"
+            "Value": "-55.8275795,-66.4750977,147.286697"
           },
           {
             "Target": {
@@ -82,7 +120,7 @@
               "IdValue": "9a9dedab-4ec1-4772-9a07-4ab9ab3ff540"
             },
             "Property": "Rotation",
-            "Value": "-0.1669113,0.6151835,0.2017607,0.7436278"
+            "Value": "-0.166911304,0.615183473,0.201760694,0.743627787"
           }
         ],
         "MovedObjects": []
@@ -394,7 +432,7 @@
               "IdValue": "63f93b49-d205-4c25-9589-8c687670a576"
             },
             "Property": "Position",
-            "Value": "-218.4288,352,191.8217"
+            "Value": "-218.428802,352,191.821701"
           }
         ],
         "MovedObjects": []
@@ -494,7 +532,12 @@
     "NetworkInterpolation": true,
     "TimeScale": 1,
     "WantsSystemScene": true,
-    "Metadata": {},
+    "Metadata": {
+      "Title": "Minimal Pen",
+      "Description": "Minimum Test Map\n\nUse this map to test anything minimally, with minimum overhead as much as possible.",
+      "Author": "JOELwindows7",
+      "Tags": "test,minimal,nolag"
+    },
     "NavMesh": {
       "Enabled": false,
       "IncludeStaticBodies": true,
@@ -506,6 +549,7 @@
       "AgentMaxSlope": 40,
       "ExcludedBodies": "",
       "IncludedBodies": "",
+      "DeferGeneration": false,
       "CustomBounds": false
     },
     "GameObjectSystems": {
@@ -520,10 +564,10 @@
     }
   },
   "ResourceVersion": 3,
-  "Title": null,
-  "Description": null,
+  "Title": "Minimal Pen",
+  "Description": "Minimum Test Map\n\nUse this map to test anything minimally, with minimum overhead as much as possible.",
   "__references": [
-    "facepunch.sandbox#185033"
+    "facepunch.sandbox#200027"
   ],
   "__version": 3
 }

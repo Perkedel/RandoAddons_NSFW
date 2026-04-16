@@ -25,6 +25,8 @@ code/Properties/*
 
 *idea
 
+*.tmp
+
 # Exported / standalone games
 Exports/
 

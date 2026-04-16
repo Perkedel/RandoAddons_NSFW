@@ -29,7 +29,7 @@ Checkout these source code of what we make, edit, hack, & even ruin, for Source2
 
 Due to the structure of this s&box & post-s&box Source2 moddings in general, we have other mods like maps, games, and big stuffs that deserves its own repository. Checkout those!
 
-- ...
+- [🪛 Testpen](https://github.com/Perkedel/Testpen). Gamemode Testbed. Let's learn how to develop with s&box, together.
 
 ## Yey
 
