@@ -20,7 +20,7 @@ Checkout these source code of what we make, edit, hack, & even ruin, for Source2
   - To get those Assets, s&box includes Editor in your s&box purchase. Download the `s&box Editor` (it's just the 0B symlink binary) beside the main one in your Steam library. 
   - When you are in a project, you can use `Asset Browser` down there, and explore `☁️ Workshop` tab there. 
   - Use the [online tool](https://sbox.game) to manage your Favourites & Collections, as well as post-editing your uploaded Assets descriptions.
-  - \* Not all games will have Source Code URL nand/nor FreeLibre license! **Always check `license` file in their source code!**, assume demonetized when too vague to be considered free-libre.
+  - \* Not all games will have Source Code URL nand/nor FreeLibre license! **Always check `license` file in their source code!**, assume demonetized when too vague to be considered free-libre / **when in doubt**.
 - Familiarity. Similar to Unity, its editor packs with features and UX that's familiar with your previous engine you tried. As well as the coding system, **powered by .NET**, hence you can adapt your **C#** experiences to here.
   - You can also make Machinima with `Movie Maker` (`View` top menu, enable `Movie Maker`) here. **Bring your legacy SFM vmdl to here?**
   - Pls test if SFM files e.g. in [SFMLab](https://sfmlab.com) can be directly opened here! Every SFM models (& basically Source1 is) have `.mdl` files, with its descriptor under `.vtx`.
