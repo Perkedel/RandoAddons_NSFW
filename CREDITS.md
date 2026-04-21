@@ -17,10 +17,19 @@ Stuffs like 3D Models, SFX, Codes, etc. we make, edit hack, etc.
 
 ## Libraries
 
-Package used in Editors
+Package used in Editors.
+
+> [!TIP]
+> You can view each **package detail** on your `Installed` Library. at the tab `Library Manager`, see each of `Installed` libraries and view the detail tab `Package Detail`.  
+> - Enable `View` of `🧩 Library Manager`
+> - `Installed` section tab
+> - Choose which package you'd like to see its detail. Detail pane is on the right.
+> - While a package is selected, on this Detail pane, `🕔 Package Detail`.
+> - There, you can see the **sauce**. enjoy.
 
 | Library | Author | License | Descriptions |
 | - | - | - | - |
+| aaa | aaa | aaa | aaa |
 | [Mesh Splitter](https://sbox.game/bugge/meshsplitter) | bugge | ??? | aaa |
 | [Unity Importer](...) | bugge | ??? | aaa |
 | [sand git](https://sbox.game/meesles/sandgit) | meesles | ??? | A Git tab bar |
@@ -30,6 +39,14 @@ Package used in Editors
 | [Source 1 BSP Import](...) | divined | ??? | aaa |
 | [File-Lib](...) | Workbot 3000 | ??? | aaa |
 | [Zed Editor Support](https://sbox.game/umblestudio/zed_editor) | umble studio | ??? | aaa |
+| [ToeKneeRed's Components](https://github.com/ToeKneeRED/sbox-simplecomponents) | ToeKneeRed | CC0 | Top Simple Components |
+| [Small Fish Shrmimple Libraries](https://sbox.game/fish/~packages?type=library): [Character Controller](https://sbox.game/fish/scc), [Ragdoll](https://sbox.game/fish/shrimple_ragdolls), [Pawns](https://sbox.game/fish/sp) | Small Fish | MIT License | [GitHub Profile](https://github.com/Small-Fish-Dev). There are: [Ragdolls](https://github.com/Small-Fish-Dev/Shrimple-Ragdolls), [Character Controller](https://github.com/Small-Fish-Dev/shrimple_character_controller), [Pawns](https://github.com/Small-Fish-Dev/shrimple-pawns), |
+| [Snap to Vertex](https://sbox.game/resync/snaptovertex) | resync | aaa | aaa |
+| [Shadergraph Extras](https://sbox.game/ali3nsystems/lib-shader_graph_extras) | Ali3n Systems | aaa | aaa |
+| [Easy JSON](https://sbox.game/extended/easyjson) | extended | aaa | aaa |
+| [Toasty Toast Message](https://sbox.game/ggg/toasty) | ggg | aaa | aaa |
+| [Crosshair Maker](https://sbox.game/copper/crosshairmaker) | copper | aaa | aaa |
+| [MediaHelper](https://sbox.game/carsonk/mediahelpers) | Carson Kompon | MIT? | aaa |
 
 ## Utilities
 
