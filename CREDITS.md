@@ -10,7 +10,10 @@ Stuffs like 3D Models, SFX, Codes, etc. we make, edit hack, etc.
 | - | - | - | - |
 | aaa | bbb | ??? | aaa |
 | [Kenney.nl Public Domain stuffs](https://kenney.nl) | Kenney | CC0 | One of the few modern Public Domain assets for game developers |
-| [TriwaveBZ Protogen](https://odysee.com/@X0P1R4T3-33NSVREENMNT-0FFICIAL:f/BZ-Protogen-RAW:5) | TriwaveBZ | ??? | The only "Free to use" & Gratis Protogen 3D model I could find. |
+| [TriwaveBZ Protogen](https://odysee.com/@X0P1R4T3-33NSVREENMNT-0FFICIAL:f/BZ-Protogen-RAW:5) | TriwaveBZ | ??? | The only "Free to use" & Gratis Protogen 3D model I could find. Original Patent by CoolKoinu |
+| [`Mindless`'s Materials](https://sbox.game/mindless) | mindless | ??? | whatever this dev material this is. I hope it's Kenney's btw, who knows. Just wanna get things real quick! |
+| [Low Poly Heart Organ](https://skfb.ly/osAnP) | [Khalifa Hawill](https://sketchfab.com/khalifahawill) | CC4.0-BY | It's beating! |
+| [Heartbeat synthetic generic sound pack](https://freesound.org/people/.name/packs/23663/) | [`.name`](https://freesound.org/people/.name/) | CC4.0-BY | Generic Soundpack of Heartbeat sound |
 
 ## Libraries
 

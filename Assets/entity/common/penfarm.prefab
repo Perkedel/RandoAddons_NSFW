@@ -60,16 +60,15 @@
             "Tint": "1,1,1,1"
           },
           {
-            "__type": "Sandbox.PlaneCollider",
+            "__type": "Sandbox.BoxCollider",
             "__guid": "3636f809-d9b3-48ec-8fa5-69fd4c5cde76",
             "__enabled": true,
             "Flags": 0,
-            "Center": "0,0,0",
+            "Center": "0,0,-2.5",
             "ColliderFlags": 0,
             "Elasticity": null,
             "Friction": null,
             "IsTrigger": false,
-            "Normal": "0,0,1",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
@@ -81,7 +80,7 @@
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
             "RollingResistance": null,
-            "Scale": "100,100",
+            "Scale": "100,100,5",
             "Static": true,
             "Surface": null,
             "SurfaceVelocity": "0,0,0"
@@ -145,7 +144,7 @@
                     "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
                   },
                   "Property": "Position",
-                  "Value": "0,0,0.00001525879"
+                  "Value": "0,0,1.52587909E-05"
                 },
                 {
                   "Target": {
@@ -153,7 +152,7 @@
                     "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
                   },
                   "Property": "Rotation",
-                  "Value": "0,0,0.7071068,0.7071068"
+                  "Value": "0,0,0.707106829,0.707106829"
                 }
               ],
               "MovedObjects": []
@@ -187,7 +186,7 @@
                     "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
                   },
                   "Property": "Rotation",
-                  "Value": "0,0,1,-0.00000004371139"
+                  "Value": "0,0,1,-4.37113883E-08"
                 }
               ],
               "MovedObjects": []
@@ -221,7 +220,7 @@
                     "IdValue": "1a879214-a885-464b-9ea3-9c1284d715f2"
                   },
                   "Property": "Rotation",
-                  "Value": "0,-0,-0.7071068,0.7071068"
+                  "Value": "0,-0,-0.707106829,0.707106829"
                 }
               ],
               "MovedObjects": []
@@ -252,6 +251,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },

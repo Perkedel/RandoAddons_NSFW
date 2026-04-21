@@ -49,53 +49,37 @@
         "PropertyOverrides": [
           {
             "Target": {
-              "Type": "Component",
-              "IdValue": "a09e2f7e-fc66-4230-8e80-60b126c98597"
+              "Type": "GameObject",
+              "IdValue": "5f1c1da6-15c9-4acd-8026-6b6b641e0d10"
             },
-            "Property": "__type",
-            "Value": "Sandbox.PlaneCollider"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "a09e2f7e-fc66-4230-8e80-60b126c98597"
-            },
-            "Property": "Normal",
-            "Value": "0,0,1"
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "a09e2f7e-fc66-4230-8e80-60b126c98597"
-            },
-            "Property": "Scale",
-            "Value": "0,0"
+            "Property": "Position",
+            "Value": "0,0,0"
           }
         ],
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
         "a7cc0c87-1f70-4ebb-8da1-4ca8503781a1": "c4ba1d05-a0f7-43d2-919b-ef40d98dd2f1",
-        "9b001617-5126-49f3-84ca-48541585c010": "a7de8b71-6aad-4881-8838-b0b7f29e71ce",
-        "ca7b44a6-63e4-4dca-a531-7800e3209f73": "d0036101-6731-440d-b308-3ae3056ca998",
-        "3636f809-d9b3-48ec-8fa5-69fd4c5cde76": "ecca65ea-631f-44c1-bb23-afe9f1f78d81",
-        "4309f8d4-ec8e-443d-a195-811344e568e8": "e0491236-e4e0-4e2b-9928-ae6f1d54d2c4",
-        "28af2086-8d7d-47ca-8193-0d2c30143a9a": "9ed4ddb9-0956-4df1-a409-398d7b2ee585",
-        "a09e2f7e-fc66-4230-8e80-60b126c98597": "53af9c9e-3c79-4d5e-8498-2853c9265f83",
-        "79f285ad-f0fb-42d7-833f-64c942b6a6dd": "28a69555-df46-4a5f-92cf-f434558fe6a3",
-        "5f1c1da6-15c9-4acd-8026-6b6b641e0d10": "63f6a430-8424-4efd-b87f-41677c95cbad",
-        "9a21e155-a4b1-4faf-8df7-cef48c5348a3": "236af7fa-15b0-4f18-8e56-2e9382c066fa",
-        "4265813f-c145-4054-83d0-5885991faaae": "da61aa60-e08f-45f7-ab40-58ca2a6d1ca3",
-        "6bb3368d-2c2e-41eb-b653-d5349b757389": "5e8baee9-7925-4fe7-aeb6-6f9dc648ba5b",
-        "a837ed13-a03b-41de-9356-5aa6dd76a79e": "fe176d47-cc8c-46fe-b446-36037f4045cd",
-        "c1d022a5-6452-4d66-b62b-cf25a709f8a9": "0b4afb29-36ef-4df7-a954-aaba31f143d7",
-        "084d6768-1328-473c-82ef-8103f20f244d": "270df76f-a0e1-44e6-a5ff-20a095bdfdf4",
-        "455c4058-070a-477e-96b6-51417eb00550": "ffa8da52-72e9-4487-95aa-30cbd34fca35",
-        "7657b046-f626-406b-8419-6033503c2fc6": "3e778a79-f857-449b-be92-fe339ffa1051",
-        "a0be49ee-627b-4d97-9a51-152c50d8cac3": "c3869762-5ada-4e3d-a76d-c6e87ac2224f",
-        "70b81bd3-a9b5-4678-bd72-fe0a24fb73e7": "c23afb72-7e51-41b6-a6a3-544379bdd827",
-        "f118e248-c210-4f72-93e8-95e9f00abae1": "7d1d9029-7c23-4b22-93ca-eafff1a17f6e",
-        "d5731b96-e7fc-4c66-801f-1f161cf600f8": "45bf9290-3dee-4e3f-b45b-d2a2ede00021"
+        "9b001617-5126-49f3-84ca-48541585c010": "e9018464-2855-48a0-a75c-321f850eaf47",
+        "ca7b44a6-63e4-4dca-a531-7800e3209f73": "089dcef0-b5d9-44ea-963d-c922d556d03d",
+        "3636f809-d9b3-48ec-8fa5-69fd4c5cde76": "225bff74-d5e1-4a0e-af0c-dac075d7d6ae",
+        "d5731b96-e7fc-4c66-801f-1f161cf600f8": "96a4dc37-8d9e-4fa2-93ae-1e6b3f60512b",
+        "79f285ad-f0fb-42d7-833f-64c942b6a6dd": "ce5d964d-6e8b-4870-890b-b9d82c8924a1",
+        "4309f8d4-ec8e-443d-a195-811344e568e8": "5798b6fc-c94a-482c-ac56-81bfc2747941",
+        "28af2086-8d7d-47ca-8193-0d2c30143a9a": "16ca1c45-59b7-4650-9c5a-44e4c08f2bb5",
+        "a09e2f7e-fc66-4230-8e80-60b126c98597": "55f54ae0-0993-407d-9695-bac139490262",
+        "5f1c1da6-15c9-4acd-8026-6b6b641e0d10": "72421281-90d5-4045-b466-8adbf61e8bb5",
+        "9a21e155-a4b1-4faf-8df7-cef48c5348a3": "cea64c37-ee72-4d16-b583-36183053b1e0",
+        "4265813f-c145-4054-83d0-5885991faaae": "1c42297f-8aa6-47e2-8646-469bc52d844c",
+        "6bb3368d-2c2e-41eb-b653-d5349b757389": "92ac6376-9c2a-4b5f-b2db-d3c410e61ff9",
+        "a837ed13-a03b-41de-9356-5aa6dd76a79e": "838d6a4d-05fc-44fa-a9d4-d64eea7f1613",
+        "c1d022a5-6452-4d66-b62b-cf25a709f8a9": "78a0c5c1-5d2a-437a-a166-d0b4db7339cf",
+        "084d6768-1328-473c-82ef-8103f20f244d": "e2c424cd-90e3-4506-892d-97b1a0d27297",
+        "455c4058-070a-477e-96b6-51417eb00550": "12d69338-68b7-492d-87b5-a12b5cbb6d4b",
+        "7657b046-f626-406b-8419-6033503c2fc6": "53e2156d-3e3a-4e67-b21e-453a56a4761b",
+        "a0be49ee-627b-4d97-9a51-152c50d8cac3": "7c4052ca-cb90-4343-bbd5-b22e93936408",
+        "70b81bd3-a9b5-4678-bd72-fe0a24fb73e7": "066da74e-0319-48cd-b680-7338211ea42b",
+        "f118e248-c210-4f72-93e8-95e9f00abae1": "15f48ed4-fc8b-4dc9-9573-9da88b521876"
       }
     },
     {
@@ -567,7 +551,7 @@
   "Title": "Minimal Pen",
   "Description": "Minimum Test Map\n\nUse this map to test anything minimally, with minimum overhead as much as possible.",
   "__references": [
-    "facepunch.sandbox#200027"
+    "facepunch.sandbox#202574"
   ],
   "__version": 3
 }
