@@ -1,0 +1,180 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-vector_transform.shdrgrph",
+  "Model": null,
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "13",
+        "Output": "Output"
+      },
+      "PositionOffset": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "408,108",
+      "Color": "Green",
+      "Title": "Vector Transform",
+      "Description": "Input: Add you input space here. It will be converted to the output space you have selected.\n",
+      "Layer": 4,
+      "Identifier": "1",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Time",
+      "Identifier": "2",
+      "Position": "-768,108",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Sine",
+      "Identifier": "3",
+      "Position": "-552,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "636,132",
+      "Color": "Purple",
+      "Title": "Transform Mode",
+      "Description": "Position - Absolute point in space (uses reference positions for offset calculation)\nNormal - Unit vector for surface orientation (normalized output)\nDirection - Projects to View space via projection matrix",
+      "Layer": 1,
+      "Identifier": "4",
+      "Position": "168,444",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "456,132",
+      "Color": "Purple",
+      "Title": "Input Space",
+      "Description": "Tangent - Surface-relative space (used for normal maps)\nWorld - Global scene coordinates\nObject - Local model coordinates",
+      "Layer": 3,
+      "Identifier": "5",
+      "Position": "168,120",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "456,168",
+      "Color": "Purple",
+      "Title": "Output Space",
+      "Description": "Tangent - Surface-relative space (used for normal maps)\nWorld - Global scene coordinates\nObject - Local model coordinates\nView - Screen/projection space (only available for Direction mode)",
+      "Layer": 2,
+      "Identifier": "6",
+      "Position": "168,264",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "276,108",
+      "Color": "Red",
+      "Title": "Warning!",
+      "Description": "Precision may or may not be lost when doing these conversions.",
+      "Layer": 2,
+      "Identifier": "7",
+      "Position": "588,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "ObjectPosition",
+      "Identifier": "8",
+      "Position": "-492,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 16,
+      "Identifier": "9",
+      "Position": "-408,108",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "10",
+      "Position": "-60,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "11",
+        "Output": "XYZ"
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 0,
+      "Identifier": "11",
+      "Position": "-276,60",
+      "HandleOffsets": {},
+      "Z": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "12",
+      "Position": "-60,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGEVectorTransformNode",
+      "InputSpace": "Object",
+      "OutputSpace": "View",
+      "Mode": "Direction",
+      "Identifier": "13",
+      "Position": "-276,0",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    }
+  ]
+}

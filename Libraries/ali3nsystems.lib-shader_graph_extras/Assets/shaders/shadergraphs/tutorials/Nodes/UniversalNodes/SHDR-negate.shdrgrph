@@ -1,0 +1,65 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-negate.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "CommentNode",
+      "Size": "336,108",
+      "Color": "Green",
+      "Title": "Negate",
+      "Description": "Input: - Positive values become negative and negative values become positive.",
+      "Layer": 1,
+      "Identifier": "0",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGENegateNode",
+      "Identifier": "1",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "2",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "1",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "SimplexNoise",
+      "Identifier": "3",
+      "Position": "-432,0",
+      "HandleOffsets": {}
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-safe_normalize.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "CommentNode",
+      "Size": "576,108",
+      "Color": "Green",
+      "Title": "Safe Normalize",
+      "Description": "Input A: - Input Vector to be normalized.\nInput B: - Fallback vector to be used when the Input A\u0027s length reaches 0.",
+      "Layer": 2,
+      "Identifier": "0",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "1",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "2",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "SubgraphNode",
+      "SubgraphPath": "shaders/subgraphs/sgsg-safe_normalize.shdrfunc",
+      "DefaultValues": {
+        "Input A": "0,0,1",
+        "Input B": "0,0,0"
+      },
+      "Identifier": "2",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Input A": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "WorldPosition",
+      "Identifier": "3",
+      "Position": "-432,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "624,108",
+      "Color": "Blue",
+      "Title": "Outputs",
+      "Description": "Output: - Normalized Input A or Input B as fallback.\nLength: - Returns 1 if the vector\u0027s length was 0. Otherwise, this output returns 0.",
+      "Layer": 1,
+      "Identifier": "4",
+      "Position": "168,120",
+      "HandleOffsets": {}
+    }
+  ]
+}

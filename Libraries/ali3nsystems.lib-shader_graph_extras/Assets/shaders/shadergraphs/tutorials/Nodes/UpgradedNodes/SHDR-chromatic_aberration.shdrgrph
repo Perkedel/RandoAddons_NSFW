@@ -1,0 +1,442 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/upgradednodes/shdr-chromatic_aberration.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "ShadingModelPath": null,
+  "Domain": "Surface",
+  "TemplatePath": null,
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "26",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "1",
+      "Position": "-612,240",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "2",
+      "Position": "-672,300",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "24",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "3",
+      "Position": "-672,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "4",
+      "Position": "-948,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "5",
+      "Position": "-1008,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "6",
+      "Position": "-672,216",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "7",
+      "Position": "-276,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "8",
+      "Position": "-1068,36",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "27",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "9",
+      "Position": "-1068,192",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "456,180",
+      "Color": "Green",
+      "Title": "Chromatic Aberration",
+      "Description": "Coordinates: -Coordinates for texture sampling.\nTexture: -The texture to apply aberration to.\nSampler: -Texture sampling settings (filtering, wrapping).\nInput: -Color value to apply aberration to.\nScale: -Aberration multiplier.\nOffset: -Per-channel RGB offset values.\n",
+      "Layer": 1,
+      "Identifier": "10",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "11",
+      "Position": "-276,300",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "12",
+      "Position": "-552,264",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "13",
+      "Position": "-336,192",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "25",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "14",
+      "Position": "-336,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "15",
+      "Position": "-1008,216",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "23",
+        "Output": "Texture2DOutput"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "16",
+      "Position": "-948,240",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "23",
+        "Output": "Texture2DSampler"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "516,120",
+      "Color": "Purple",
+      "Title": "Mode",
+      "Description": "Texture2D: - Samples the texture 3 times at different coordinates.\nVector: - Applies derivative-based color offset to any input.\n",
+      "Layer": 2,
+      "Identifier": "17",
+      "Position": "168,192",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "18",
+      "Position": "-612,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "20",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "19",
+      "Position": "-612,132",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float3",
+      "Min": "-1,-1,-1",
+      "Max": "1,1,1",
+      "Value": "1,0,-1",
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "20",
+      "Position": "-888,324",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGETextureSampleNode",
+      "Mode": "Texture2D",
+      "Identifier": "21",
+      "Position": "-888,156",
+      "HandleOffsets": {},
+      "Texture2DCoordinates": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "Texture2DInput": {
+        "Identifier": "15",
+        "Output": "Result"
+      },
+      "Texture2DSampler": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGEChromaticAberrationNode",
+      "Mode": "Texture2D",
+      "DefaultScale": 1,
+      "DefaultOffset": "1,0,-1",
+      "Identifier": "22",
+      "Position": "-552,0",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "27",
+        "Output": "Result"
+      },
+      "Texture": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "Sampler": {
+        "Identifier": "4",
+        "Output": "Result"
+      },
+      "Scale": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "Offset": {
+        "Identifier": "19",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGETextureObjectNode",
+      "Mode": "Texture2D",
+      "Image": "decals/impact/glass/decal_impact_glass_01_color.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
+      "UI": {
+        "Name": "Color",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "23",
+      "Position": "-1284,180",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 10,
+      "Value": 10,
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "24",
+      "Position": "-888,264",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGEChromaticAberrationNode",
+      "Mode": "Vector",
+      "DefaultScale": 1,
+      "DefaultOffset": "1,0,-1",
+      "Identifier": "25",
+      "Position": "-552,156",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "21",
+        "Output": "Output"
+      },
+      "Scale": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "Offset": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Fraction": 1,
+      "Identifier": "26",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "22",
+        "Output": "Output"
+      },
+      "B": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "27",
+      "Position": "-1284,0",
+      "HandleOffsets": {}
+    }
+  ]
+}

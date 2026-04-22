@@ -1,0 +1,357 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/upgradednodes/shdr-flipbook.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Translucent",
+  "ShadingModel": "Unlit",
+  "ShadingModelPath": null,
+  "Domain": "Surface",
+  "TemplatePath": null,
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Time",
+      "Identifier": "0",
+      "Position": "-1296,252",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "1",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "14",
+        "Output": "XYZ"
+      },
+      "Opacity": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "2",
+      "Position": "-1296,-24",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 30,
+      "Identifier": "3",
+      "Position": "-1020,252",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "0",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGEFlipbookNode",
+      "DefaultWidth": 11,
+      "DefaultHeight": 11,
+      "DefaultTile": 1,
+      "DefaultInvert": "0,0",
+      "DefaultLoop": 1,
+      "Mode": "Interpolated",
+      "Identifier": "4",
+      "Position": "-768,-24",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "Texture": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "Sampler": {
+        "Identifier": "23",
+        "Output": "Result"
+      },
+      "Tile": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "5",
+      "Position": "-1080,72",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "21",
+        "Output": "Texture2DOutput"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "6",
+      "Position": "-1080,36",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "7",
+      "Position": "-888,288",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "8",
+      "Position": "-888,132",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 120,
+      "Value": 30,
+      "Name": "Frame Rate",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "9",
+      "Position": "-1296,312",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "10",
+      "Position": "-1080,348",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "11",
+      "Position": "-1080,312",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "312,216",
+      "Color": "Green",
+      "Title": "Flipbook",
+      "Description": "Coordinates: - Add your coordinates here to sample the texture.\nTexture: - Add a \u0022Texture Object\u0022 node here with your flipbook texture.\nSampler: - Add your \u0022Sampler\u0022 output here. It will use the correct Sampler.\nWidth: - Amount of horizontal tiles.\nHeight: - Amount of vertical tiles.\n",
+      "Layer": 1,
+      "Identifier": "12",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "13",
+      "Position": "-552,-24",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "4",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 0,
+      "Identifier": "14",
+      "Position": "-276,-24",
+      "HandleOffsets": {},
+      "X": {
+        "Identifier": "13",
+        "Output": "X"
+      },
+      "Y": {
+        "Identifier": "13",
+        "Output": "Y"
+      },
+      "Z": {
+        "Identifier": "13",
+        "Output": "Z"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "15",
+      "Position": "-336,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "13",
+        "Output": "W"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "16",
+      "Position": "-336,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "17",
+      "Position": "-60,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "18",
+      "Position": "-60,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "456,156",
+      "Color": "Green",
+      "Title": "",
+      "Description": "Tile: - Current tile index. Value is automatically floored.\nInvert: - Value of 0 iterates through the tiles normally, value of 1 iterates through the tiles in an inverted manner.\nLoop: - Value of 0 will stop the animation once it\u0027s done, value of 1 will continuously loop it.",
+      "Layer": 2,
+      "Identifier": "19",
+      "Position": "492,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "408,180",
+      "Color": "Purple",
+      "Title": "Mode",
+      "Description": "Interpolated: - Samples the texture twice and blends between the samples. Best used with a very low framerate. This is a more expensive method.\nStandard: - Normal way of sampling a flipbook texture. It only samples it once and it is fairly cheap but looks bad at very low frame rates.",
+      "Layer": 3,
+      "Identifier": "20",
+      "Position": "168,228",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGETextureObjectNode",
+      "Mode": "Texture2D",
+      "Image": "textures/tex-flipbook.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
+      "UI": {
+        "Name": "Flipbook",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "21",
+      "Position": "-1296,36",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "22",
+      "Position": "-1020,96",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "21",
+        "Output": "Texture2DSampler"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "23",
+      "Position": "-1020,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "22",
+        "Output": "Result"
+      }
+    }
+  ]
+}

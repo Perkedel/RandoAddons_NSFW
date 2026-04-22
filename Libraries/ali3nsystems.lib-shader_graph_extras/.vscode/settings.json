@@ -1,0 +1,20 @@
+{
+  "files.associations": {
+    "*.shader": "slang",
+    "*.hlsl": "slang"
+  },
+  "slang.additionalSearchPaths": [
+    "D:\\steam\\steamapps\\common\\sbox\\core\\shaders",
+    "D:\\Steam\\steamapps\\common\\sbox\\addons\\base\\Assets\\shaders",
+    "D:\\Steam\\steamapps\\common\\sbox\\addons\\menu\\Assets\\shaders",
+    "D:\\Steam\\steamapps\\common\\sbox\\addons\\tools\\Assets\\shaders",
+    "D:\\Steam\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Assets\\shaders",
+    "D:\\Steam\\steamapps\\common\\sbox\\editor\\ActionGraph\\Assets\\shaders",
+    "D:\\Steam\\steamapps\\common\\sbox\\editor\\MovieMaker\\Assets\\shaders",
+    "D:\\Steam\\steamapps\\common\\sbox\\editor\\Hammer\\Assets\\shaders",
+    "D:\\Steam\\steamapps\\common\\sbox\\editor\\DooEditor\\Assets\\shaders",
+    "C:\\Users\\DESKTOP\\Documents\\s\u0026box projects\\Shader-Graph-Extras-for-sbox\\Assets\\shaders"
+  ],
+  "slang.predefinedMacros": [],
+  "slang.workspaceFlavor": "vfx"
+}

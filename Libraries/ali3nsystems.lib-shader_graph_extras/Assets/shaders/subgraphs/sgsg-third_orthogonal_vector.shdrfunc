@@ -1,0 +1,284 @@
+{
+  "IsSubgraph": true,
+  "Path": "shaders/subgraphs/sgsg-third_orthogonal_vector.shdrfunc",
+  "Model": null,
+  "Title": "SGE - Third Orthogonal Vector",
+  "Description": null,
+  "Category": "Shader Graph Extras - Universal",
+  "Icon": "create",
+  "AddToNodeLibrary": true,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "SubgraphNode",
+      "SubgraphPath": "shaders/subgraphs/sgsg-safe_normalize.shdrfunc",
+      "DefaultValues": {
+        "Input Vector": "0,0,0",
+        "Input Default": "0,0,0",
+        "InputVector": "0,0,0",
+        "InputDefault": "0,0,0",
+        "Input A": "0,0,1",
+        "Input B": "0,0,0"
+      },
+      "Identifier": "0",
+      "Position": "-444,324",
+      "HandleOffsets": {},
+      "Input A": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SubgraphNode",
+      "SubgraphPath": "shaders/subgraphs/sgsg-safe_normalize.shdrfunc",
+      "DefaultValues": {
+        "Input Vector": "0,0,0",
+        "Input Default": "0,0,0",
+        "InputVector": "0,0,0",
+        "InputDefault": "0,0,0",
+        "Input A": "0,0,1",
+        "Input B": "0,0,0"
+      },
+      "Identifier": "1",
+      "Position": "-444,408",
+      "HandleOffsets": {},
+      "Input A": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "FunctionResult",
+      "FunctionOutputs": [
+        {
+          "Id": "796087b9-daa9-4796-989a-393783ea8134",
+          "Name": "Output A",
+          "Type": "Vector3",
+          "Preview": "None",
+          "Priority": 1
+        },
+        {
+          "Id": "8a6816b7-9071-4587-a792-600921b02e5d",
+          "Name": "Output B",
+          "Type": "Vector3",
+          "Preview": "None",
+          "Priority": 2
+        },
+        {
+          "Id": "7043b2e9-5f8e-4e4b-b716-67489f5b92b2",
+          "Name": "Output C",
+          "Type": "Vector3",
+          "Preview": "None",
+          "Priority": 3
+        }
+      ],
+      "Identifier": "2",
+      "Position": "-120,276",
+      "HandleOffsets": {},
+      "Output A": {
+        "Identifier": "15",
+        "Output": "Result"
+      },
+      "Output B": {
+        "Identifier": "10",
+        "Output": "Result"
+      },
+      "Output C": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CrossProduct",
+      "DefaultA": "0,0,0",
+      "DefaultB": "0,0,0",
+      "Identifier": "3",
+      "Position": "-660,324",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CrossProduct",
+      "DefaultA": "0,0,0",
+      "DefaultB": "0,0,0",
+      "Identifier": "4",
+      "Position": "-936,408",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "16",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Normalize",
+      "Identifier": "5",
+      "Position": "-1164,276",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Normalize",
+      "Identifier": "6",
+      "Position": "-1164,432",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Input A",
+      "InputDescription": "",
+      "InputType": "Float3",
+      "DefaultFloat": 0,
+      "DefaultFloat2": "0,0",
+      "DefaultFloat3": "1,0,0",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": false,
+      "PortOrder": 1,
+      "Identifier": "7",
+      "Position": "-1380,276",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Input B",
+      "InputDescription": "",
+      "InputType": "Float3",
+      "DefaultFloat": 0,
+      "DefaultFloat2": "0,0",
+      "DefaultFloat3": "0,0,1",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": false,
+      "PortOrder": 2,
+      "Identifier": "8",
+      "Position": "-1380,432",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "9",
+      "Position": "-228,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "0",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "10",
+      "Position": "-228,336",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "11",
+      "Position": "-168,444",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "1",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "12",
+      "Position": "-168,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "13",
+      "Position": "-720,444",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "14",
+      "Position": "-720,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "15",
+      "Position": "-996,312",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "16",
+      "Position": "-996,444",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "17",
+      "Position": "-996,384",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    }
+  ]
+}

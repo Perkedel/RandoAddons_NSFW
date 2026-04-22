@@ -1,0 +1,434 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/upgradednodes/shdr-decal_projection.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Translucent",
+  "ShadingModel": "Unlit",
+  "ShadingModelPath": null,
+  "Domain": "Custom",
+  "TemplatePath": "Editor/templates/deferreddecal.cs",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "TextureSampler",
+      "Image": "decals/impact/flesh/decal_impact_flesh_01_color.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Clamp",
+        "AddressV": "Clamp"
+      },
+      "UI": {
+        "Name": "Color",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "0",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "4",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "660,144",
+      "Color": "Green",
+      "Title": "Decal Projection",
+      "Description": "Forward: - The direction the decal is projecting towards (the X-axis in decal space). This is the primary projection direction that shoots from the decal box onto surfaces.\nRight: - The direction perpendicular to Forward along the decal\u0027s width (the Y-axis in decal space). Used by Angle Attenuation to determine surface angle relative to projection.\nUp: -The vertical direction of the decal box (the Z-axis in decal space). Points upward in the decal\u0027s local orientation.",
+      "Layer": 3,
+      "Identifier": "1",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "2",
+      "Position": "-864,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "3",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "0",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGEParallaxOcclusionMappingNode",
+      "Mode": "Standard",
+      "Channel": "Blue",
+      "DefaultAmplitude": 0.1,
+      "DefaultMinimumIterations": 8,
+      "DefaultMaximumIterations": 32,
+      "DefaultLevelOfDetail": 1,
+      "DefaultOffset": 0,
+      "Identifier": "4",
+      "Position": "-468,0",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "Texture": {
+        "Identifier": "24",
+        "Output": "Result"
+      },
+      "Sampler": {
+        "Identifier": "26",
+        "Output": "Result"
+      },
+      "TangentSpaceViewDirection": {
+        "Identifier": "28",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGETextureObjectNode",
+      "Mode": "Texture2D",
+      "Image": "decals/impact/flesh/decal_impact_flesh_01_height.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Clamp",
+        "AddressV": "Clamp"
+      },
+      "UI": {
+        "Name": "Height",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "DXT5",
+        "SrgbRead": false,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "5",
+      "Position": "-864,60",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGEDecalProjectionNode",
+      "Identifier": "6",
+      "Position": "-1848,312",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "WorldPosition",
+      "Identifier": "7",
+      "Position": "-1296,276",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "8",
+      "Position": "-1080,336",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGENegateNode",
+      "Identifier": "9",
+      "Position": "-1512,336",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Right"
+      }
+    },
+    {
+      "_class": "TransformNormal",
+      "InputSpace": "World",
+      "OutputSpace": "Tangent",
+      "DecodeNormal": false,
+      "Identifier": "10",
+      "Position": "-1296,336",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "9",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "11",
+      "Position": "-1572,348",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Forward"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "12",
+      "Position": "-1020,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "13",
+      "Position": "-1080,372",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "14",
+      "Position": "-1632,396",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Up"
+      }
+    },
+    {
+      "_class": "SGENegateNode",
+      "Identifier": "15",
+      "Position": "-1512,396",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "16",
+      "Position": "-1020,432",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "15",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "17",
+      "Position": "-1632,432",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "14",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "18",
+      "Position": "-960,384",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "21",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGENegateNode",
+      "Identifier": "19",
+      "Position": "-1512,456",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "22",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TangentViewVector",
+      "Identifier": "20",
+      "Position": "-900,276",
+      "HandleOffsets": {},
+      "WorldPosition": {
+        "Identifier": "7",
+        "Output": "Result"
+      },
+      "WorldNormal": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "TangentUWs": {
+        "Identifier": "12",
+        "Output": "Result"
+      },
+      "TangentVWs": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "21",
+      "Position": "-960,492",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "19",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "22",
+      "Position": "-1572,492",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "23",
+      "Position": "-648,96",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "Texture2DOutput"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "24",
+      "Position": "-648,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "23",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "25",
+      "Position": "-588,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "Texture2DSampler"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "26",
+      "Position": "-588,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "27",
+      "Position": "-528,312",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "20",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "28",
+      "Position": "-528,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "27",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "660,120",
+      "Color": "Green",
+      "Title": "",
+      "Description": "to determine surface angle relative to projection.\nUp: - The vertical direction of the decal box (the Z-axis in decal space). Points upward in the decal\u0027s local orientation.",
+      "Layer": 2,
+      "Identifier": "29",
+      "Position": "168,156",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "660,96",
+      "Color": "Red",
+      "Title": "Warning!",
+      "Description": "Must be used with the decal template: Editor/templates/deferreddecal.cs",
+      "Layer": 1,
+      "Identifier": "30",
+      "Position": "168,288",
+      "HandleOffsets": {}
+    }
+  ]
+}

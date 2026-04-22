@@ -1,0 +1,165 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/upgradednodes/shdr-texture_sample.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": null,
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "ShadingModelPath": null,
+  "Domain": "Surface",
+  "TemplatePath": null,
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "1,1,1,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "1",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "SGETextureSampleNode",
+      "Mode": "TextureCubemap",
+      "Identifier": "1",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "TextureCubemapCoordinates": {
+        "Identifier": "7",
+        "Output": "Result"
+      },
+      "TextureCubemapInput": {
+        "Identifier": "4",
+        "Output": "Result"
+      },
+      "TextureCubemapSampler": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGETextureObjectNode",
+      "Mode": "TextureCubemap",
+      "Image": "textures/tex-cubemap.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
+      "UI": {
+        "Name": "Cubemap",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "2",
+      "Position": "-552,60",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "3",
+      "Position": "-336,96",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "2",
+        "Output": "TextureCubemapOutput"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "4",
+      "Position": "-336,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "432,180",
+      "Color": "Green",
+      "Title": "Texture Sample",
+      "Description": "Coordinates: - Add the coordinates here that you want to use for sampling your texture.\nTexture: - Add your \u0022Texture\u0022 output here. Make sure the modes between the two nodes match.\nSampler: - Add your \u0022Sampler\u0022 output here. It will use the correct Sampler instead of an accidental one.",
+      "Layer": 2,
+      "Identifier": "5",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "480,144",
+      "Color": "Purple",
+      "Title": "Modes",
+      "Description": "2D: - Samples a Texture2D. You can use Texture Coordinate, POM, World Space Position, etc. for the coordinates.\nCubemap: - Samples a Cubemap. You should use View Direction, Interior Mapping, etc. for the coordinates.",
+      "Layer": 1,
+      "Identifier": "6",
+      "Position": "168,192",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "ViewDirection",
+      "Identifier": "7",
+      "Position": "-552,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "8",
+      "Position": "-276,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "2",
+        "Output": "TextureCubemapSampler"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "9",
+      "Position": "-276,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    }
+  ]
+}

@@ -9,7 +9,9 @@
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
-      "PackageReferences": [],
+      "PackageReferences": [
+        "perkedel/sunadjustable_prefab"
+      ],
       "EditorReferences": null,
       "Mounts": null,
       "IsStandaloneOnly": false,

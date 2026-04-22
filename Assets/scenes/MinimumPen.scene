@@ -25,7 +25,7 @@
           "Author": "JOELwindows7",
           "Changes": null,
           "Description": "Minimum Test Map\n\nUse this map to test anything minimally, with minimum overhead as much as possible.",
-          "Group": null,
+          "Group": "Test",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -510,6 +510,54 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "8ada778d-3962-4d5e-82a7-77d1903ebc02",
+      "__version": 2,
+      "Flags": 2048,
+      "Name": "CameraPreview",
+      "Position": "-3374.85498,-2260.63306,989.202515",
+      "Rotation": "-0.0474872552,0.102254033,0.331127316,0.936826229",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "7e9afb2a-ac81-406a-9473-4be252ea1678",
+          "__enabled": true,
+          "Flags": 0,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "EnablePostProcessing": true,
+          "FieldOfView": 124.28404,
+          "FovAxis": "Horizontal",
+          "IsMainCamera": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "PostProcessAnchor": null,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "RenderTexture": null,
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 16343,
+          "ZNear": 10
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -519,6 +567,7 @@
     "Metadata": {
       "Title": "Minimal Pen",
       "Description": "Minimum Test Map\n\nUse this map to test anything minimally, with minimum overhead as much as possible.",
+      "Group": "Test",
       "Author": "JOELwindows7",
       "Tags": "test,minimal,nolag"
     },
@@ -537,13 +586,13 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "d3047113-a044-4635-8cc3-92edfb3fbd60"
         }
+      },
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
       }
     }
   },

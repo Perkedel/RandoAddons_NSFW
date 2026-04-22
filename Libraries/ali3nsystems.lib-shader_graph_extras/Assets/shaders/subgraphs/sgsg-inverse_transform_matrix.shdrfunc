@@ -1,0 +1,261 @@
+{
+  "IsSubgraph": true,
+  "Path": "shaders/subgraphs/sgsg-inverse_transform_matrix.shdrfunc",
+  "Model": null,
+  "Title": "SGE - Inverse Transform Matrix",
+  "Description": null,
+  "Category": "Shader Graph Extras - Universal",
+  "Icon": "alt_route",
+  "AddToNodeLibrary": true,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "DotProduct",
+      "Identifier": "0",
+      "Position": "-3864,240",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "11",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "1",
+      "Position": "-3864,324",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "12",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "FunctionResult",
+      "FunctionOutputs": [
+        {
+          "Id": "9a464695-0811-46f7-967f-1ce4d28dbf1d",
+          "Name": "Output",
+          "Type": "Vector3",
+          "Preview": "None",
+          "Priority": 1
+        }
+      ],
+      "Identifier": "2",
+      "Position": "-3096,240",
+      "HandleOffsets": {},
+      "Output": {
+        "Identifier": "3",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "AppendVector",
+      "Identifier": "3",
+      "Position": "-3312,240",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "4",
+        "Output": "Output"
+      },
+      "B": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "AppendVector",
+      "Identifier": "4",
+      "Position": "-3588,240",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "0",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "5",
+      "Position": "-3864,408",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "14",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "6",
+      "Position": "-3648,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "7",
+      "Position": "-3648,300",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "8",
+      "Position": "-3372,444",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "9",
+      "Position": "-3372,300",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Coordinates",
+      "InputDescription": "",
+      "InputType": "Float3",
+      "DefaultFloat": 0,
+      "DefaultFloat2": "0,0",
+      "DefaultFloat3": "0,0,0",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": true,
+      "PortOrder": 1,
+      "Identifier": "10",
+      "Position": "-4140,180",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Input A",
+      "InputDescription": "",
+      "InputType": "Float3",
+      "DefaultFloat": 0,
+      "DefaultFloat2": "0,0",
+      "DefaultFloat3": "0,0,0",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": false,
+      "PortOrder": 2,
+      "Identifier": "11",
+      "Position": "-4140,240",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Input B",
+      "InputDescription": "",
+      "InputType": "Float3",
+      "DefaultFloat": 0,
+      "DefaultFloat2": "0,0",
+      "DefaultFloat3": "0,0,0",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": false,
+      "PortOrder": 3,
+      "Identifier": "12",
+      "Position": "-4140,324",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Input C",
+      "InputDescription": "",
+      "InputType": "Float3",
+      "DefaultFloat": 0,
+      "DefaultFloat2": "0,0",
+      "DefaultFloat3": "0,0,0",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": false,
+      "PortOrder": 4,
+      "Identifier": "13",
+      "Position": "-4140,408",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "14",
+      "Position": "-3924,468",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "15",
+      "Position": "-3924,384",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "16",
+      "Position": "-3924,300",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "17",
+      "Position": "-3924,216",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    }
+  ]
+}

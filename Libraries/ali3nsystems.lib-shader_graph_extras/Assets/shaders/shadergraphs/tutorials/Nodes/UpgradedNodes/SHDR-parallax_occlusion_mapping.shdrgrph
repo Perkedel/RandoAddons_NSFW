@@ -1,0 +1,750 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/upgradednodes/shdr-parallax_occlusion_mapping.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": null,
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "ShadingModelPath": null,
+  "Domain": "Surface",
+  "TemplatePath": null,
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "1,1,1,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "Normal": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "Roughness": {
+        "Identifier": "22",
+        "Output": "Result"
+      },
+      "Metalness": {
+        "Identifier": "23",
+        "Output": "Result"
+      },
+      "AmbientOcclusion": {
+        "Identifier": "24",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "1",
+      "Position": "-1284,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "43",
+        "Output": "Texture2DSampler"
+      }
+    },
+    {
+      "_class": "TangentViewVector",
+      "Identifier": "2",
+      "Position": "-1596,276",
+      "HandleOffsets": {},
+      "WorldPosition": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "WorldNormal": {
+        "Identifier": "29",
+        "Output": "Result"
+      },
+      "TangentUWs": {
+        "Identifier": "32",
+        "Output": "Result"
+      },
+      "TangentVWs": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "WorldPosition",
+      "Identifier": "3",
+      "Position": "-1992,276",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "WorldNormal",
+      "Identifier": "4",
+      "Position": "-1992,336",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "WorldTangent",
+      "Identifier": "5",
+      "Position": "-1992,396",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "6",
+      "Position": "-1560,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "7",
+      "Position": "-1284,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "decals/impact/concrete/decal_impact_concrete_03_color.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
+      "UI": {
+        "Name": "Albedo",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "8",
+      "Position": "-672,0",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "19",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "decals/impact/concrete/decal_impact_concrete_03_normal.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
+      "UI": {
+        "Name": "Normal",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "DXT5",
+        "SrgbRead": false,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "9",
+      "Position": "-672,192",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "decals/impact/concrete/decal_impact_concrete_03_rmo.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
+      "UI": {
+        "Name": "RMA",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "DXT5",
+        "SrgbRead": false,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "10",
+      "Position": "-672,384",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TransformNormal",
+      "InputSpace": "Tangent",
+      "OutputSpace": "Tangent",
+      "DecodeNormal": true,
+      "Identifier": "11",
+      "Position": "-456,192",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "12",
+      "Position": "-732,420",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "13",
+      "Position": "-732,228",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "19",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "14",
+      "Position": "-240,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "Offset",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "15",
+      "Position": "-1560,636",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.15,
+      "Name": "Amplitude",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "16",
+      "Position": "-1560,408",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "17",
+      "Position": "-180,444",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "10",
+        "Output": "R"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "18",
+      "Position": "-240,228",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "19",
+      "Position": "-732,36",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "44",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "20",
+      "Position": "-120,468",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "10",
+        "Output": "G"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "21",
+      "Position": "-60,492",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "10",
+        "Output": "B"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "22",
+      "Position": "-180,132",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "23",
+      "Position": "-120,156",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "20",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "24",
+      "Position": "-60,180",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "21",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "25",
+      "Position": "-1344,96",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "43",
+        "Output": "Texture2DOutput"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "26",
+      "Position": "-1344,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "588,168",
+      "Color": "Green",
+      "Title": "",
+      "Description": "Amplitude: - Controls the amplitude of the coordinates.\nMinimum Iterations: - Minimum number of height textures to sample based on the LOD.\nMaximum Iterations: - Maximum number of height textures to sample based on the LOD.",
+      "Layer": 3,
+      "Identifier": "27",
+      "Position": "168,180",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "28",
+      "Position": "-1776,372",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "29",
+      "Position": "-1776,336",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "28",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "30",
+      "Position": "-1716,432",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "U"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "31",
+      "Position": "-1656,456",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "V"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "32",
+      "Position": "-1716,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "30",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "33",
+      "Position": "-1656,384",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "31",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "34",
+      "Position": "-1224,312",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "35",
+      "Position": "-1224,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "34",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "36",
+      "Position": "-1164,444",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "37",
+      "Position": "-1044,672",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "38",
+      "Position": "-1164,132",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "36",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "39",
+      "Position": "-1044,228",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "37",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "588,168",
+      "Color": "Green",
+      "Title": "Parallax Occlusion Mapping",
+      "Description": "Coordinates: - Add your coordinates to sample the height.\nTexture: - Add your \u0022Texture\u0022 output here from the \u0022Texture Object\u0022 node.\nSampler: - Add your \u0022Sampler\u0022 output here from the \u0022Texture Object\u0022 node.\nTangent Space View Direction: - Add \u0022Tangent View Vector\u0022 node as shown.",
+      "Layer": 5,
+      "Identifier": "40",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "564,132",
+      "Color": "Orange",
+      "Title": "Info",
+      "Description": "If you want to use this node with \u0022Deferred Decals\u0022 template then look at: shaders/shadergraphs/tutorials/templates/deferred_decal/shdr-bullet_hole.shdrgrph",
+      "Layer": 4,
+      "Identifier": "41",
+      "Position": "768,156",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "564,144",
+      "Color": "Purple",
+      "Title": "Modes",
+      "Description": "Standard: - Moderately expensive with high quality results. Interpolates the layers and is about 2 times more expensive than \u0022Steep\u0022.\nSteep: - Cheapest but also the worst quality overall. You must use a lot of samples if you want decent results.\n\n",
+      "Layer": 1,
+      "Identifier": "42",
+      "Position": "768,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGETextureObjectNode",
+      "Mode": "Texture2D",
+      "Image": "decals/impact/concrete/decal_impact_concrete_03_height.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
+      "UI": {
+        "Name": "Height",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "DXT5",
+        "SrgbRead": false,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "43",
+      "Position": "-1560,60",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGEParallaxOcclusionMappingNode",
+      "Mode": "Standard",
+      "Channel": "Red",
+      "DefaultAmplitude": 0.1,
+      "DefaultMinimumIterations": 8,
+      "DefaultMaximumIterations": 32,
+      "DefaultLevelOfDetail": 1,
+      "DefaultOffset": 0.3,
+      "Identifier": "44",
+      "Position": "-984,0",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "Texture": {
+        "Identifier": "26",
+        "Output": "Result"
+      },
+      "Sampler": {
+        "Identifier": "7",
+        "Output": "Result"
+      },
+      "TangentSpaceViewDirection": {
+        "Identifier": "35",
+        "Output": "Result"
+      },
+      "Amplitude": {
+        "Identifier": "38",
+        "Output": "Result"
+      },
+      "LevelOfDetail": {
+        "Identifier": "49",
+        "Output": "Result"
+      },
+      "Offset": {
+        "Identifier": "39",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "588,132",
+      "Color": "Green",
+      "Title": "",
+      "Description": "Level Of Detail: - Lerps between the minimum and maximum numbers of height samples (0-1 = Minimum - Maximum).\nOffset: - Controls the offset of the coordinates.",
+      "Layer": 2,
+      "Identifier": "45",
+      "Position": "168,360",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphNode",
+      "SubgraphPath": "shaders/subgraphs/sgsg-level_of_detail.shdrfunc",
+      "DefaultValues": {
+        "Coordinates": "0,0",
+        "Input": 1,
+        "Minimum": 0,
+        "Maximum": 1,
+        "Scale": 1,
+        "Value": 4
+      },
+      "Identifier": "46",
+      "Position": "-1560,504",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "47",
+        "Output": "XY"
+      }
+    },
+    {
+      "_class": "ScreenPosition",
+      "Identifier": "47",
+      "Position": "-1992,480",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "48",
+      "Position": "-1104,540",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "46",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "49",
+      "Position": "-1104,204",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "48",
+        "Output": "Result"
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-level_of_detail.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "CommentNode",
+      "Size": "444,168",
+      "Color": "Green",
+      "Title": "Level Of Detail",
+      "Description": "Coordinates: - XY of the Screen Position to be sampled.\nValue: -Distance based on meters.\nMinimum: - Remaps the 0 (black) to this value\nMaximum: - Remaps the 1 (white) to this value.",
+      "Layer": 2,
+      "Identifier": "0",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "1",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "4",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "ScreenPosition",
+      "Identifier": "2",
+      "Position": "-432,-24",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "432,144",
+      "Color": "Orange",
+      "Title": "Info",
+      "Description": "This node uses Depth sampled in \u0022Eye\u0022 mode so zNear and zFar won\u0027t change it. It will always be the same regardless of your camera settings. This is used for Parallax Occlusion Mapping and many other effects.",
+      "Layer": 1,
+      "Identifier": "3",
+      "Position": "168,180",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphNode",
+      "SubgraphPath": "shaders/subgraphs/sgsg-level_of_detail.shdrfunc",
+      "DefaultValues": {
+        "Coordinates": "0,0",
+        "Input": 0.116,
+        "Minimum": 0,
+        "Maximum": 0.1,
+        "Scale": 0.116,
+        "Value": 4
+      },
+      "Identifier": "4",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "2",
+        "Output": "XY"
+      }
+    }
+  ]
+}

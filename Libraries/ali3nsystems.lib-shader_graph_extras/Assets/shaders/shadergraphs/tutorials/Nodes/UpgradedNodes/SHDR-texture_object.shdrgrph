@@ -1,0 +1,167 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/upgradednodes/shdr-texture_object.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": null,
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "ShadingModelPath": null,
+  "Domain": "Surface",
+  "TemplatePath": null,
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "1,1,1,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "1",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "SGETextureSampleNode",
+      "Mode": "Texture2D",
+      "Identifier": "1",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Texture2DCoordinates": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "Texture2DInput": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "Texture2DSampler": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "2",
+      "Position": "-552,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGETextureObjectNode",
+      "Mode": "Texture2D",
+      "Image": "decals/impact/dirt/decal_impact_dirt_01_color.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
+      "UI": {
+        "Name": "Texture2D",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "3",
+      "Position": "-552,60",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "4",
+      "Position": "-336,96",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Texture2DOutput"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "5",
+      "Position": "-336,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "384,168",
+      "Color": "Green",
+      "Title": "Texture Object",
+      "Description": "Output: - Outputs a texture depending on the mode which can then be sampled using \u0022Texture Sample\u0022 node. Make sure the modes between \u0022Texture Object\u0022 and \u0022Texture Sample\u0022 are the exact same otherwise it won\u0027t work.",
+      "Layer": 2,
+      "Identifier": "6",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "384,132",
+      "Color": "Purple",
+      "Title": "Modes",
+      "Description": "2D: - Outputs a 2D texture.\nCubemap: - Outputs a cubemap texture.\nSampler: - Outputs the correct sampler to use.",
+      "Layer": 1,
+      "Identifier": "7",
+      "Position": "168,180",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "8",
+      "Position": "-276,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Texture2DSampler"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "9",
+      "Position": "-276,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    }
+  ]
+}

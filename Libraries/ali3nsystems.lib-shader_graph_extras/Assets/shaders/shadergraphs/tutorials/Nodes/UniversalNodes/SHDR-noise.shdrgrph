@@ -1,0 +1,135 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-noise.shdrgrph",
+  "Model": "models/dev/box.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 0.1,
+      "Identifier": "0",
+      "Position": "-408,0",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "ObjectPosition",
+      "Identifier": "1",
+      "Position": "-624,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "372,156",
+      "Color": "Green",
+      "Title": "Noise",
+      "Description": "Coordinates: -Coordinates to sample the noise with. Use Object Space Position or World Space Position with 3D mode.\nOctaves: - Number of samples for fBM noise.\nOffset: - Cell offset for Voronoi noise.",
+      "Layer": 3,
+      "Identifier": "2",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "612,120",
+      "Color": "Purple",
+      "Title": "Dimension",
+      "Description": "-2D: Flat patterns on a plane.\n-3D: Patterns filling a volume of space. Can plug in Time as the Z component of the coordinates to offset the seed but it will then look like animated 2D noise.",
+      "Layer": 1,
+      "Identifier": "3",
+      "Position": "396,168",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "4",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "9",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "5",
+      "Position": "-492,84",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "6",
+      "Position": "-276,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "7",
+      "Position": "-276,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "216,156",
+      "Color": "Purple",
+      "Title": "Mode",
+      "Description": "-Static: Static noise.\n-Value: Value noise.\n-Simplex: Simplex noise.\n-fBM: fBM noise.\n-Voronoi: Voronoi noise.",
+      "Layer": 2,
+      "Identifier": "8",
+      "Position": "168,168",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGENoiseNode",
+      "Mode": "Voronoi",
+      "Dimension": "Noise2D",
+      "DefaultOctaves": 6,
+      "DefaultOffset": 3.1415927,
+      "Identifier": "9",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "0",
+        "Output": "Result"
+      },
+      "Offset": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    }
+  ]
+}

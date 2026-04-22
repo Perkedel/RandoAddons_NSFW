@@ -1,0 +1,137 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-clamp.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "SimplexNoise",
+      "Identifier": "0",
+      "Position": "-492,0",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "312,168",
+      "Color": "Green",
+      "Title": "Clamp",
+      "Description": "Input: - Can be noise or anything else.\nMin: - Clamps the generated value to the minimum specified value.\nMax: - Clamps the generated value to the maximum specified value.",
+      "Layer": 1,
+      "Identifier": "1",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Sine",
+      "Identifier": "2",
+      "Position": "-636,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "3",
+      "Position": "-852,60",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGEClampNode",
+      "DefaultMinimum": 0,
+      "DefaultMaximum": 1,
+      "Identifier": "4",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "0",
+        "Output": "Result"
+      },
+      "Maximum": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "5",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "4",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "RemapValue",
+      "In": 0.5,
+      "InMin": -1,
+      "InMax": 1,
+      "OutMin": 0,
+      "OutMax": 1,
+      "Clamp": true,
+      "Identifier": "6",
+      "Position": "-492,60",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "7",
+      "Position": "-852,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "8",
+      "Position": "-276,96",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "9",
+      "Position": "-276,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    }
+  ]
+}

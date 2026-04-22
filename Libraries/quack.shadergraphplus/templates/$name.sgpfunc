@@ -1,0 +1,40 @@
+{
+  "__version": 4,
+  "IsSubgraph": true,
+  "Path": "",
+  "Model": "models/dev/box.vmdl",
+  "Title": "",
+  "Description": "",
+  "Category": "",
+  "Icon": "",
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "Metadata": {},
+  "PreviewSettings": {
+    "ViewMode": "Perspective",
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": true,
+    "ShowSkybox": true,
+    "BackgroundColor": "1,1,1,1",
+    "Tint": "1,1,1,1"
+  },
+  "nodes": [
+    {
+      "_class": "SubgraphOutput",
+      "__version": 1,
+      "OutputIdentifier": "56022ee5-9c59-48c1-8458-52c33c32d8cc",
+      "OutputName": "Output0",
+      "OutputDescription": "",
+      "OutputType": "Vector3",
+      "Preview": "None",
+      "PortOrder": 0,
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {}
+    }
+  ],
+  "parameters": []
+}

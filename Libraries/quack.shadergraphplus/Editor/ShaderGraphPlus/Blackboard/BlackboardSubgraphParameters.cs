@@ -1,0 +1,271 @@
+﻿namespace ShaderGraphPlus;
+
+/// <summary>
+/// Bool value subgraph input
+/// </summary>
+[Title( "Bool" ), Icon( "check_box" ), Order( 0 )]
+[SubgraphOnly]
+public sealed class BoolSubgraphInputParameter : BlackboardSubgraphInputParameter<bool>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Bool;
+
+	public BoolSubgraphInputParameter() : base()
+	{
+		Value = false;
+	}
+}
+
+/// <summary>
+/// Int value subgraph input
+/// </summary>
+[Title( "Int" ), Icon( "looks_one" ), Order( 1 )]
+[SubgraphOnly]
+public sealed class IntSubgraphInputParameter : BlackboardSubgraphInputParameter<int>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Int;
+
+	[Group( "Range" )] public int Min { get; set; }
+	[Group( "Range" )] public int Max { get; set; }
+
+	public IntSubgraphInputParameter()
+	{
+		Value = 1;
+		Min = 0;
+		Max = 1;
+	}
+}
+
+/// <summary>
+/// Float value subgraph input
+/// </summary>
+[Title( "Float" ), Icon( "looks_one" ), Order( 2 )]
+[SubgraphOnly]
+public sealed class FloatSubgraphInputParameter : BlackboardSubgraphInputParameter<float>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Float;
+
+	[Group( "Range" )] public float Min { get; set; }
+	[Group( "Range" )] public float Max { get; set; }
+
+	public FloatSubgraphInputParameter()
+	{
+		Value = 1.0f;
+		Min = 0.0f;
+		Max = 1.0f;
+	}
+}
+
+/// <summary>
+/// Float2 value subgraph input
+/// </summary>
+[Title( "Float2" ), Icon( "looks_two" ), Order( 3 )]
+[SubgraphOnly]
+public sealed class Float2SubgraphInputParameter : BlackboardSubgraphInputParameter<Vector2>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Vector2;
+
+	[Group( "Range" )] public Vector2 Min { get; set; }
+	[Group( "Range" )] public Vector2 Max { get; set; }
+
+	public Float2SubgraphInputParameter()
+	{
+		Value = Vector2.One;
+		Min = Vector2.Zero;
+		Max = Vector2.One;
+	}
+}
+
+/// <summary>
+/// Float3 value subgraph input
+/// </summary>
+[Title( "Float3" ), Icon( "looks_3" ), Order( 4 )]
+[SubgraphOnly]
+public sealed class Float3SubgraphInputParameter : BlackboardSubgraphInputParameter<Vector3>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Vector3;
+
+	[Group( "Range" )] public Vector3 Min { get; set; }
+	[Group( "Range" )] public Vector3 Max { get; set; }
+
+	public Float3SubgraphInputParameter()
+	{
+		Value = Vector3.One;
+		Min = Vector3.Zero;
+		Max = Vector3.One;
+	}
+}
+
+/// <summary>
+/// Float4 value subgraph input
+/// </summary>
+[Title( "Float4" ), Icon( "looks_4" ), Order( 5 )]
+[SubgraphOnly]
+public sealed class Float4SubgraphInputParameter : BlackboardSubgraphInputParameter<Vector4>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Vector4;
+
+	[Group( "Range" )] public Vector4 Min { get; set; }
+	[Group( "Range" )] public Vector4 Max { get; set; }
+
+	public Float4SubgraphInputParameter()
+	{
+		Value = Vector4.One;
+		Min = Vector4.Zero;
+		Max = Vector4.One;
+	}
+}
+
+/// <summary>
+/// Color value subgraph input
+/// </summary>
+[Title( "Color" ), Icon( "palette" ), Order( 6 )]
+[SubgraphOnly]
+public sealed class ColorSubgraphInputParameter : BlackboardSubgraphInputParameter<Color>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Color;
+
+	public ColorSubgraphInputParameter()
+	{
+		Value = Color.White;
+	}
+}
+
+/// <summary>
+/// Float2x2 value subgraph input
+/// </summary>
+[Title( "Float2x2" ), Icon( "apps" ), Order( 7 )]
+[SubgraphOnly]
+public sealed class Float2x2SubgraphInputParameter : BlackboardSubgraphInputParameter<Float2x2>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Float2x2;
+
+	public Float2x2SubgraphInputParameter() : base()
+	{
+		Value = new Float2x2();
+	}
+}
+
+/// <summary>
+/// Float3x3 value subgraph input
+/// </summary>
+[Title( "Float3x3" ), Icon( "apps" ), Order( 8 )]
+[SubgraphOnly]
+public sealed class Float3x3SubgraphInputParameter : BlackboardSubgraphInputParameter<Float3x3>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Float3x3;
+
+	public Float3x3SubgraphInputParameter() : base()
+	{
+		Value = new Float3x3();
+	}
+}
+
+/// <summary>
+/// Float4x4 value subgraph input
+/// </summary>
+[Title( "Float4x4" ), Icon( "apps" ), Order( 9 )]
+[SubgraphOnly]
+public sealed class Float4x4SubgraphInputParameter : BlackboardSubgraphInputParameter<Float4x4>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Float4x4;
+
+	public Float4x4SubgraphInputParameter() : base()
+	{
+		Value = new Float4x4();
+	}
+}
+
+/// <summary>
+/// Gradient value subgraph input
+/// </summary>
+[Title( "Gradient" ), Icon( "gradient" ), Order( 10 )]
+[SubgraphOnly]
+public sealed class GradientSubgraphInputParameter : BlackboardSubgraphInputParameter<Gradient>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Gradient;
+
+	public GradientSubgraphInputParameter() : base()
+	{
+		Value = new Gradient();
+	}
+}
+
+/// <summary>
+/// Texture2D subgraph input parameter
+/// </summary>
+[Title( "Texture2D" ), Icon( "image" ), Order( 11 )]
+public sealed class Texture2DSubgraphInputParameter : BlackboardSubgraphInputParameter<TextureInput>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.Texture2DObject;
+
+	[Hide, JsonIgnore]
+	public override bool IsRequired { get; set; } = true;
+
+	public Texture2DSubgraphInputParameter() : base()
+	{
+		Value = new TextureInput()
+		{
+			ImageFormat = TextureFormat.DXT5,
+			Type = TextureType.Tex2D,
+			SrgbRead = true,
+			DefaultColor = Color.White,
+		};
+		IsRequired = true;
+	}
+}
+
+/// <summary>
+/// TextureCube subgraph input parameter
+/// </summary>
+[Title( "TextureCube" ), Icon( "image" ), Order( 12 )]
+public sealed class TextureCubeSubgraphInputParameter : BlackboardSubgraphInputParameter<TextureInput>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.TextureCubeObject;
+
+	[Hide, JsonIgnore]
+	public override bool IsRequired { get; set; } = true;
+
+	public TextureCubeSubgraphInputParameter() : base()
+	{
+		Value = new TextureInput()
+		{
+			ImageFormat = TextureFormat.DXT5,
+			Type = TextureType.TexCube,
+			SrgbRead = true,
+			DefaultColor = Color.White,
+		};
+		IsRequired = true;
+	}
+}
+
+/// <summary>
+/// SamplerState subgraph input
+/// </summary>
+[Title( "Sampler State" ), Icon( "colorize" ), Order( 13 )]
+[SubgraphOnly]
+public sealed class SamplerStateSubgraphInputParameter : BlackboardSubgraphInputParameter<Sampler>
+{
+	[Hide, JsonIgnore]
+	public override SubgraphPortType InputType => SubgraphPortType.SamplerState;
+
+	//[Hide, JsonIgnore]
+	//public override bool IsRequired { get; set; } = true;
+
+	public SamplerStateSubgraphInputParameter() : base()
+	{
+		Value = new Sampler();
+	}
+}

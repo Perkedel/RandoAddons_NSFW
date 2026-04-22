@@ -1,0 +1,104 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-scene_depth.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "RemapValue",
+      "In": 0.5,
+      "InMin": 0.08,
+      "InMax": 0.12,
+      "OutMin": 0,
+      "OutMax": 1,
+      "Clamp": true,
+      "Identifier": "0",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "4",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "444,84",
+      "Color": "Green",
+      "Title": "Scene Depth",
+      "Description": "Coordinates: - XY of the Screen Position to be sampled.",
+      "Layer": 3,
+      "Identifier": "1",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "2",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "0",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "480,132",
+      "Color": "Purple",
+      "Title": "Modes",
+      "Description": "Raw: - Raw depth buffer value.\nLinear: - Depth normalized between 0-1 (0 = zFar, 1 = zNear).\nEye: - Depth in view space (world units from camera).",
+      "Layer": 2,
+      "Identifier": "3",
+      "Position": "168,96",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGESceneDepthNode",
+      "Mode": "Raw",
+      "Identifier": "4",
+      "Position": "-432,0",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "5",
+        "Output": "XY"
+      }
+    },
+    {
+      "_class": "ScreenPosition",
+      "Identifier": "5",
+      "Position": "-648,-24",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "372,168",
+      "Color": "Red",
+      "Title": "Warning!",
+      "Description": "Eye mode will only show white by default, in order to get results from it do this:\n1. - Multiply it by 0.001 or another low value.\n2. - Invert the result using a \u0022One Minus\u0022 node\n3. - Finally saturate using \u0022Saturate\u0022 Node.",
+      "Layer": 1,
+      "Identifier": "6",
+      "Position": "168,240",
+      "HandleOffsets": {}
+    }
+  ]
+}

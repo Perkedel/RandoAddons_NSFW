@@ -1,0 +1,274 @@
+{
+  "IsSubgraph": true,
+  "Path": "shaders/subgraphs/sgsg-depth_intersection.shdrfunc",
+  "Model": null,
+  "Title": "SGE - Depth Intersection",
+  "Description": "",
+  "Category": "Shader Graph Extras - Universal",
+  "Icon": "join_inner",
+  "AddToNodeLibrary": true,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "FunctionResult",
+      "FunctionOutputs": [
+        {
+          "Id": "696b99ca-57f9-4ba0-bdea-27172aa4f1f5",
+          "Name": "Output",
+          "Type": "float",
+          "Preview": "None",
+          "Priority": 1
+        }
+      ],
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Output": {
+        "Identifier": "20",
+        "Output": "Out"
+      }
+    },
+    {
+      "_class": "WorldPosition",
+      "Identifier": "1",
+      "Position": "-1284,24",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Camera",
+      "Identifier": "2",
+      "Position": "-1284,84",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "3",
+      "Position": "-1008,24",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "4",
+      "Position": "-1068,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "2",
+        "Output": "WorldPosition"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "5",
+      "Position": "-1068,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "6",
+      "Position": "-816,24",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "7",
+      "Position": "-876,144",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "2",
+        "Output": "Direction"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "8",
+      "Position": "-876,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "9",
+      "Position": "-540,84",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "12",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Offset",
+      "InputDescription": "",
+      "InputType": "Float",
+      "DefaultFloat": 1,
+      "DefaultFloat2": "0,0",
+      "DefaultFloat3": "0,0,0",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": false,
+      "PortOrder": 1,
+      "Identifier": "10",
+      "Position": "-816,108",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "11",
+      "Position": "-600,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "12",
+      "Position": "-600,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SmoothStep",
+      "DefaultInput": 0,
+      "DefaultEdge1": 0,
+      "DefaultEdge2": 0,
+      "Identifier": "13",
+      "Position": "-348,0",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "19",
+        "Output": "Result"
+      },
+      "Edge1": {
+        "Identifier": "11",
+        "Output": "Result"
+      },
+      "Edge2": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "14",
+      "Position": "-408,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "15",
+      "Position": "-408,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "14",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGESceneDepthNode",
+      "Mode": "Eye",
+      "Identifier": "16",
+      "Position": "-624,-84",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "17",
+        "Output": "XY"
+      }
+    },
+    {
+      "_class": "ScreenPosition",
+      "Identifier": "17",
+      "Position": "-1284,-108",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "18",
+      "Position": "-408,-48",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "16",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "19",
+      "Position": "-408,36",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "OneMinus",
+      "Identifier": "20",
+      "Position": "-132,0",
+      "HandleOffsets": {},
+      "In": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    }
+  ]
+}

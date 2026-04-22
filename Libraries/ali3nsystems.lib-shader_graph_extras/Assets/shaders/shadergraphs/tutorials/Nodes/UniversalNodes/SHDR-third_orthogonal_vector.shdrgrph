@@ -1,0 +1,81 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-third_orthogonal_vector.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "CommentNode",
+      "Size": "348,108",
+      "Color": "Green",
+      "Title": "Third Orthogonal Vector",
+      "Description": "Input A: - Input A Vector to be normalized.\nInput B: - Input B Vector to be normalized.",
+      "Layer": 2,
+      "Identifier": "0",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "1",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "4",
+        "Output": "Output C"
+      }
+    },
+    {
+      "_class": "WorldPosition",
+      "Identifier": "2",
+      "Position": "-432,-48",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "504,168",
+      "Color": "Blue",
+      "Title": "Outputs",
+      "Description": "Output A: - Normalized Input A.\nOutput B: - Third orthogonal vector perpendicular to both inputs, with safe normalization (returns black if degenerate).\nOutput C: - X component of the intermediate cross product (the \u0022bitangent\u0022 between the two inputs), with safe normalization.",
+      "Layer": 1,
+      "Identifier": "3",
+      "Position": "168,120",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphNode",
+      "SubgraphPath": "shaders/subgraphs/sgsg-third_orthogonal_vector.shdrfunc",
+      "DefaultValues": {
+        "Input A": "1,0,0",
+        "Input B": "1,1,1"
+      },
+      "Identifier": "4",
+      "Position": "-216,-48",
+      "HandleOffsets": {},
+      "Input A": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    }
+  ]
+}

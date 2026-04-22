@@ -1,0 +1,220 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/upgradednodes/shdr-blur.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "ShadingModelPath": null,
+  "Domain": "Surface",
+  "TemplatePath": null,
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "0",
+      "Position": "-396,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "1",
+      "Position": "-396,96",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Texture2DOutput"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "636,168",
+      "Color": "Green",
+      "Title": "Blur",
+      "Description": "Coordinates: - Coordinates to sample the texture with.\nTexture: - Input texture.\nSampler: - Sampler of the texture.\nValue: - Value of the blur.\nDirections: - Number of radial angles to sample in a circle around the center pixel.",
+      "Layer": 1,
+      "Identifier": "2",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "3",
+      "Position": "-612,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "4",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "5",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "SGEBlurNode",
+      "DefaultValue": 1,
+      "DefaultDirections": 16,
+      "DefaultQuality": 4,
+      "DefaultTaps": 1,
+      "Identifier": "5",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "Texture": {
+        "Identifier": "0",
+        "Output": "Result"
+      },
+      "Sampler": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "Value": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGETextureObjectNode",
+      "Mode": "Texture2D",
+      "Image": "decals/impact/wood/decal_impact_wood_03_color.png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Wrap",
+        "AddressV": "Wrap"
+      },
+      "UI": {
+        "Name": "Color",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "6",
+      "Position": "-612,60",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "7",
+      "Position": "-336,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Texture2DSampler"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "8",
+      "Position": "-336,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.1,
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "9",
+      "Position": "-612,276",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "10",
+      "Position": "-276,312",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "11",
+      "Position": "-276,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "636,108",
+      "Color": "Green",
+      "Title": "",
+      "Description": "Quality: - Number of samples along each radial direction from center outward.\nTaps: - Starting sample count used as divisor for averaging.",
+      "Layer": 2,
+      "Identifier": "12",
+      "Position": "168,180",
+      "HandleOffsets": {}
+    }
+  ]
+}

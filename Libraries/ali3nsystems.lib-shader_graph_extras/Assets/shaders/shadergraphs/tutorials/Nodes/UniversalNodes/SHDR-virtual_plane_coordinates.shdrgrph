@@ -1,0 +1,85 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-virtual_plane_coordinates.shdrgrph",
+  "Model": null,
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "CommentNode",
+      "Size": "384,132",
+      "Color": "Green",
+      "Title": "Virtual Plane Coordinates",
+      "Description": "Center: -Center of the generated coordinates.\nNormal: -Which way the coordinates are facing.\nScale: -Scale of the coordinates.",
+      "Layer": 2,
+      "Identifier": "0",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "1",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "2",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "SGESphereMaskNode",
+      "DefaultCenter": "0,0,0",
+      "DefaultRadius": 0,
+      "DefaultHardness": 32,
+      "Identifier": "2",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "3",
+        "Output": "World Space Position - Centered"
+      }
+    },
+    {
+      "_class": "SubgraphNode",
+      "SubgraphPath": "shaders/subgraphs/sgsg-virtual_plane_coordinates.shdrfunc",
+      "DefaultValues": {
+        "Center": "0,0,0",
+        "Normal": "0,0,1",
+        "Scale": "1,1"
+      },
+      "Identifier": "3",
+      "Position": "-432,-48",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "612,144",
+      "Color": "Blue",
+      "Title": "Outputs",
+      "Description": "Texture Coordinate: - The 2D UVs of the virtual plane coordinates.\nWorld Space Position: - The world position at each point on the virtual plane.\nWorld Space Position - Centered: - The world position centered on the specified position. This means position will be 0,0,0 at the specified center.",
+      "Layer": 1,
+      "Identifier": "4",
+      "Position": "168,144",
+      "HandleOffsets": {}
+    }
+  ]
+}

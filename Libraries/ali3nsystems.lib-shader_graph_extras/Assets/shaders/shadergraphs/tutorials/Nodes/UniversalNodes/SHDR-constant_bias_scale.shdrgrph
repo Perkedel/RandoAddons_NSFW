@@ -1,0 +1,79 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-constant_bias_scale.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "CommentNode",
+      "Size": "324,144",
+      "Color": "Green",
+      "Title": "Constant Bias Scale",
+      "Description": "Input: - Can be noise or anything else.\nBias: - Value that adds to the input.\nScale: - Value that multiplies the addition between input and bias.",
+      "Layer": 1,
+      "Identifier": "0",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGEConstantBiasScaleNode",
+      "DefaultBias": 0.49999976,
+      "DefaultScale": -1,
+      "Identifier": "1",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "2",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "1",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "SimplexNoise",
+      "Identifier": "3",
+      "Position": "-432,0",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "5,5",
+      "Identifier": "4",
+      "Position": "-648,0",
+      "HandleOffsets": {}
+    }
+  ]
+}

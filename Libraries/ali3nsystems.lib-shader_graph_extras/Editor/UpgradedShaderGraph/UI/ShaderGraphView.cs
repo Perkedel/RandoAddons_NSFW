@@ -1,0 +1,458 @@
+﻿namespace Editor.ShaderGraphExtras;
+
+public class ShaderGraphView : GraphView
+{
+	private readonly MainWindow _window;
+	private readonly UndoStack _undoStack;
+
+	protected override string ClipboardIdent => "shadergraph";
+
+	protected override string ViewCookie => _window?.AssetPath;
+
+	private static bool? _cachedConnectionStyle;
+
+	public static bool EnableGridAlignedWires
+	{
+		get => _cachedConnectionStyle ??= EditorCookie.Get( "shadergraph.gridwires", false );
+		set => EditorCookie.Set( "shadergraph.gridwires", _cachedConnectionStyle = value );
+	}
+
+	private ConnectionStyle _oldConnectionStyle;
+
+	public new ShaderGraph Graph
+	{
+		get => (ShaderGraph)base.Graph;
+		set => base.Graph = value;
+	}
+
+	private readonly Dictionary<string, INodeType> AvailableNodes = new( StringComparer.OrdinalIgnoreCase );
+
+	public override ConnectionStyle ConnectionStyle => EnableGridAlignedWires
+		? GridConnectionStyle.Instance
+		: ConnectionStyle.Default;
+
+	public ShaderGraphView( Widget parent, MainWindow window ) : base( parent )
+	{
+		_window = window;
+		_undoStack = window.UndoStack;
+
+		OnSelectionChanged += SelectionChanged;
+	}
+
+	protected override INodeType RerouteNodeType { get; } = new ClassNodeType( EditorTypeLibrary.GetType<Reroute>() );
+	protected override INodeType CommentNodeType { get; } = new ClassNodeType( EditorTypeLibrary.GetType<CommentNode>() );
+
+	public void AddNodeType<T>()
+		where T : BaseNode
+	{
+		AddNodeType( EditorTypeLibrary.GetType<T>() );
+	}
+
+	public void AddNodeType( TypeDescription type )
+	{
+		var nodeType = new ClassNodeType( type );
+
+
+		AvailableNodes.TryAdd( nodeType.Identifier, nodeType );
+	}
+
+	public void AddNodeType( string subgraphPath )
+	{
+		var subgraphTxt = Editor.FileSystem.Content.ReadAllText( subgraphPath );
+		var subgraph = new ShaderGraph();
+		subgraph.Deserialize( subgraphTxt );
+		if ( !subgraph.AddToNodeLibrary ) return;
+		var nodeType = new SubgraphNodeType( subgraphPath, EditorTypeLibrary.GetType<SubgraphNode>() );
+		nodeType.SetDisplayInfo( subgraph );
+		AvailableNodes.TryAdd( nodeType.Identifier, nodeType );
+	}
+
+	public INodeType FindNodeType( Type type )
+	{
+		return AvailableNodes.TryGetValue( type.FullName!, out var nodeType ) ? nodeType : null;
+	}
+
+	protected override INodeType NodeTypeFromDragEvent( DragEvent ev )
+	{
+		if ( ev.Data.Assets.FirstOrDefault() is { } asset )
+		{
+			if ( asset.IsInstalled )
+			{
+				if ( string.Equals( Path.GetExtension( asset.AssetPath ), ".shdrfunc", StringComparison.OrdinalIgnoreCase ) )
+				{
+					return new SubgraphNodeType( asset.AssetPath, EditorTypeLibrary.GetType<SubgraphNode>() );
+				}
+				else
+				{
+					var realAsset = asset.GetAssetAsync().Result;
+					if ( realAsset.AssetType == AssetType.ImageFile )
+					{
+						return new TextureNodeType( EditorTypeLibrary.GetType<TextureSampler>(), asset.AssetPath );
+					}
+				}
+			}
+		}
+
+		return AvailableNodes.TryGetValue( ev.Data.Text, out var type )
+			? type
+			: null;
+	}
+
+	protected override IEnumerable<INodeType> GetRelevantNodes( NodeQuery query )
+	{
+		return AvailableNodes.Values.Filter( query ).Where( x =>
+		{
+			if ( x is ClassNodeType classNodeType )
+			{
+				var targetType = classNodeType.Type.TargetType;
+				if ( !Graph.IsSubgraph && targetType == typeof( FunctionResult ) ) return false;
+				if ( Graph.IsSubgraph && targetType == typeof( Result ) ) return false;
+				if ( targetType == typeof( SubgraphNode ) && classNodeType.DisplayInfo.Name == targetType.Name.ToTitleCase() ) return false;
+				// Only show SubgraphInput when editing subgraphs
+				if ( !Graph.IsSubgraph && targetType == typeof( SubgraphInput ) ) return false;
+			}
+			return true;
+		} );
+	}
+
+	private Dictionary<Type, HandleConfig> HandleConfigs { get; } = new()
+	{
+		{ typeof(float), new HandleConfig( "Float", Color.Parse( "#8ec07c" ).Value ) },
+		{ typeof(Vector2), new HandleConfig( "Vector2", Color.Parse( "#ce67e0" ).Value ) },
+		{ typeof(Vector3), new HandleConfig( "Vector3", Color.Parse( "#7177e1" ).Value ) },
+		{ typeof(Vector4), new HandleConfig( "Vector4", Color.Parse( "#e0d867" ).Value ) },
+		{ typeof(Color), new HandleConfig( "Color", Color.Parse( "#c7ae32" ).Value ) },
+	};
+
+	protected override HandleConfig OnGetHandleConfig( Type type )
+	{
+		return HandleConfigs.TryGetValue( type, out var config ) ? config : base.OnGetHandleConfig( type );
+	}
+
+	public override void ChildValuesChanged( Widget source )
+	{
+		BindSystem.Flush();
+
+		base.ChildValuesChanged( source );
+
+		BindSystem.Flush();
+	}
+
+	public override void PushUndo( string name )
+	{
+		Log.Info( $"Push Undo ({name})" );
+		_undoStack.PushUndo( name, Graph.SerializeNodes() );
+		_window.OnUndoPushed();
+	}
+
+	public override void PushRedo()
+	{
+		Log.Info( "Push Redo" );
+		_undoStack.PushRedo( Graph.SerializeNodes() );
+		_window.SetDirty();
+	}
+
+	protected override void OnOpenContextMenu( Menu menu, Plug targetPlug )
+	{
+		var selectedNodes = SelectedItems.OfType<NodeUI>().ToArray();
+		if ( selectedNodes.Length > 1 && !selectedNodes.Any( x => x.Node is BaseResult ) )
+		{
+			menu.AddOption( "Create Custom Node...", "add_box", () =>
+			{
+				const string extension = "shdrfunc";
+
+				var fd = new FileDialog( null );
+				fd.Title = "Create Shader Graph Function";
+				fd.Directory = Project.Current.RootDirectory.FullName;
+				fd.DefaultSuffix = $".{extension}";
+				fd.SelectFile( $"untitled.{extension}" );
+				fd.SetFindFile();
+				fd.SetModeSave();
+				fd.SetNameFilter( $"ShaderGraph Function (*.{extension})" );
+				if ( !fd.Execute() ) return;
+
+				CreateSubgraphFromSelection( fd.SelectedFile );
+			} );
+		}
+	}
+
+	private void CreateSubgraphFromSelection( string filePath )
+	{
+		if ( string.IsNullOrWhiteSpace( filePath ) ) return;
+
+		var fileName = Path.GetFileNameWithoutExtension( filePath );
+		var subgraph = new ShaderGraph();
+		subgraph.Title = fileName.ToTitleCase();
+		subgraph.IsSubgraph = true;
+
+		// Grab all selected nodes
+		Vector2 rightmostPos = new Vector2( -9999, 0 );
+		var selectedNodes = SelectedItems.OfType<NodeUI>();
+		Dictionary<IPlugIn, IPlugOut> oldConnections = new();
+		foreach ( var node in selectedNodes )
+		{
+			if ( node.Node is not BaseNode baseNode ) continue;
+
+			foreach ( var input in baseNode.Inputs )
+			{
+				oldConnections[input] = input.ConnectedOutput;
+			}
+			subgraph.AddNode( baseNode );
+
+			rightmostPos.y += baseNode.Position.y;
+			if ( baseNode.Position.x > rightmostPos.x )
+			{
+				rightmostPos = rightmostPos.WithX( baseNode.Position.x );
+			}
+		}
+		rightmostPos.y /= selectedNodes.Count();
+
+		// Create Inputs/Constants
+		var nodesToAdd = new List<BaseNode>();
+		var previousOutputs = new Dictionary<string, IPlugOut>();
+		foreach ( var node in subgraph.Nodes )
+		{
+			foreach ( var input in node.Inputs )
+			{
+				var correspondingOutput = oldConnections[input];
+				var correspondingNode = subgraph.Nodes.FirstOrDefault( x => x.Identifier == correspondingOutput?.Node?.Identifier );
+				if ( correspondingOutput is not null && correspondingNode is null )
+				{
+					var inputName = $"{input.Identifier}_{correspondingOutput?.Node?.Identifier}";
+					var existingParameterNode = nodesToAdd.OfType<IParameterNode>().FirstOrDefault( x => x.Name == inputName );
+					if ( input.ConnectedOutput is not null )
+					{
+						previousOutputs[inputName] = input.ConnectedOutput;
+					}
+					if ( existingParameterNode is not null )
+					{
+						input.ConnectedOutput = (existingParameterNode as BaseNode).Outputs.FirstOrDefault();
+						continue;
+					}
+					if ( input.Type == typeof( float ) )
+					{
+						var subgraphInput = FindNodeType( typeof( SubgraphInput ) ).CreateNode( subgraph );
+						subgraphInput.Position = node.Position - new Vector2( 240, 0 );
+						if ( subgraphInput is SubgraphInput subgraphInputNode )
+						{
+							subgraphInputNode.InputName = inputName;
+							subgraphInputNode.InputType = InputType.Float;
+							subgraphInputNode.PortOrder = nodesToAdd.Count;
+							subgraphInputNode.OnFrame(); // Trigger update to create outputs
+							input.ConnectedOutput = subgraphInputNode.Outputs.FirstOrDefault();
+							nodesToAdd.Add( subgraphInputNode );
+						}
+					}
+					else if ( input.Type == typeof( Vector2 ) )
+					{
+						var subgraphInput = FindNodeType( typeof( SubgraphInput ) ).CreateNode( subgraph );
+						subgraphInput.Position = node.Position - new Vector2( 240, 0 );
+						if ( subgraphInput is SubgraphInput subgraphInputNode )
+						{
+							subgraphInputNode.InputName = inputName;
+							subgraphInputNode.InputType = InputType.Float2;
+							subgraphInputNode.PortOrder = nodesToAdd.Count;
+							subgraphInputNode.OnFrame(); // Trigger update to create outputs
+							input.ConnectedOutput = subgraphInputNode.Outputs.FirstOrDefault();
+							nodesToAdd.Add( subgraphInputNode );
+						}
+					}
+					else if ( input.Type == typeof( Vector3 ) )
+					{
+						var subgraphInput = FindNodeType( typeof( SubgraphInput ) ).CreateNode( subgraph );
+						subgraphInput.Position = node.Position - new Vector2( 240, 0 );
+						if ( subgraphInput is SubgraphInput subgraphInputNode )
+						{
+							subgraphInputNode.InputName = inputName;
+							subgraphInputNode.InputType = InputType.Float3;
+							subgraphInputNode.PortOrder = nodesToAdd.Count;
+							subgraphInputNode.OnFrame(); // Trigger update to create outputs
+							input.ConnectedOutput = subgraphInputNode.Outputs.FirstOrDefault();
+							nodesToAdd.Add( subgraphInputNode );
+						}
+					}
+					else if ( input.Type == typeof( Color ) )
+					{
+						var subgraphInput = FindNodeType( typeof( SubgraphInput ) ).CreateNode( subgraph );
+						subgraphInput.Position = node.Position - new Vector2( 240, 0 );
+						if ( subgraphInput is SubgraphInput subgraphInputNode )
+						{
+							subgraphInputNode.InputName = inputName;
+							subgraphInputNode.InputType = InputType.Color;
+							subgraphInputNode.PortOrder = nodesToAdd.Count;
+							subgraphInputNode.OnFrame(); // Trigger update to create outputs
+							input.ConnectedOutput = subgraphInputNode.Outputs.FirstOrDefault();
+							nodesToAdd.Add( subgraphInputNode );
+						}
+					}
+					else
+					{
+						// Default to float for unknown types
+						var subgraphInput = FindNodeType( typeof( SubgraphInput ) ).CreateNode( subgraph );
+						subgraphInput.Position = node.Position - new Vector2( 240, 0 );
+						if ( subgraphInput is SubgraphInput subgraphInputNode )
+						{
+							subgraphInputNode.InputName = inputName;
+							subgraphInputNode.InputType = InputType.Float;
+							subgraphInputNode.PortOrder = nodesToAdd.Count;
+							subgraphInputNode.OnFrame(); // Trigger update to create outputs
+							input.ConnectedOutput = subgraphInputNode.Outputs.FirstOrDefault();
+							nodesToAdd.Add( subgraphInputNode );
+						}
+					}
+				}
+			}
+		}
+
+		// Create Output/Result node
+		var frNode = FindNodeType( typeof( FunctionResult ) ).CreateNode( subgraph );
+		if ( frNode is FunctionResult resultNode )
+		{
+			resultNode.Position = rightmostPos + new Vector2( 240, 0 );
+			resultNode.FunctionOutputs = new();
+			foreach ( var node in subgraph.Nodes )
+			{
+				foreach ( var output in node.Outputs )
+				{
+					var correspondingNode = Graph.Nodes.FirstOrDefault( x => !subgraph.Nodes.Contains( x ) && x.Inputs.Any( x => x.ConnectedOutput == output ) );
+					if ( correspondingNode is null ) continue;
+					var inputName = $"{output.Identifier}_{output.Node.Identifier}";
+					resultNode.FunctionOutputs.Add( new FunctionOutput
+					{
+						Name = inputName,
+						TypeName = output.Type.FullName
+					} );
+					resultNode.CreateInputs();
+
+					var input = resultNode.Inputs.FirstOrDefault( x => x is BasePlugIn plugIn && plugIn.Info.Name == inputName );
+					input.ConnectedOutput = output;
+					break;
+				}
+			}
+			nodesToAdd.Add( resultNode );
+		}
+
+		// Add all the newly created nodes
+		foreach ( var node in nodesToAdd )
+		{
+			subgraph.AddNode( node );
+		}
+
+		// Save the newly created sub-graph
+		System.IO.File.WriteAllText( filePath, subgraph.Serialize() );
+		var asset = AssetSystem.RegisterFile( filePath );
+		MainAssetBrowser.Instance?.Local.UpdateAssetList();
+
+		PushUndo( "Create Subgraph from Selection" );
+
+		// Create the new subgraph node centered on the selected nodes
+		Vector2 centerPos = Vector2.Zero;
+		foreach ( var node in selectedNodes )
+		{
+			centerPos += node.Position;
+		}
+		centerPos /= selectedNodes.Count();
+		var subgraphNode = CreateNewNode( new SubgraphNodeType( asset.RelativePath, EditorTypeLibrary.GetType<SubgraphNode>() ) ).Node as SubgraphNode;
+		subgraphNode.Position = centerPos;
+
+		// Get all the collected inputs/outputs and connect them to the new subgraph node
+		foreach ( var node in Graph.Nodes )
+		{
+			if ( node == subgraphNode ) continue;
+
+			if ( selectedNodes.Any( x => x.Node == node ) )
+			{
+				foreach ( var input in node.Inputs )
+				{
+					var correspondingOutput = oldConnections[input];
+					if ( correspondingOutput is not null && !selectedNodes.Any( x => x.Node == correspondingOutput.Node ) )
+					{
+						var inputName = $"{input.Identifier}_{correspondingOutput.Node.Identifier}";
+						var newInput = subgraphNode.Inputs.FirstOrDefault( x => x.Identifier == inputName );
+						if ( previousOutputs.TryGetValue( inputName, out var previousOutput ) )
+						{
+							newInput.ConnectedOutput = previousOutput;
+						}
+					}
+				}
+			}
+			else
+			{
+				foreach ( var input in node.Inputs )
+				{
+					var correspondingOutput = input.ConnectedOutput;
+					if ( correspondingOutput is not null && selectedNodes.Any( x => x.Node == correspondingOutput.Node ) )
+					{
+						var inputName = $"{correspondingOutput.Identifier}_{correspondingOutput.Node.Identifier}";
+						var newOutput = subgraphNode.Outputs.FirstOrDefault( x => x.Identifier == inputName );
+						if ( newOutput is not null )
+						{
+							input.ConnectedOutput = newOutput;
+						}
+					}
+				}
+			}
+		}
+
+		PushRedo();
+		DeleteSelection();
+
+		// Delete all previously selected nodes
+		UpdateConnections( Graph.Nodes );
+	}
+
+	private void SelectionChanged()
+	{
+		var selectedNodes = SelectedItems
+			.OfType<NodeUI>()
+			.Where( n => n is not CommentUI )
+			.ToList();
+
+		if ( selectedNodes.Count == 0 )
+		{
+			_window.OnNodeSelected( null );
+			return;
+		}
+
+		if ( selectedNodes.Count == 1 )
+		{
+			_window.OnNodeSelected( (BaseNode)selectedNodes[0].Node );
+			return;
+		}
+
+		var nodes = selectedNodes
+			.Select( n => (BaseNode)n.Node )
+			.ToList();
+		_window.OnMultipleNodesSelected( nodes );
+	}
+
+	protected override void OnNodeCreated( INode node )
+	{
+		if ( node is SubgraphNode subgraphNode )
+		{
+			subgraphNode.OnNodeCreated();
+		}
+	}
+
+	[EditorEvent.Frame]
+	public void Frame()
+	{
+		foreach ( var node in Items )
+		{
+			if ( node is NodeUI nodeUI && nodeUI.Node is BaseNode baseNode )
+			{
+				baseNode.OnFrame();
+			}
+		}
+
+		if ( _oldConnectionStyle != ConnectionStyle )
+		{
+			_oldConnectionStyle = ConnectionStyle;
+
+			foreach ( var connection in Items.OfType<NodeEditor.Connection>() )
+			{
+				connection.Layout();
+			}
+		}
+	}
+}

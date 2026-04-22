@@ -1,0 +1,112 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-rotate_about_axis.shdrgrph",
+  "Model": null,
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Time",
+      "Identifier": "0",
+      "Position": "-624,84",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "1",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "7",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "ObjectPosition",
+      "Identifier": "2",
+      "Position": "-432,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "3",
+      "Position": "-276,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "4",
+      "Position": "-276,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 10,
+      "Identifier": "5",
+      "Position": "-408,84",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "0",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "468,144",
+      "Color": "Green",
+      "Title": "Rotate About Axis",
+      "Description": "Input: -Add Object Space Position or World Space Position.\nAxis: -Which axis to rotate around.\nRotation: -Use Degrees or Radians in the Properties tab to rotate the coordinates.",
+      "Layer": 1,
+      "Identifier": "6",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGERotateAboutAxisNode",
+      "DefaultAxis": "0,0,1",
+      "DefaultRotation": 0,
+      "Mode": "Degrees",
+      "Identifier": "7",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "Rotation": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    }
+  ]
+}

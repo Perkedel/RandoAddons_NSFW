@@ -1,0 +1,82 @@
+{
+  "IsSubgraph": true,
+  "Path": "shaders/subgraphs/sgsg-normal_decode.shdrfunc",
+  "Model": null,
+  "Title": "SGE - Normal Decode",
+  "Description": null,
+  "Category": "Shader Graph Extras - Universal",
+  "Icon": "transform",
+  "AddToNodeLibrary": true,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 2,
+      "Identifier": "0",
+      "Position": "648,4020",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "FunctionResult",
+      "FunctionOutputs": [
+        {
+          "Id": "ec1c7748-28f7-457b-8cd9-4e7c7d89e81f",
+          "Name": "Output",
+          "Type": "Vector3",
+          "Preview": "Normal",
+          "Priority": 1
+        }
+      ],
+      "Identifier": "1",
+      "Position": "912,4020",
+      "HandleOffsets": {},
+      "Output": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Input",
+      "InputDescription": "",
+      "InputType": "Float3",
+      "DefaultFloat": 0,
+      "DefaultFloat2": "0,0",
+      "DefaultFloat3": "0,0,0",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": true,
+      "PortOrder": 1,
+      "Identifier": "2",
+      "Position": "432,4020",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "3",
+      "Position": "780,4020",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "0",
+        "Output": "Result"
+      }
+    }
+  ]
+}

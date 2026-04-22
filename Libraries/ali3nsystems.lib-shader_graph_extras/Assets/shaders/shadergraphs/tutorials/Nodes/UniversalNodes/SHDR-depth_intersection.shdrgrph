@@ -1,0 +1,70 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-depth_intersection.shdrgrph",
+  "Model": null,
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Translucent",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "156,-96",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "1",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "SubgraphNode",
+      "SubgraphPath": "shaders/subgraphs/sgsg-depth_intersection.shdrfunc",
+      "DefaultValues": {
+        "Offset": 10
+      },
+      "Identifier": "1",
+      "Position": "-60,-96",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "432,84",
+      "Color": "Green",
+      "Title": "Depth Intersection",
+      "Description": "Offset: - Changes the offset between the intersection.\n",
+      "Layer": 2,
+      "Identifier": "2",
+      "Position": "324,-96",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "336,108",
+      "Color": "Red",
+      "Title": "Warning!",
+      "Description": "The scene intersection only works when the blending mode is set to translucent.",
+      "Layer": 1,
+      "Identifier": "3",
+      "Position": "324,0",
+      "HandleOffsets": {}
+    }
+  ]
+}

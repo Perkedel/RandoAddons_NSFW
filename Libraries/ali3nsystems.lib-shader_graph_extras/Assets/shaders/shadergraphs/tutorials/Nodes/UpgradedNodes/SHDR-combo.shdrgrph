@@ -1,0 +1,241 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/upgradednodes/shdr-combo.shdrgrph",
+  "Model": "models/dev/plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "ShadingModelPath": null,
+  "Domain": "Surface",
+  "TemplatePath": null,
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "12",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,0,0,1",
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "1",
+      "Position": "-552,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "2",
+      "Position": "-276,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "348,144",
+      "Color": "Purple",
+      "Title": "Type",
+      "Description": "Bool: - If selected you will only have true or false inputs.\nEnum: - Can select from 2-8 different inputs.",
+      "Layer": 3,
+      "Identifier": "3",
+      "Position": "516,216",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Float4",
+      "Value": "0,1,0,1",
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "4",
+      "Position": "-552,156",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "5",
+      "Position": "-336,192",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "6",
+      "Position": "-276,348",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "0,0,1,1",
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "7",
+      "Position": "-552,312",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "504,204",
+      "Color": "Green",
+      "Title": "Combo",
+      "Description": "Value: - Starts from 1 and will select which input to passthrough.\nif Bool type:\nTrue: - add your logic here when the bool is true.\nFalse: - add your logic here when the bool is false.\nif Enum type:\nState 1-8: - Define your states here, it will be selected depending on the value.\n",
+      "Layer": 2,
+      "Identifier": "8",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "216,204",
+      "Color": "Orange",
+      "Title": "Info",
+      "Description": "If there are multiple combos with the same name, then all of the other values and properties will be automatically synced.",
+      "Layer": 1,
+      "Identifier": "9",
+      "Position": "684,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "336,144",
+      "Color": "Purple",
+      "Title": "Mode",
+      "Description": "Static: - Compile-time shader variants. Enabled or disabled via material editor.\nDynamic: - Runtime switching. Enabled or disabled via C# code.",
+      "Layer": 3,
+      "Identifier": "10",
+      "Position": "168,216",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "11",
+      "Position": "-336,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGEComboNode",
+      "Mode": "Static",
+      "Type": "Enum",
+      "DefaultValue": 1,
+      "StateCount": 3,
+      "Name": {
+        "Name": "Combo Name"
+      },
+      "Group": {
+        "Group": "Combo Group"
+      },
+      "State1": "Red",
+      "State2": "Green",
+      "State3": "Blue",
+      "State4": "State 4",
+      "State5": "State 5",
+      "State6": "State 6",
+      "State7": "State 7",
+      "State8": "State 8",
+      "Identifier": "12",
+      "Position": "-216,0",
+      "HandleOffsets": {},
+      "InputState1": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "InputState2": {
+        "Identifier": "11",
+        "Output": "Result"
+      },
+      "InputState3": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "528,144",
+      "Color": "Blue",
+      "Title": "UI",
+      "Description": "if Bool type:\nName: - Name of the combo inside material editor and in C#.\nGroup: - The group in the material editor that the combo\u0027s a part of.\nState 1-8: The name of the individiual states inside material editor.",
+      "Layer": 4,
+      "Identifier": "13",
+      "Position": "168,372",
+      "HandleOffsets": {}
+    }
+  ]
+}

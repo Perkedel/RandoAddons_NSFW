@@ -1,0 +1,1438 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/templates/deferred_decal/shdr-bullet_hole.shdrgrph",
+  "Model": "models/dev/box.vmdl",
+  "Title": null,
+  "Description": null,
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Translucent",
+  "ShadingModel": "Lit",
+  "ShadingModelPath": "",
+  "Domain": "Custom",
+  "TemplatePath": "Editor/templates/DeferredDecal.cs",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": true,
+    "ShowSkybox": true,
+    "BackgroundColor": "1,1,1,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "67",
+        "Output": "Result"
+      },
+      "Opacity": {
+        "Identifier": "77",
+        "Output": "Result"
+      },
+      "Normal": {
+        "Identifier": "10",
+        "Output": "Result"
+      },
+      "Roughness": {
+        "Identifier": "15",
+        "Output": "Result"
+      },
+      "Metalness": {
+        "Identifier": "16",
+        "Output": "Result"
+      },
+      "AmbientOcclusion": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "textures/tex-decal@albedo(rgb),tint_mask(a).png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Clamp",
+        "AddressV": "Clamp"
+      },
+      "UI": {
+        "Name": "Albedo (RGB) Tint Mask (A)",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Srgb",
+        "ImageFormat": "DXT5",
+        "SrgbRead": true,
+        "Priority": 1,
+        "PrimaryGroup": {
+          "Name": "Albedo Tint Mask",
+          "Priority": 2
+        },
+        "SecondaryGroup": {
+          "Name": "Albedo Tint Mask - Texture",
+          "Priority": 1
+        }
+      },
+      "Identifier": "1",
+      "Position": "-1212,0",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "textures/tex-decal@roughness(r),metalness(g),ambient_occlusion(b),opacity(a).png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Clamp",
+        "AddressV": "Clamp"
+      },
+      "UI": {
+        "Name": "Roughness (R) Metalness (G) Ambient Occlusion (B) Opacity (A)",
+        "IsAttribute": false,
+        "Default": "1,1,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "DXT5",
+        "SrgbRead": false,
+        "Priority": 1,
+        "PrimaryGroup": {
+          "Name": "Roughness Metalness Ambient Occlusion Opacity",
+          "Priority": 4
+        },
+        "SecondaryGroup": {
+          "Name": "Roughness Metalness Ambient Occlusion Opacity - Texture",
+          "Priority": 1
+        }
+      },
+      "Identifier": "2",
+      "Position": "-1212,324",
+      "HandleOffsets": {},
+      "Coords": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "3",
+      "Position": "-192,456",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "78",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGETextureObjectNode",
+      "Mode": "Texture2D",
+      "Image": "textures/tex-decal@normal(rgb),height(a).png",
+      "Sampler": {
+        "Filter": "Aniso",
+        "AddressU": "Clamp",
+        "AddressV": "Clamp"
+      },
+      "UI": {
+        "Name": "Normal (RGB) Height (A)",
+        "IsAttribute": false,
+        "Default": "0.50196,0.50196,1,1",
+        "Extension": "Color",
+        "CustomExtension": null,
+        "ShowExtension": true,
+        "Processor": "None",
+        "ColorSpace": "Linear",
+        "ImageFormat": "DXT5",
+        "SrgbRead": false,
+        "Priority": 1,
+        "PrimaryGroup": {
+          "Name": "Normal Height",
+          "Priority": 3
+        },
+        "SecondaryGroup": {
+          "Name": "Normal Height - Texture",
+          "Priority": 1
+        }
+      },
+      "Identifier": "4",
+      "Position": "-2664,84",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "TransformNormal",
+      "InputSpace": "Tangent",
+      "OutputSpace": "World",
+      "DecodeNormal": true,
+      "Identifier": "5",
+      "Position": "-780,216",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "76",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "6",
+      "Position": "-1272,36",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "46",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "7",
+      "Position": "-1272,252",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "8",
+      "Position": "-1272,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "9",
+      "Position": "-2052,648",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "31",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "10",
+      "Position": "-564,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "11",
+      "Position": "-564,252",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "12",
+      "Position": "-504,384",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "2",
+        "Output": "R"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "13",
+      "Position": "-444,408",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "2",
+        "Output": "G"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "14",
+      "Position": "-384,432",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "2",
+        "Output": "B"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "15",
+      "Position": "-504,132",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "16",
+      "Position": "-444,156",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "17",
+      "Position": "-384,180",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "14",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "18",
+      "Position": "-1992,252",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "51",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "19",
+      "Position": "-2292,336",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "88",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "DefaultA": 1,
+      "DefaultB": 0,
+      "Fraction": 0.5,
+      "Identifier": "20",
+      "Position": "-2388,480",
+      "HandleOffsets": {},
+      "B": {
+        "Identifier": "28",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "23",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "21",
+      "Position": "-2292,132",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "19",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 256,
+      "Value": 8,
+      "Name": "Minimum Samples",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 1,
+        "Priority": 3,
+        "PrimaryGroup": {
+          "Name": "Normal Height",
+          "Priority": 3
+        },
+        "SecondaryGroup": {
+          "Name": "Height - Parallax Occlusion Mapping",
+          "Priority": 2
+        }
+      },
+      "Identifier": "22",
+      "Position": "-2664,492",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "23",
+      "Position": "-2448,564",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "31",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "24",
+      "Position": "-2352,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "40",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "25",
+      "Position": "-2112,588",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "49",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "26",
+      "Position": "-1860,12",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "39",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "27",
+      "Position": "-2172,516",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "20",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "28",
+      "Position": "-2448,540",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "44",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "29",
+      "Position": "-1548,36",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "36",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "30",
+      "Position": "-2052,324",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "31",
+      "Position": "-2448,648",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "45",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "32",
+      "Position": "-2412,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "50",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "33",
+      "Position": "-1548,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "37",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "34",
+      "Position": "-2664,24",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.1,
+      "Name": "Amplitude",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 1,
+        "PrimaryGroup": {
+          "Name": "Normal Height",
+          "Priority": 3
+        },
+        "SecondaryGroup": {
+          "Name": "Height - Parallax Occlusion Mapping",
+          "Priority": 2
+        }
+      },
+      "Identifier": "35",
+      "Position": "-2664,432",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "36",
+      "Position": "-1548,12",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "26",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "37",
+      "Position": "-1548,324",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "30",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "38",
+      "Position": "-2112,204",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "39",
+      "Position": "-1860,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "34",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "40",
+      "Position": "-2352,144",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "4",
+        "Output": "Texture2DSampler"
+      }
+    },
+    {
+      "_class": "SGEParallaxOcclusionMappingNode",
+      "Mode": "Standard",
+      "Channel": "Alpha",
+      "DefaultAmplitude": 0.1,
+      "DefaultMinimumIterations": 8,
+      "DefaultMaximumIterations": 32,
+      "DefaultLevelOfDetail": 1,
+      "DefaultOffset": 0.3,
+      "Identifier": "41",
+      "Position": "-1800,24",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "39",
+        "Output": "Result"
+      },
+      "Texture": {
+        "Identifier": "71",
+        "Output": "Result"
+      },
+      "Sampler": {
+        "Identifier": "72",
+        "Output": "Result"
+      },
+      "TangentSpaceViewDirection": {
+        "Identifier": "21",
+        "Output": "Result"
+      },
+      "Amplitude": {
+        "Identifier": "43",
+        "Output": "Result"
+      },
+      "MinimumIterations": {
+        "Identifier": "48",
+        "Output": "Result"
+      },
+      "MaximumIterations": {
+        "Identifier": "38",
+        "Output": "Result"
+      },
+      "LevelOfDetail": {
+        "Identifier": "47",
+        "Output": "Result"
+      },
+      "Offset": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "ScreenPosition",
+      "Identifier": "42",
+      "Position": "-3060,588",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "43",
+      "Position": "-2232,156",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "52",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "44",
+      "Position": "-2448,528",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "22",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SubgraphNode",
+      "SubgraphPath": "shaders/subgraphs/sgsg-level_of_detail.shdrfunc",
+      "DefaultValues": {
+        "Coordinates": "0,0",
+        "Scale": 0.5,
+        "Minimum": 0,
+        "Maximum": 1,
+        "Value": 1
+      },
+      "Identifier": "45",
+      "Position": "-2664,612",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "42",
+        "Output": "XY"
+      },
+      "Value": {
+        "Identifier": "58",
+        "Output": "Result"
+      },
+      "Minimum": {
+        "Identifier": "60",
+        "Output": "Result"
+      },
+      "Maximum": {
+        "Identifier": "62",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Fraction": 0.5,
+      "Identifier": "46",
+      "Position": "-1488,0",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "29",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "41",
+        "Output": "Output"
+      },
+      "C": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "47",
+      "Position": "-2052,228",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "30",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "48",
+      "Position": "-2172,180",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "27",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 256,
+      "Value": 32,
+      "Name": "Maximum Samples",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 1,
+        "Priority": 4,
+        "PrimaryGroup": {
+          "Name": "Normal Height",
+          "Priority": 3
+        },
+        "SecondaryGroup": {
+          "Name": "Height - Parallax Occlusion Mapping",
+          "Priority": 2
+        }
+      },
+      "Identifier": "49",
+      "Position": "-2664,552",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "50",
+      "Position": "-2412,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "4",
+        "Output": "Texture2DOutput"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "51",
+      "Position": "-1992,780",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "53",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "52",
+      "Position": "-2232,468",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "35",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "Offset",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 2,
+        "PrimaryGroup": {
+          "Name": "Normal Height",
+          "Priority": 3
+        },
+        "SecondaryGroup": {
+          "Name": "Height - Parallax Occlusion Mapping",
+          "Priority": 2
+        }
+      },
+      "Identifier": "53",
+      "Position": "-2664,744",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 16,
+      "Value": 4,
+      "Name": "LOD Threshold Value",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 5,
+        "PrimaryGroup": {
+          "Name": "Normal Height",
+          "Priority": 3
+        },
+        "SecondaryGroup": {
+          "Name": "Height - Parallax Occlusion Mapping",
+          "Priority": 2
+        }
+      },
+      "Identifier": "54",
+      "Position": "-3060,720",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "LOD Threshold Minimum",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 6,
+        "PrimaryGroup": {
+          "Name": "Normal Height",
+          "Priority": 3
+        },
+        "SecondaryGroup": {
+          "Name": "Height - Parallax Occlusion Mapping",
+          "Priority": 2
+        }
+      },
+      "Identifier": "55",
+      "Position": "-3060,780",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.5,
+      "Name": "LOD Threshold Maximum",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 7,
+        "PrimaryGroup": {
+          "Name": "Normal Height",
+          "Priority": 3
+        },
+        "SecondaryGroup": {
+          "Name": "Height - Parallax Occlusion Mapping",
+          "Priority": 2
+        }
+      },
+      "Identifier": "56",
+      "Position": "-3060,840",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "57",
+      "Position": "-2844,756",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "54",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "58",
+      "Position": "-2844,672",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "57",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "59",
+      "Position": "-2784,816",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "55",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "60",
+      "Position": "-2784,696",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "59",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "61",
+      "Position": "-2724,876",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "56",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "62",
+      "Position": "-2724,720",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "61",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "63",
+      "Position": "-324,0",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "66",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,1,1,1",
+      "Name": "Tint",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "Step": 0,
+        "Priority": 1,
+        "PrimaryGroup": {
+          "Name": "Albedo Tint Mask",
+          "Priority": 2
+        },
+        "SecondaryGroup": {
+          "Name": "Tint Mask - Color",
+          "Priority": 2
+        }
+      },
+      "Identifier": "64",
+      "Position": "-996,48",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "65",
+      "Position": "-780,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "64",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "66",
+      "Position": "-780,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "65",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "67",
+      "Position": "-132,0",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "63",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "70",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Tint",
+      "Identifier": "68",
+      "Position": "-408,-60",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "69",
+      "Position": "-192,-24",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "68",
+        "Output": "RGBA"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "70",
+      "Position": "-192,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "69",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "71",
+      "Position": "-1860,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "32",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "72",
+      "Position": "-1920,108",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "24",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "73",
+      "Position": "-1860,276",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "71",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "74",
+      "Position": "-1920,300",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "72",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGETextureSampleNode",
+      "Mode": "Texture2D",
+      "Identifier": "75",
+      "Position": "-1212,216",
+      "HandleOffsets": {},
+      "Texture2DCoordinates": {
+        "Identifier": "7",
+        "Output": "Result"
+      },
+      "Texture2DInput": {
+        "Identifier": "73",
+        "Output": "Result"
+      },
+      "Texture2DSampler": {
+        "Identifier": "74",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGEComponentMaskNode",
+      "R": true,
+      "G": true,
+      "B": true,
+      "A": false,
+      "Identifier": "76",
+      "Position": "-996,216",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "75",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "77",
+      "Position": "-192,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "78",
+      "Position": "-324,420",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "2",
+        "Output": "A"
+      },
+      "B": {
+        "Identifier": "80",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "79",
+      "Position": "-384,504",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "82",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "80",
+      "Position": "-384,480",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "79",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 1,
+      "Name": "Angle Attenuation",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 1,
+        "PrimaryGroup": {
+          "Name": "General Settings",
+          "Priority": 1
+        },
+        "SecondaryGroup": {
+          "Name": "Decal - Projection",
+          "Priority": 1
+        }
+      },
+      "Identifier": "81",
+      "Position": "-816,468",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGEAngleAttenuationNode",
+      "DefaultInput": 0,
+      "Identifier": "82",
+      "Position": "-600,468",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "81",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "83",
+      "Position": "-3432,456",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "85",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "84",
+      "Position": "-2760,516",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "90",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "85",
+      "Position": "-3432,420",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "95",
+        "Output": "Up"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "86",
+      "Position": "-2820,456",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "87",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "SGENegateNode",
+      "Identifier": "87",
+      "Position": "-3312,420",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "83",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TangentViewVector",
+      "Identifier": "88",
+      "Position": "-2700,300",
+      "HandleOffsets": {},
+      "WorldPosition": {
+        "Identifier": "99",
+        "Output": "Result"
+      },
+      "WorldNormal": {
+        "Identifier": "98",
+        "Output": "Result"
+      },
+      "TangentUWs": {
+        "Identifier": "96",
+        "Output": "Result"
+      },
+      "TangentVWs": {
+        "Identifier": "91",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "89",
+      "Position": "-3372,516",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "97",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGENegateNode",
+      "Identifier": "90",
+      "Position": "-3312,480",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "89",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "91",
+      "Position": "-2760,408",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "84",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TransformNormal",
+      "InputSpace": "World",
+      "OutputSpace": "Tangent",
+      "DecodeNormal": false,
+      "Identifier": "92",
+      "Position": "-3096,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "93",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "SGENegateNode",
+      "Identifier": "93",
+      "Position": "-3312,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "95",
+        "Output": "Right"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "94",
+      "Position": "-2880,396",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "92",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGEDecalProjectionNode",
+      "Identifier": "95",
+      "Position": "-3648,336",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "96",
+      "Position": "-2820,384",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "86",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "97",
+      "Position": "-3372,372",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "95",
+        "Output": "Forward"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "98",
+      "Position": "-2880,360",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "94",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "WorldPosition",
+      "Identifier": "99",
+      "Position": "-3096,300",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "324,120",
+      "Color": "Green",
+      "Title": "Bullet Hole",
+      "Description": "A Deferred Decal shadergraph example showcasing a POM projected bullet hole with a depth based LOD system.",
+      "Layer": 1,
+      "Identifier": "100",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    }
+  ]
+}

@@ -42,7 +42,8 @@ Package used in Editors.
 | [ToeKneeRed's Components](https://github.com/ToeKneeRED/sbox-simplecomponents) | ToeKneeRed | CC0 | Top Simple Components |
 | [Small Fish Shrmimple Libraries](https://sbox.game/fish/~packages?type=library): [Character Controller](https://sbox.game/fish/scc), [Ragdoll](https://sbox.game/fish/shrimple_ragdolls), [Pawns](https://sbox.game/fish/sp) | Small Fish | MIT License | [GitHub Profile](https://github.com/Small-Fish-Dev). There are: [Ragdolls](https://github.com/Small-Fish-Dev/Shrimple-Ragdolls), [Character Controller](https://github.com/Small-Fish-Dev/shrimple_character_controller), [Pawns](https://github.com/Small-Fish-Dev/shrimple-pawns), |
 | [Snap to Vertex](https://sbox.game/resync/snaptovertex) | resync | aaa | aaa |
-| [Shadergraph Extras](https://sbox.game/ali3nsystems/lib-shader_graph_extras) | Ali3n Systems | aaa | aaa |
+| [Shadergraph Extras](https://sbox.game/ali3nsystems/lib-shader_graph_extras) | Ali3n Systems | aaa | ShaderGraph Extras guys! [Source Code](https://github.com/Ali3nSystems/Shader-Graph-Extras-for-sbox) |
+| [ShaderGraph Plus Shrimple Fork](https://sbox.game/quack/shadergraphplus) | Quack Cola | aaa | [Source Code](https://github.com/QuackCola/ShaderGraphPlus) |
 | [Easy JSON](https://sbox.game/extended/easyjson) | extended | aaa | aaa |
 | [Toasty Toast Message](https://sbox.game/ggg/toasty) | ggg | aaa | aaa |
 | [Crosshair Maker](https://sbox.game/copper/crosshairmaker) | copper | aaa | aaa |

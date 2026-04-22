@@ -1,0 +1,326 @@
+{
+  "IsSubgraph": false,
+  "Path": "shaders/shadergraphs/tutorials/nodes/universalnodes/shdr-gerstner_waves.shdrgrph",
+  "Model": "models/mdl-subdivided_plane.vmdl",
+  "Title": null,
+  "Description": "",
+  "Category": null,
+  "Icon": null,
+  "AddToNodeLibrary": false,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Unlit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "0,0",
+      "HandleOffsets": {},
+      "Albedo": {
+        "Identifier": "8",
+        "Output": "Output"
+      },
+      "PositionOffset": {
+        "Identifier": "23",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 2,
+      "Identifier": "1",
+      "Position": "-864,60",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "20",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "2",
+      "Position": "-732,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "24",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "564,108",
+      "Color": "Purple",
+      "Title": "Mode",
+      "Description": "Linear: - Waves travel in a uniform direction across the entire surface.\nCircular: - Waves emanate outward from a central point in all directions.",
+      "Layer": 1,
+      "Identifier": "3",
+      "Position": "168,312",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "420,84",
+      "Color": "Green",
+      "Title": "",
+      "Description": "Steepness: -How sharp or rounded the waves are.",
+      "Layer": 2,
+      "Identifier": "4",
+      "Position": "168,216",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "420,216",
+      "Color": "Green",
+      "Title": "Gerstner Waves",
+      "Description": "Coordinates: -Use Object Space Position or World Space Position.\nTime: -Controls the animation of the waves.\nDirection/Center:  -Coordinates from which the waves generate.\nAmplitude: -Height of the waves.\nLength: -Length of the waves.\nGravity: -Contributes to the speed of the waves.\n",
+      "Layer": 1,
+      "Identifier": "5",
+      "Position": "168,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SGEGerstnerWavesNode",
+      "Mode": "Linear",
+      "DefaultDirection": "0,0",
+      "DefaultCenter": "0,0,0",
+      "DefaultAmplitude": 3,
+      "DefaultLength": 128,
+      "DefaultGravity": 9.8,
+      "DefaultSteepness": 0,
+      "Identifier": "6",
+      "Position": "-612,0",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "17",
+        "Output": "Result"
+      },
+      "Time": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGEGerstnerWavesNode",
+      "Mode": "Circular",
+      "DefaultDirection": "0,0",
+      "DefaultCenter": "0,0,0",
+      "DefaultAmplitude": 2,
+      "DefaultLength": 128,
+      "DefaultGravity": 9.8,
+      "DefaultSteepness": 1,
+      "Identifier": "7",
+      "Position": "-612,204",
+      "HandleOffsets": {},
+      "Coordinates": {
+        "Identifier": "18",
+        "Output": "Result"
+      },
+      "Time": {
+        "Identifier": "21",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SGENormalBlendNode",
+      "Mode": "Reoriented",
+      "Identifier": "8",
+      "Position": "-276,0",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "6",
+        "Output": "Normal"
+      },
+      "InputB": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "9",
+      "Position": "-336,240",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "7",
+        "Output": "Normal"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "10",
+      "Position": "-336,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "11",
+      "Position": "-192,84",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "12",
+      "Position": "-396,60",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Displacement"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "13",
+      "Position": "-396,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "14",
+      "Position": "-276,264",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "7",
+        "Output": "Displacement"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "15",
+      "Position": "-276,144",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "14",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "WorldPosition",
+      "Identifier": "16",
+      "Position": "-1200,0",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "17",
+      "Position": "-984,36",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "18",
+      "Position": "-984,240",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "19",
+      "Position": "-1200,60",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "20",
+      "Position": "-924,96",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "19",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "21",
+      "Position": "-924,264",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "20",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "22",
+      "Position": "-60,120",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "23",
+      "Position": "-60,84",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "22",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "24",
+      "Position": "-732,96",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    }
+  ]
+}

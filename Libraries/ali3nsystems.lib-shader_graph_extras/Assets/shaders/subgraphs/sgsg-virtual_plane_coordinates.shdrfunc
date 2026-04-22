@@ -1,0 +1,980 @@
+{
+  "IsSubgraph": true,
+  "Path": "shaders/subgraphs/sgsg-virtual_plane_coordinates.shdrfunc",
+  "Model": null,
+  "Title": "SGE - Virtual Plane Coordinates",
+  "Description": null,
+  "Category": "Shader Graph Extras - Universal",
+  "Icon": "airplanemode_active",
+  "AddToNodeLibrary": true,
+  "BlendMode": "Opaque",
+  "ShadingModel": "Lit",
+  "Domain": "Surface",
+  "PreviewSettings": {
+    "RenderBackfaces": false,
+    "EnableShadows": true,
+    "ShowGround": false,
+    "ShowSkybox": true,
+    "BackgroundColor": "0,0,0,1",
+    "Tint": "1,1,1,1"
+  },
+  "Version": 1,
+  "nodes": [
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 0.5,
+      "Identifier": "0",
+      "Position": "-684,132",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "71",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "FunctionResult",
+      "FunctionOutputs": [
+        {
+          "Id": "1a34c1f7-d247-4b12-a6c1-02555a8538d3",
+          "Name": "Texture Coordinate",
+          "Type": "Vector3",
+          "Preview": "None",
+          "Priority": 1
+        },
+        {
+          "Id": "8ec402e6-cbf2-4917-9fd2-dbc6fe17b785",
+          "Name": "World Space Position",
+          "Type": "Vector3",
+          "Preview": "None",
+          "Priority": 2
+        },
+        {
+          "Id": "09898c9c-833f-497c-8acf-76962c23fc29",
+          "Name": "World Space Position - Centered",
+          "Type": "Vector3",
+          "Preview": "None",
+          "Priority": 3
+        }
+      ],
+      "Identifier": "1",
+      "Position": "-432,132",
+      "HandleOffsets": {},
+      "Texture Coordinate": {
+        "Identifier": "0",
+        "Output": "Result"
+      },
+      "World Space Position": {
+        "Identifier": "43",
+        "Output": "Result"
+      },
+      "World Space Position - Centered": {
+        "Identifier": "40",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Branch",
+      "Name": "",
+      "IsAttribute": true,
+      "Operator": "GreaterThan",
+      "Enabled": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "2",
+      "Position": "-1092,132",
+      "HandleOffsets": {},
+      "True": {
+        "Identifier": "4",
+        "Output": "Output"
+      },
+      "False": {
+        "Identifier": "29",
+        "Output": "Result"
+      },
+      "A": {
+        "Identifier": "49",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "30",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0,
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "3",
+      "Position": "-1428,216",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "AppendVector",
+      "Identifier": "4",
+      "Position": "-1428,132",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "32",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "5",
+      "Position": "-1704,132",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "36",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "35",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "6",
+      "Position": "-1704,216",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "34",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "7",
+      "Position": "-1896,528",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "41",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "56",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Normalize",
+      "Identifier": "8",
+      "Position": "-1932,216",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "9",
+      "Position": "-2088,360",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "64",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "45",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "10",
+      "Position": "-3036,432",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "11",
+      "Position": "-2340,468",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "47",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "54",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CrossProduct",
+      "DefaultA": "0,0,0",
+      "DefaultB": "0,0,0",
+      "Identifier": "12",
+      "Position": "-2148,216",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "37",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "25",
+        "Output": "Output A"
+      }
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "13",
+      "Position": "-2700,312",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "51",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": -1,
+      "Identifier": "14",
+      "Position": "-2892,312",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "15",
+      "Position": "-3168,312",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "16",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "53",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "16",
+      "Position": "-3444,312",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "66",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "61",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "17",
+      "Position": "-3036,276",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "65",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "18",
+      "Position": "-3564,396",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "68",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "19",
+      "Position": "-3444,396",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "67",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "57",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Scale",
+      "InputDescription": "",
+      "InputType": "Float2",
+      "DefaultFloat": 0,
+      "DefaultFloat2": "1,1",
+      "DefaultFloat3": "0,0,0",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": false,
+      "PortOrder": 3,
+      "Identifier": "20",
+      "Position": "-1092,264",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "WorldPosition",
+      "Identifier": "21",
+      "Position": "-3780,492",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Camera",
+      "Identifier": "22",
+      "Position": "-3780,612",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "23",
+      "Position": "-3168,492",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "21",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "62",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "24",
+      "Position": "-2976,396",
+      "HandleOffsets": {},
+      "InputA": {
+        "Identifier": "10",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "55",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SubgraphNode",
+      "SubgraphPath": "shaders/subgraphs/sgsg-third_orthogonal_vector.shdrfunc",
+      "DefaultValues": {
+        "Input A": "1,0,0",
+        "Input B": "0,0,1"
+      },
+      "Identifier": "25",
+      "Position": "-2424,240",
+      "HandleOffsets": {},
+      "Input A": {
+        "Identifier": "17",
+        "Output": "Result"
+      },
+      "Input B": {
+        "Identifier": "59",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float3",
+      "Min": "-1,-1,-1",
+      "Max": "1,1,1",
+      "Value": "0,0.00015,-1",
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Default",
+        "Step": 0,
+        "Priority": 0,
+        "PrimaryGroup": {
+          "Name": null,
+          "Priority": 0
+        },
+        "SecondaryGroup": {
+          "Name": null,
+          "Priority": 0
+        }
+      },
+      "Identifier": "26",
+      "Position": "-2700,396",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "27",
+      "Position": "-1956,396",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "28",
+      "Position": "-1212,252",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "29",
+      "Position": "-1212,192",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "30",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "30",
+      "Position": "-1212,240",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "28",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "31",
+      "Position": "-1488,252",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "32",
+      "Position": "-1488,192",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "31",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "33",
+      "Position": "-1764,564",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "34",
+      "Position": "-1764,276",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "35",
+      "Position": "-1764,192",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "34",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "36",
+      "Position": "-2208,168",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "37",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "37",
+      "Position": "-2208,252",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "38",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "38",
+      "Position": "-2208,324",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "25",
+        "Output": "Output C"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "39",
+      "Position": "-492,564",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "40",
+      "Position": "-492,216",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "39",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "41",
+      "Position": "-1956,564",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "27",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "42",
+      "Position": "-552,396",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "27",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "43",
+      "Position": "-552,192",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "42",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "44",
+      "Position": "-2148,504",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "45",
+      "Position": "-2148,420",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "44",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "46",
+      "Position": "-2400,348",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "47",
+      "Position": "-2400,504",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "46",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "48",
+      "Position": "-1152,348",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "46",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "49",
+      "Position": "-1152,216",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "48",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "50",
+      "Position": "-2760,432",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "24",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "51",
+      "Position": "-2760,372",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "50",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "52",
+      "Position": "-3228,432",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "19",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "53",
+      "Position": "-3228,372",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "52",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "54",
+      "Position": "-3036,528",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "23",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "55",
+      "Position": "-3036,456",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "54",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "56",
+      "Position": "-3564,588",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "69",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "57",
+      "Position": "-3564,456",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "56",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "58",
+      "Position": "-2484,432",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "26",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "59",
+      "Position": "-2484,300",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "58",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "60",
+      "Position": "-3504,648",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "22",
+        "Output": "WorldPosition"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "61",
+      "Position": "-3504,372",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "62",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "62",
+      "Position": "-3504,552",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "60",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "63",
+      "Position": "-2208,648",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "60",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "64",
+      "Position": "-2208,396",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "63",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "65",
+      "Position": "-3564,276",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "66",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "66",
+      "Position": "-3564,348",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "67",
+      "Position": "-3564,432",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Normal",
+      "InputDescription": "",
+      "InputType": "Float3",
+      "DefaultFloat": 0,
+      "DefaultFloat2": "0,0",
+      "DefaultFloat3": "0,0,1",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": false,
+      "PortOrder": 2,
+      "Identifier": "68",
+      "Position": "-3780,360",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "SubgraphInput",
+      "InputName": "Center",
+      "InputDescription": "",
+      "InputType": "Float3",
+      "DefaultFloat": 0,
+      "DefaultFloat2": "0,0",
+      "DefaultFloat3": "0,0,0",
+      "DefaultColor": "1,1,1,1",
+      "IsRequired": false,
+      "PortOrder": 1,
+      "Identifier": "69",
+      "Position": "-3780,552",
+      "HandleOffsets": {}
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "70",
+      "Position": "-876,300",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "20",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "71",
+      "Position": "-816,132",
+      "HandleOffsets": {},
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "72",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "72",
+      "Position": "-876,192",
+      "HandleOffsets": {},
+      "Input": {
+        "Identifier": "70",
+        "Output": "Result"
+      }
+    }
+  ]
+}
