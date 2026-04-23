@@ -1,0 +1,61 @@
+{
+  "RootObject": {
+    "__guid": "361ceba9-17fb-4534-8dfd-7d8d4e201100",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "Radio Player",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "SlapBox.Core.Components.RadioManager",
+        "__guid": "357ec3f4-b62b-46cd-a1e7-f47a4ae87df5",
+        "__enabled": true,
+        "Flags": 0,
+        "AutoPlay": true,
+        "DefaultVolume": 0.75,
+        "LoopStations": true,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "Shuffle": false,
+        "Stations": [
+          {
+            "StationName": "Bossa Nova",
+            "StreamUrl": "http://strm112.1.fm/bossanova_mobile_mp3",
+            "Source": "Bossa Nova Hits"
+          },
+          {
+            "StationName": "Historical Music",
+            "StreamUrl": "https://mediaserv73.live-streams.nl:18058/stream",
+            "Source": "Ancient FM"
+          },
+          {
+            "StationName": "Video Game Music",
+            "StreamUrl": "https://stream-178.zeno.fm/kp41ftw3zehvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJrcDQxZnR3M3plaHZ2IiwiaG9zdCI6InN0cmVhbS0xNzguemVuby5mbSIsInJ0dGwiOjUsImp0aSI6InhFYmg2TnJ0UU9TNzFVdkFyRVpqNWciLCJpYXQiOjE3NTkyODI3NzksImV4cCI6MTc1OTI4MjgzOX0._lkGslB0KovEFTHn5D932nFV5B4GGLKenXWiCwegLiU",
+            "Source": "Lo-fi Minecraft 24/7"
+          }
+        ]
+      }
+    ],
+    "Children": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

@@ -1,0 +1,357 @@
+{
+  "RootObject": {
+    "__guid": "152c4948-a739-4918-9db0-de9aac187d03",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "inbesten",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "4512e71e-0a75-421c-bc05-20728fd49553",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,22,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "4512e71e-0a75-421c-bc05-20728fd49553",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "9e2f864f-f6ff-4ea4-974a-0871ce75d030",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "c782c945-23e8-4a5a-b36c-4c8b5fa36c6c",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "d9b3df6b-5d3f-425e-80ff-4da3a20a915d",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "c3ff3478-bd09-48ef-8c7d-55116d0b15d6",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "fccffc64-00e2-410f-9adc-3614e8a84d97"
+        }
+      },
+      {
+        "__guid": "df971d50-b79c-4298-857b-c18b57e2b2f6",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,42,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "df971d50-b79c-4298-857b-c18b57e2b2f6",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "9fd4b536-00a5-4a52-995a-a7de87275164",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "79d2f393-ac6c-4c5c-8721-99b4cba59957",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "7b15fa07-5326-4608-901d-3ed966002091",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "d0fc075b-72b0-43cd-828b-6663fb437f58",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "58dbfee9-5f45-4cab-932e-7b4c9b226797"
+        }
+      },
+      {
+        "__guid": "d4b06810-3e4b-4744-b148-2ab2c0db8354",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,62,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "d4b06810-3e4b-4744-b148-2ab2c0db8354",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "81eccb00-0974-4067-bd98-db4f13215dd6",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "5f994b12-8820-48fd-a9eb-f6eb77b6442e",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "45371e3b-5968-4ad7-8905-38fa4e59ba8b",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "11820029-c316-45d9-8922-9c0139482f51",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "501a34e4-0465-425d-93eb-5d88379784bc"
+        }
+      },
+      {
+        "__guid": "a2eaf4be-a8c0-45ff-9390-2e5bdb38f5d9",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,84.7045898,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "a2eaf4be-a8c0-45ff-9390-2e5bdb38f5d9",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "78cfecb0-826e-4ddb-b95b-5bb6571a0148",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "60c8f986-6154-4480-adf6-811a76d0831c",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "e6d1466d-b3bb-43cd-97c6-08385652187c",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "4928cf02-9f30-4f92-bd73-58a39fbc784f",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "648a18c9-deec-4519-9c14-3de0ccc7442a"
+        }
+      },
+      {
+        "__guid": "98032924-b601-4709-91c7-1b5885645332",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,107,1.90734863E-06"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "98032924-b601-4709-91c7-1b5885645332",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "49cb4fe1-bf60-4753-b307-e9e2d1e7559c",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "51e22f2e-f4fc-4ef8-bb9c-c9f0f83d86b7",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "1e758fe0-7d45-4509-9ae1-e04e683b5d8e",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "09ce3b99-00bf-4a39-a018-cdaafa11fc2d",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "8eadece5-510d-4c5c-a45e-c570d335f60f"
+        }
+      },
+      {
+        "__guid": "0bded402-0e4a-46d7-a1eb-9e133cbc377d",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,129,1.14440918E-05"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "0bded402-0e4a-46d7-a1eb-9e133cbc377d",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "120e1bae-8957-44bc-8d53-929df7135850",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "1039a451-adfd-45d3-ac8c-b0fb1ff4596d",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "569a37c3-0d6e-4a26-b4d9-4c96431df8ac",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "14b5a421-8a98-45ba-b830-2d1b3ce36704",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "a161ec57-53bd-42b4-b946-4ff0afa8e696"
+        }
+      },
+      {
+        "__guid": "8a6f02a7-b195-498a-bd0d-3f646b1190fc",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,151,1.14440918E-05"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "8a6f02a7-b195-498a-bd0d-3f646b1190fc",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "45e0b9e8-6d89-4e5d-9f22-4d36cfad0bb0",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "97a81c90-2db1-4017-ade0-a5960e33026c",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "a79af805-1353-430c-b2b2-c282d972dfd4",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "e57765bc-cec4-4efe-a90d-20c3983c7e67",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "db00afd4-3fb8-4040-b877-3e2d22968372"
+        }
+      },
+      {
+        "__guid": "fc2971e1-11fd-4da3-af5e-e952e4d41c31",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,174,1.14440918E-05"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "fc2971e1-11fd-4da3-af5e-e952e4d41c31",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "29be77ae-a55a-45e6-a71f-fe444ecb428b",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "677ebac1-8f39-4f65-a7d0-1d3643530ae1",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "3947f19e-a5ff-48e5-ba6a-348d15189c1e",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "635ce295-3b85-402c-b48d-3f0836045a1d",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "5eaeea41-0f68-47b5-86df-0ab3237ca017"
+        }
+      },
+      {
+        "__guid": "eecae794-08b8-43d1-9020-e89dc90e5243",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,196,9.53674316E-06"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "eecae794-08b8-43d1-9020-e89dc90e5243",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "6f4aa2b0-3b16-4724-9b9e-3a34a5ea30f4",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "ab7dd457-2516-4280-b7cf-903e00b9b5ae",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "95e62668-ae95-40e5-a33c-ff3a0de757ac",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "89276411-0df0-428b-8923-e0a9803f09b1",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "9a601c01-e3c9-49c6-ac08-c969cfc5aa7a"
+        }
+      },
+      {
+        "__guid": "a94b2110-b359-4f5c-963d-3c45a4b872c6",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,218.494522,9.53674316E-06"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "a94b2110-b359-4f5c-963d-3c45a4b872c6",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "e067836f-4709-4ff7-a6e1-dcc2099496cf",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "6d0f6828-16b2-4cf8-a439-a246c8bde0dc",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "b9d1c7b5-e3f1-43c3-befd-0815229944bd",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "4589d28d-0b35-4a70-87ee-c4c7ae46aebe",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "310a2261-8344-4d58-9ea5-3ae3ed8aa18e"
+        }
+      },
+      {
+        "__guid": "a9c12d0e-edab-408a-83d1-d1e3e0334064",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Position",
+              "Value": "0,240.362915,0"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "a9c12d0e-edab-408a-83d1-d1e3e0334064",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "5c43126d-6a08-47ce-b42a-3e0a12c0f588",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "f5e49475-37c5-4077-b57d-4915380ae874",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "143a431c-c54b-4a90-811a-1859bcedc136",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "e21966db-07c8-4e2e-ac9c-2c5400f689ac",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "0d9ac01e-02c5-4a88-a010-cb25b42846e1"
+        }
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

@@ -1,0 +1,230 @@
+{
+  "RootObject": {
+    "__guid": "510e024b-b6b7-44ab-b5b6-1079e59500f7",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "desperchair",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae",
+        "__enabled": true,
+        "Flags": 0,
+        "Center": "4,0,10",
+        "ColliderFlags": 0,
+        "Elasticity": null,
+        "Friction": null,
+        "IsTrigger": false,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "RollingResistance": null,
+        "Scale": "15,19,20",
+        "Static": false,
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "Sandbox.BaseChair",
+        "__guid": "5049b7b3-a2a5-45ef-9b19-63fd08412848",
+        "__enabled": true,
+        "Flags": 0,
+        "ExitPoints": [
+          {
+            "_type": "gameobject",
+            "go": "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6"
+          }
+        ],
+        "EyePosition": {
+          "_type": "gameobject",
+          "go": "54152903-353d-4d2b-8eca-d2c2fbf440e6"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PitchRange": "-90,70",
+        "SeatPosition": {
+          "_type": "gameobject",
+          "go": "ed161adb-cb1d-4d02-9079-ff606f9972ab"
+        },
+        "SitHeight": 0.6420233,
+        "SitPose": "Chair",
+        "TooltipDescription": "",
+        "TooltipIcon": "airline_seat_recline_normal",
+        "TooltipTitle": "Sit",
+        "YawRange": "-120,120"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "ed161adb-cb1d-4d02-9079-ff606f9972ab",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "SeatPos",
+        "Position": "10,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [],
+        "Children": []
+      },
+      {
+        "__guid": "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "ExitPos",
+        "Position": "32,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [],
+        "Children": []
+      },
+      {
+        "__guid": "54152903-353d-4d2b-8eca-d2c2fbf440e6",
+        "__version": 2,
+        "Flags": 0,
+        "Name": "EyePos",
+        "Position": "1.60000002,0,55",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [],
+        "Children": []
+      },
+      {
+        "__guid": "05e19227-aff2-4215-a306-dcbc510a8389",
+        "__version": 2,
+        "Flags": 2048,
+        "Name": "Preview",
+        "Position": "0,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkFlags": 0,
+        "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
+        "OwnerTransfer": 1,
+        "Components": [],
+        "Children": [
+          {
+            "__guid": "60c0dbc0-9f70-4e2c-9c49-47de6f5c7aff",
+            "__version": 2,
+            "Flags": 0,
+            "Name": "Cube",
+            "Position": "4.617311,0,10",
+            "Rotation": "0,0,0,1",
+            "Scale": "0.334827393,0.450000048,0.400000423",
+            "Tags": "",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkFlags": 0,
+            "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
+            "OwnerTransfer": 1,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "b52ad788-d7cb-4c07-a673-d61e1514d8c9",
+                "__enabled": true,
+                "Flags": 0,
+                "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
+                "LodOverride": null,
+                "MaterialGroup": null,
+                "MaterialOverride": null,
+                "Materials": null,
+                "Model": "models/dev/box.vmdl",
+                "OnComponentDestroy": null,
+                "OnComponentDisabled": null,
+                "OnComponentEnabled": null,
+                "OnComponentFixedUpdate": null,
+                "OnComponentStart": null,
+                "OnComponentUpdate": null,
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ],
+            "Children": []
+          }
+        ]
+      }
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [
+    "facepunch.sandbox#204182"
+  ],
+  "__version": 2
+}

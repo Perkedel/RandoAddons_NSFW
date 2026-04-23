@@ -14,6 +14,8 @@ Stuffs like 3D Models, SFX, Codes, etc. we make, edit hack, etc.
 | [`Mindless`'s Materials](https://sbox.game/mindless) | mindless | ??? | whatever this dev material this is. I hope it's Kenney's btw, who knows. Just wanna get things real quick! |
 | [Low Poly Heart Organ](https://skfb.ly/osAnP) | [Khalifa Hawill](https://sketchfab.com/khalifahawill) | CC4.0-BY | It's beating! |
 | [Heartbeat synthetic generic sound pack](https://freesound.org/people/.name/packs/23663/) | [`.name`](https://freesound.org/people/.name/) | CC4.0-BY | Generic Soundpack of Heartbeat sound |
+| [Whoopee Cushion](https://skfb.ly/oFIup) | Andy Begg | CC4.0-BY | Whoopie Cushion. Fart Prank! |
+| [JCThornton 3D Models!!!!](https://www.patreon.com/c/jcthornton/posts) | JCThornton | ??? | Every JCThornton 3D Model he made. Legacy Pack according to [here](https://www.patreon.com/posts/wip-model-packs-116693030). |
 
 ## Libraries
 
@@ -26,6 +28,10 @@ Package used in Editors.
 > - Choose which package you'd like to see its detail. Detail pane is on the right.
 > - While a package is selected, on this Detail pane, `🕔 Package Detail`.
 > - There, you can see the **sauce**. enjoy.
+
+> [!NOTE]
+> Legends:
+> - `~~BROKEN~~`. Striked thru = broken, and has been deleted from this project.
 
 | Library | Author | License | Descriptions |
 | - | - | - | - |
@@ -48,6 +54,8 @@ Package used in Editors.
 | [Toasty Toast Message](https://sbox.game/ggg/toasty) | ggg | aaa | aaa |
 | [Crosshair Maker](https://sbox.game/copper/crosshairmaker) | copper | aaa | aaa |
 | [MediaHelper](https://sbox.game/carsonk/mediahelpers) | Carson Kompon | MIT? | aaa |
+| ~~[Terrain Splat Generator](https://sbox.game/sturnus/terraingenerationtool)~~ | sturnus | aaa | aaa |
+| [Infinite Procedural Generation](https://sbox.game/foreignlanparty/infiniteproceduralterraingeneration/) | Foreign LAN Party | aaa | aaa |
 
 ## Utilities
 
@@ -57,6 +65,7 @@ Package used in Editors.
 | [Source2 Viewer](https://s2v.app/) | Valve Resource Format | MIT | [**Source Code!**](https://github.com/ValveResourceFormat/ValveResourceFormat) Valve's Source 2 resource file format parser, renderer, decompiler, and exporter. **For Source2**. The library component is called **ValveResourceFormat (VRF)**. [Referred by ZaqMacaw](https://steamcommunity.com/groups/CrowbarTool/discussions/0/1741139653396823076/), of vF's discussion. [Extra Decompile](https://github.com/Penguinwizzard/Source2ResourceDecompiler)? |
 | [ZaqMacaw's Crowbar](https://github.com/ZeqMacaw/Crowbar) | ZaqMacaw | [CC3.0-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/) | GoldSource and Source Engine Modding Tool. **For Source1**. [Valve's Wiki Article](https://developer.valvesoftware.com/wiki/Crowbar) |
 | [Source2 Converter](https://github.com/REDxEYE/Source2Converter) | REDxEYE | ??? | Toolset for converting Source1 props to Source2. [Valve Wiki Hub Article how to port Source1 to Source2](https://developer.valvesoftware.com/wiki/Source_2/Docs/Porting_Legacy_Content). |
+| [Noz's Source-2-s&box Playermodel Converter](https://github.com/Noztik/Source-to-Sbox-Playermodel-Converter) | Noztik | ??? | Convert Player model from Source1 to Sandbox yey! |
 
 ## Game Mode
 
@@ -79,3 +88,9 @@ Recommended Game modes
 - [Carson's how to make UI](https://www.youtube.com/watch?v=4J37tgZ1Qmo). Carson Kompon. How to make UI
   - [Flex Froggy](https://flexboxfroggy.com/)
   - The documentation about UI has not yet been migrated fully! [Here's the new one rn](https://sbox.game/dev/doc/ui/).
+- S&box docs
+  - [Property Attribute](https://sbox.game/dev/doc/editor/property-attributes) to make pretty Inspector.
+  - [style the razor](https://sbox.game/dev/doc/ui/styling-panels/style-properties)
+- Dude, idk how to Random in C\#, care to help me?
+  - https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp
+  - https://stackoverflow.com/questions/2706500/how-do-i-generate-a-random-integer-in-c

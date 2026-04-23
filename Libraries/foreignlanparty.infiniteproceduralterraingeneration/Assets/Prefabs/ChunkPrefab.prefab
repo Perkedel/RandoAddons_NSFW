@@ -1,0 +1,71 @@
+{
+  "RootObject": {
+    "__guid": "fabe6d59-26ab-4ffb-8cda-811955551178",
+    "Flags": 0,
+    "Name": "chunkprefab",
+    "Tags": "terrain",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.Terrain",
+        "__guid": "3ae60a33-de16-4f10-b23f-1bc21c5e6385",
+        "__version": 1,
+        "ClipMapLodExtentTexels": 256,
+        "ClipMapLodLevels": 6,
+        "EnableCollision": true,
+        "Friction": null,
+        "IsTrigger": false,
+        "MaterialOverride": null,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "RenderType": "Off",
+        "Static": true,
+        "Storage": "prefabs/untitled.terrain",
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0",
+        "TerrainHeight": 2500,
+        "TerrainSize": 10000
+      }
+    ],
+    "Children": [],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

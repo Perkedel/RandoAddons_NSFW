@@ -65,12 +65,6 @@
 				children = 
 				[
 					{
-						_class = "PhysicsMeshFromRender"
-						parent_bone = ""
-						surface_prop = "rubber"
-						collision_tags = "solid"
-					},
-					{
 						_class = "PhysicsShapeBox"
 						name = "JockCompensate"
 						parent_bone = ""
@@ -89,6 +83,15 @@
 						radius = 80.33886
 						point0 = [ 0.0, 0.0, 0.0 ]
 						point1 = [ 0.0, 0.0, 10.0 ]
+					},
+					{
+						_class = "PhysicsHullFromRender"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						faceMergeAngle = 5.0
+						maxHullVertices = 64
+						hull_mode = "SingleHull"
 					},
 				]
 			},

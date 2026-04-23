@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Mdl Subdivided Plane",
+      "Type": "model",
+      "Org": "local",
+      "Ident": "mdlsubdividedplane",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": [
+        "facepunch.sandbox#203779"
+      ],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "models/mdl-subdivided_plane.vmdl"
+      }
+    }
+  }
+}

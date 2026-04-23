@@ -1,0 +1,25 @@
+﻿@using System;
+@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.Razor;
+
+<root>
+	@Content
+</root>
+
+@code
+{
+	public RenderFragment Content { get; set; }
+	public new RenderFragment Tooltip { get; set; }
+
+	protected override void OnMouseOver ( MousePanelEvent e )
+	{
+		base.OnMouseOver( e );
+
+		if ( RazorTooltipSystem.Hovering != this )
+		{
+			RazorTooltipSystem.Hovering = this;
+			RazorTooltipSystem.Show( Tooltip );
+		}
+	}
+}

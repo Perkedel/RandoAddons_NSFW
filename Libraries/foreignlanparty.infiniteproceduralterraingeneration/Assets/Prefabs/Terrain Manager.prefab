@@ -1,0 +1,174 @@
+{
+  "RootObject": {
+    "__guid": "43e93efd-4eb1-478d-9b69-09f7b44c7e75",
+    "Flags": 0,
+    "Name": "terrain manager",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "TerrainManager",
+        "__guid": "200be214-b21a-45ce-8734-355f191405af",
+        "ChunkSpaceing": 9988,
+        "ConfigFileName": "",
+        "ConfigureMode": true,
+        "ExportAsHeightMapNow": false,
+        "ExportAsHeightMapOptions": false,
+        "ExportConfigName": "",
+        "ExportHeightMapName": "",
+        "ExportHeightMapSize": 5,
+        "ExportOptions": false,
+        "ExportToConfigFileNow": false,
+        "ExportToConfigFileOptions": false,
+        "FalloffCenter": "0,0",
+        "FalloffMapSize": 0,
+        "HeightCurve": [
+          {
+            "x": 0,
+            "y": 0.07936508,
+            "in": 0,
+            "out": 0,
+            "mode": "Mirrored"
+          },
+          {
+            "x": 0.20627008,
+            "y": 0.073250264,
+            "in": 0,
+            "out": 0,
+            "mode": "Mirrored"
+          },
+          {
+            "x": 0.6825619,
+            "y": 0.17295103,
+            "in": -0.07330616,
+            "out": 0.07330616,
+            "mode": "Mirrored"
+          },
+          {
+            "x": 0.8603215,
+            "y": 0.7012974,
+            "in": -3.3548603,
+            "out": 3.3548603,
+            "mode": "Mirrored"
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "in": 0,
+            "out": 0,
+            "mode": "Mirrored"
+          }
+        ],
+        "LoadConfigFromFile": false,
+        "Noise1Frequency": 0.008,
+        "Noise1Gain": 1,
+        "Noise1lacunarity": 0.5,
+        "Noise1Octave": 3,
+        "Noise1Seed": 0,
+        "Noise1Type": 0,
+        "Noise1Weight": [
+          {
+            "x": 0.48773006,
+            "y": 0.74414897,
+            "in": 0,
+            "out": 0,
+            "mode": "Mirrored"
+          }
+        ],
+        "Noise2Frequency": 0.020000001,
+        "Noise2Gain": 1,
+        "Noise2lacunarity": 0.8,
+        "Noise2Octave": 3,
+        "Noise2Seed": 0,
+        "Noise2Type": 0,
+        "Noise2Weight": [
+          {
+            "x": 0.5,
+            "y": 0.30000007,
+            "in": 0,
+            "out": 0,
+            "mode": "Mirrored"
+          },
+          {
+            "x": 1,
+            "y": 0.51058203,
+            "in": -1.0588236,
+            "out": 1.0588236,
+            "mode": "Mirrored"
+          }
+        ],
+        "Noise3Frequency": 0.07000001,
+        "Noise3Gain": 1.1,
+        "Noise3lacunarity": 0.3,
+        "Noise3Octave": 9,
+        "Noise3Seed": 0,
+        "Noise3Type": 0,
+        "Noise3Weight": [
+          {
+            "x": 0.51687115,
+            "y": 0.39361703,
+            "in": 0,
+            "out": 0,
+            "mode": "Mirrored"
+          }
+        ],
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "RegenNoise": false,
+        "SampleResolution": 256,
+        "SetResolution": 1,
+        "TerrainMat": "materials/islands.vmat",
+        "TerrainObj": {
+          "_type": "gameobject",
+          "prefab": "prefabs/chunkprefab.prefab"
+        },
+        "TerrainOffset": "0,0"
+      },
+      {
+        "__type": "LocalFile",
+        "__guid": "e23cd6c2-ef0c-4a51-baf4-04e291cdd9c5",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
+      }
+    ],
+    "Children": [],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>package.redsnail.roadtool</name>
+    </assembly>
+    <members>
+        <member name="T:RedSnail.RoadTool.RoadComponent">
+            <summary>
+            Represents a road component that can be manipulated within the editor and at runtime.
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadComponent.IsLocked">
+            <summary>
+            This will prevent the bridge from being rebuilt if any property is edited or if the road component get disable and re-enabled.
+            Really useful if you plan to edit the mesh with the mapping tool so you don't accidently erase/rebuild the bridge.
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadComponent.BridgeMaterial">
+            <summary>
+            This is your bridge material you wanna use.
+            I recommend using a tileable texture for better result.
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadComponent.BridgePillarsKeepVertical">
+            <summary>
+            Does the pillars follow world up vector or follow the road shape ?
+            </summary>
+        </member>
+        <member name="M:RedSnail.RoadTool.RoadComponent.AdaptTerrainToRoad">
+            <summary> 
+            Adapts the terrain geometry to the spline shape.
+            </summary>
+        </member>
+        <member name="M:RedSnail.RoadTool.RoadComponent.PaintTerrainToRoad">
+            <summary>
+            Applies the materials to the terrain based on the road shape and the blend gradient.
+            </summary>
+        </member>
+        <member name="T:RedSnail.RoadTool.RoadIntersectionComponent">
+            <summary>
+            Represents a road intersection component allowing you to select specific exit points
+            </summary>
+        </member>
+        <member name="F:RedSnail.RoadTool.DrivingSide.Right">
+            <summary>
+            Drive on the right side (USA, Europe, etc...)
+            </summary>
+        </member>
+        <member name="F:RedSnail.RoadTool.DrivingSide.Left">
+            <summary>
+            Drive on the left side (UK, Japan, etc...)
+            </summary>
+        </member>
+        <member name="F:RedSnail.RoadTool.TrafficLightSystem.European">
+            <summary>
+            Traffic lights placed near the intersection (before crossing)
+            </summary>
+        </member>
+        <member name="F:RedSnail.RoadTool.TrafficLightSystem.US">
+            <summary>
+            Traffic lights placed far from the intersection (after crossing)
+            </summary>
+        </member>
+        <member name="F:RedSnail.RoadTool.IntersectionShape.Rectangle">
+            <summary>
+            Rectangle mode is allowing you to toggle between 4 differents road exits
+            </summary>
+        </member>
+        <member name="F:RedSnail.RoadTool.IntersectionShape.Circle">
+            <summary>
+            (WIP) Circle mode is incomplete and really experimental yet
+            </summary>
+        </member>
+        <member name="T:RedSnail.RoadTool.RoadParkingLotComponent">
+            <summary>
+            Generates parking lot lines for parking spaces
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadParkingLotComponent.LinesMaterial">
+            <summary>
+            The material used to render the line segments between each parking spots
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadParkingLotComponent.LinesCap">
+            <summary>
+            Do we want line caps at the start and end of the parking lot ?
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadParkingLotComponent.LinesWidth">
+            <summary>
+            The width of a line segment.
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadParkingLotComponent.LinesOffset">
+            <summary>
+            The height offset above the ground (This is used to avoid Z fighting with the ground)
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadParkingLotComponent.LinesTextureRepeat">
+            <summary>
+            How many units before the line texture repeat itself (This is used to avoid stretching)
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadParkingLotComponent.SpotPrefab">
+            <summary>
+            An optional prefab, if non-empty the parking lot will generate a bunch of child gameobjects positioned at each parking spots center.
+            (e.g. this allows you to use a gameobject prefab with a car spawner system component attached to it)
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadParkingLotComponent.SpotCount">
+            <summary>
+            The amount of parking spots you want to generate.
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadParkingLotComponent.SpotLength">
+            <summary>
+            Well that's the parking spot length
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadParkingLotComponent.SpotWidth">
+            <summary>
+            and width...
+            </summary>
+        </member>
+        <member name="P:RedSnail.RoadTool.RoadParkingLotComponent.SpotAngle">
+            <summary>
+            The angle of the parking spots in degrees (0 = perpendicular, 45 = angled, 90 = parallel)
+            </summary>
+        </member>
+        <member name="M:RedSnail.RoadTool.RoadParkingLotComponent.SnapToGround">
+            <summary>
+            Utility button to directly snap the parking lot to the nearest solid ground
+            </summary>
+        </member>
+        <member name="M:RedSnail.RoadTool.SandboxUtility.ShowEditorNotification(System.String,System.Int32)">
+            <summary>
+            Yes I know this is not intended to be used for notification purpose, but it does the job of notifying the user, so it's a nice work around
+            until Facepunch give us a proper way to show editor notifications easily (Technically it's related to ToastManager class but only available on the editor side)
+            </summary>
+        </member>
+    </members>
+</doc>

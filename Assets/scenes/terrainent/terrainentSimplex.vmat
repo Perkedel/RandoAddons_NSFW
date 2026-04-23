@@ -1,0 +1,27 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/terrainshader.shader"
+
+	TexCoordMulti "[40.000 40.000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- HeightMap ----
+	NoiseTexture "materials/default/default_color.tga"
+
+	//---- Terrain Textures ----
+	TextureAtHight0 "materials/default/default_color.tga"
+	TextureAtHight1 "materials/default/default_color.tga"
+	TextureAtHight10 "materials/default/default_color.tga"
+	TextureAtHight2 "materials/default/default_color.tga"
+	TextureAtHight3 "materials/default/default_color.tga"
+	TextureAtHight4 "materials/default/default_color.tga"
+	TextureAtHight5 "materials/default/default_color.tga"
+	TextureAtHight6 "materials/default/default_color.tga"
+	TextureAtHight7 "materials/default/default_color.tga"
+	TextureAtHight8 "materials/default/default_color.tga"
+	TextureAtHight9 "materials/default/default_color.tga"
+}

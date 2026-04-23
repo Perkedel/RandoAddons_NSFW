@@ -1,0 +1,334 @@
+{
+  "__guid": "c2eb4401-02f5-46a7-81fe-ac2904c4e22c",
+  "GameObjects": [
+    {
+      "__guid": "43e93efd-4eb1-478d-9b69-09f7b44c7e75",
+      "Flags": 0,
+      "Name": "Terrain Manager",
+      "Position": "0,0,250000",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TerrainManager",
+          "__guid": "200be214-b21a-45ce-8734-355f191405af",
+          "ChunkSpaceing": 9988,
+          "ConfigFileName": "",
+          "ConfigureMode": true,
+          "ExportAsHeightMapNow": false,
+          "ExportAsHeightMapOptions": false,
+          "ExportConfigName": "",
+          "ExportHeightMapName": "",
+          "ExportHeightMapSize": 5,
+          "ExportOptions": false,
+          "ExportToConfigFileNow": false,
+          "ExportToConfigFileOptions": false,
+          "FalloffCenter": "0,0",
+          "FalloffMapSize": 0,
+          "HeightCurve": [
+            {
+              "x": 0,
+              "y": 0.07936508,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 0.20627008,
+              "y": 0.073250264,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 0.6825619,
+              "y": 0.17295103,
+              "in": -0.07330616,
+              "out": 0.07330616,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 0.8603215,
+              "y": 0.7012974,
+              "in": -3.3548603,
+              "out": 3.3548603,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 1,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "LoadConfigFromFile": false,
+          "Noise1Frequency": 0.008,
+          "Noise1Gain": 1,
+          "Noise1lacunarity": 0.5,
+          "Noise1Octave": 3,
+          "Noise1Seed": 0,
+          "Noise1Type": 0,
+          "Noise1Weight": [
+            {
+              "x": 0.48773006,
+              "y": 0.74414897,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "Noise2Frequency": 0.020000001,
+          "Noise2Gain": 1,
+          "Noise2lacunarity": 0.8,
+          "Noise2Octave": 3,
+          "Noise2Seed": 0,
+          "Noise2Type": 0,
+          "Noise2Weight": [
+            {
+              "x": 0.5,
+              "y": 0.30000007,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 0.51058203,
+              "in": -1.0588236,
+              "out": 1.0588236,
+              "mode": "Mirrored"
+            }
+          ],
+          "Noise3Frequency": 0.07000001,
+          "Noise3Gain": 1.1,
+          "Noise3lacunarity": 0.3,
+          "Noise3Octave": 9,
+          "Noise3Seed": 0,
+          "Noise3Type": 0,
+          "Noise3Weight": [
+            {
+              "x": 0.51687115,
+              "y": 0.39361703,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RegenNoise": false,
+          "SampleResolution": 256,
+          "SetResolution": 1,
+          "TerrainMat": "materials/islands.vmat",
+          "TerrainObj": {
+            "_type": "gameobject",
+            "prefab": "prefabs/chunkprefab.prefab"
+          },
+          "TerrainOffset": "0,0"
+        },
+        {
+          "__type": "LocalFile",
+          "__guid": "b13bbaa1-40ef-44a1-a667-12ddabe76063",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    },
+    {
+      "__guid": "e8ef0bf6-ab5a-4447-b519-2259a614f1ec",
+      "Flags": 0,
+      "Name": "Player",
+      "Position": "0,0,100",
+      "Tags": "player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "abc9ad17-e1c5-4008-ac6a-7f58d9ffd356",
+          "BodyGroups": 681,
+          "CreateAttachments": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/citizen_human/citizen_human_male.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.CharacterController",
+          "__guid": "724ee2eb-8777-4d6e-b3b6-2ff8897239d2",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Radius": 16,
+          "StepHeight": 18,
+          "UseCollisionRules": false
+        },
+        {
+          "__type": "Noclip",
+          "__guid": "8127a5c6-32cc-4feb-8601-2e7aa7af966a",
+          "Camera": {
+            "_type": "gameobject",
+            "go": "911fd6b7-d799-49fd-a512-653a833e8af0"
+          },
+          "CharController": {
+            "_type": "component",
+            "component_id": "724ee2eb-8777-4d6e-b3b6-2ff8897239d2",
+            "go": "e8ef0bf6-ab5a-4447-b519-2259a614f1ec",
+            "component_type": "CharacterController"
+          },
+          "HumanForScale": {
+            "_type": "component",
+            "component_id": "abc9ad17-e1c5-4008-ac6a-7f58d9ffd356",
+            "go": "e8ef0bf6-ab5a-4447-b519-2259a614f1ec",
+            "component_type": "ModelRenderer"
+          },
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "911fd6b7-d799-49fd-a512-653a833e8af0",
+          "Flags": 0,
+          "Name": "Main Camera",
+          "Position": "-476.0975,0,110.9101",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "9d075aa1-a906-4f5b-8fdc-1c992050e4b8",
+              "BackgroundColor": "0,0,0,1",
+              "ClearFlags": "All",
+              "FieldOfView": 60,
+              "IsMainCamera": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 20000,
+              "ZNear": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "df018bcd-3017-4350-8fbc-c058a51cbe9b",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Position": "99.4212,-659.9509,400007.2",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "ae7f97c1-c386-43b6-a8cf-5f380ec88dcb",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "SkyIndirectLighting": true,
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "993c1b0f-6d54-469d-8715-e56c975a2d66",
+      "Flags": 0,
+      "Name": "Sun",
+      "Position": "13510.1,13509.81,3000131",
+      "Rotation": "0.8824572,-0.139739,-0.3275502,0.3073321",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "1a2483de-dda7-4c5b-a99e-659cef83b808",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Shadows": true,
+          "SkyColor": "0,0,0,0"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "Metadata": {},
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": null,
+  "Description": null,
+  "__references": [],
+  "__version": 2
+}

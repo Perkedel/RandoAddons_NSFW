@@ -54,12 +54,6 @@
 				children = 
 				[
 					{
-						_class = "PhysicsMeshFromRender"
-						parent_bone = ""
-						surface_prop = "default"
-						collision_tags = "solid"
-					},
-					{
 						_class = "PhysicsShapeCylinder"
 						name = "RhineCompensate"
 						parent_bone = ""
@@ -98,6 +92,15 @@
 						radius = 8.0
 						point0 = [ 0.0, 0.0, 160.0 ]
 						point1 = [ 0.0, 0.0, 120.0 ]
+					},
+					{
+						_class = "PhysicsHullFromRender"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						faceMergeAngle = 9.63
+						maxHullVertices = 64
+						hull_mode = "SingleHull"
 					},
 				]
 			},

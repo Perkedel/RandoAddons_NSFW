@@ -558,6 +558,38 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "5f077c41-0a7a-43d7-b48e-8f7611d814b8",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "PlayerModelCommand",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "PlayerModelCommand",
+          "__guid": "a785386f-872b-41a7-8fd1-665cd50be903",
+          "__enabled": true,
+          "Flags": 0,
+          "Myself": null,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -586,13 +618,13 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
+      "Sandbox.MovieMaker.MovieRecorderSystem": {
+        "DisableClientRecording": false
+      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "d3047113-a044-4635-8cc3-92edfb3fbd60"
         }
-      },
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
       }
     }
   },
@@ -600,7 +632,7 @@
   "Title": "Minimal Pen",
   "Description": "Minimum Test Map\n\nUse this map to test anything minimally, with minimum overhead as much as possible.",
   "__references": [
-    "facepunch.sandbox#202574"
+    "facepunch.sandbox#204182"
   ],
   "__version": 3
 }

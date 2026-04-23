@@ -7,9 +7,9 @@
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
-    "Tags": "",
+    "Tags": "grab,interact",
     "Enabled": true,
-    "NetworkMode": 2,
+    "NetworkMode": 1,
     "NetworkFlags": 0,
     "NetworkOrphaned": 0,
     "NetworkTransmit": true,
@@ -86,7 +86,10 @@
         "OnComponentEnabled": null,
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
-        "OnComponentUpdate": null
+        "OnComponentUpdate": null,
+        "rigidItself": null,
+        "RotationForce": 250,
+        "UpwardForce": 500
       },
       {
         "__type": "Sandbox.ModelCollider",
@@ -112,6 +115,113 @@
         "Static": false,
         "Surface": "entity/wahahadice/wahahadicesurface.surface",
         "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "Button",
+        "__guid": "8c481639-23ad-495a-8d2f-1cc8c43a27ac",
+        "__enabled": true,
+        "Flags": 0,
+        "AnimationCurve": [
+          {
+            "x": 0,
+            "y": 0,
+            "in": 0,
+            "out": 0,
+            "mode": "Mirrored"
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "in": 0,
+            "out": 0,
+            "mode": "Mirrored"
+          }
+        ],
+        "AnimationTime": 0.5,
+        "AutoReset": true,
+        "Mode": "Immediate",
+        "Move": false,
+        "MoveDelta": "0,0,0",
+        "MoveTarget": null,
+        "OffSound": null,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnPressed": null,
+        "OnSound": "sounds/kenney/ui/ui.popup.message.open.sound",
+        "OnStateChanged": {
+          "__version": 9,
+          "__guid": "e4624706-74c2-4749-8624-0a131c14677b",
+          "__changeId": 7,
+          "UserData": {
+            "Title": "On State Changed",
+            "ReferencedComponentTypes": [
+              "WahahaDice"
+            ]
+          },
+          "Variables": [],
+          "Nodes": [
+            {
+              "Id": 0,
+              "Type": "input",
+              "UserData": {
+                "Position": "-24,12"
+              }
+            },
+            {
+              "Id": 3,
+              "Type": "call",
+              "Properties": {
+                "_isStatic": false,
+                "_name": "RollTheDiceNow",
+                "_type": "WahahaDice"
+              },
+              "UserData": {
+                "Position": "204,24"
+              }
+            },
+            {
+              "Id": 4,
+              "Type": "scene.get",
+              "Properties": {
+                "T": "WahahaDice"
+              },
+              "UserData": {
+                "Position": "-36,96"
+              }
+            }
+          ],
+          "Links": [
+            {
+              "SrcId": 0,
+              "SrcName": "_signal",
+              "DstId": 3,
+              "DstName": "_signal"
+            },
+            {
+              "SrcId": 4,
+              "SrcName": "_result",
+              "DstId": 3,
+              "DstName": "_target"
+            },
+            {
+              "SrcId": 0,
+              "SrcName": "_target",
+              "DstId": 4,
+              "DstName": "_this"
+            }
+          ]
+        },
+        "ResetTime": 1,
+        "TooltipDescription": "Roll this dice now",
+        "TooltipDescriptionOff": "",
+        "TooltipIcon": "casino",
+        "TooltipIconOff": "touch_app",
+        "TooltipTitle": "Roll",
+        "TooltipTitleOff": "Press"
       }
     ],
     "Children": [],
@@ -131,6 +241,7 @@
         "AgentMaxSlope": 40,
         "ExcludedBodies": "",
         "IncludedBodies": "",
+        "DeferGeneration": false,
         "CustomBounds": false
       }
     },

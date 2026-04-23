@@ -1,0 +1,32 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/terrainshader.shader"
+
+	TexCoordMulti "[40.000 40.000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- HeightMap ----
+	NoiseTexture "materials/default/default_mod2x.tga"
+
+	//---- Terrain Textures ----
+	TextureAtHight0 "materials/simpletextures/sand4.png"
+	TextureAtHight1 "materials/simpletextures/sand5.png"
+	TextureAtHight10 "materials/simpletextures/sand2.png"
+	TextureAtHight2 "materials/simpletextures/sand3.png"
+	TextureAtHight3 "materials/simpletextures/sand2.png"
+	TextureAtHight4 "materials/simpletextures/sand2.png"
+	TextureAtHight5 "materials/simpletextures/sand2.png"
+	TextureAtHight6 "materials/simpletextures/sand2.png"
+	TextureAtHight7 "materials/simpletextures/sand2.png"
+	TextureAtHight8 "materials/simpletextures/sand2.png"
+	TextureAtHight9 "materials/simpletextures/sand2.png"
+
+	DynamicParams
+	{
+		NoiseTexture "NoiseTexture"
+	}
+}

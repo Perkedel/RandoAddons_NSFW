@@ -36,13 +36,13 @@ public sealed class PenComponent : Component
 	// Tutorial Console Commands!
 
 	[ConCmd( "test", ConVarFlags.Server )]
-	public static void TestCmd( Connection caller )
+	public static void TestCmd( Connection caller , string arg)
 	{
-		Log.Info( "The caller is: " + caller.DisplayName  );
+		Log.Info( "The caller is: " + caller.DisplayName  + ". Yeah " + arg);
 	}
 
 	[ConCmd("hello")]
-    static void HelloCommand( string name = "citizen" )
+    public static void HelloCommand( string name = "citizen" )
     {
         Log.Info( $"Hello there {name}!" );
     }

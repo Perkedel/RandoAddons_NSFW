@@ -1,0 +1,108 @@
+﻿@using System;
+@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.Razor;
+@inherits PanelComponent
+
+<root>
+	<div @ref="TooltipPanel" class="tooltip-container tooltip-panel">
+		@Contents
+	</div>
+</root>
+
+@code
+{
+	public static RazorTooltipSystem Current
+	{
+		get
+		{
+			if ( !_current.IsValid() )
+			{
+				var go = new GameObject( "RazorTooltipSystem" );
+				var screen = go.AddComponent<ScreenPanel>();
+				screen.ZIndex = 5000;
+				_current = go.AddComponent<RazorTooltipSystem>();
+			}
+			return _current;
+		}
+	}
+	static RazorTooltipSystem _current;
+
+	public static Panel Hovering { get; set; }
+
+	Vector2 Position { get; set; }
+	RenderFragment Contents = null;
+	Panel TooltipPanel;
+
+	protected override void OnTreeFirstBuilt ()
+	{
+		Hide();
+	}
+
+	protected override void OnUpdate ()
+	{
+		if ( Hovering is not null && ( !Hovering.IsValid() || !Hovering.IsVisible || !Hovering.HasHovered ) )
+		{
+			Hide();
+		}
+		else if ( Hovering is null && TooltipPanel.Style.Opacity > 0 )
+		{
+			Hide();
+		}
+
+		var pos = Mouse.Position;
+		pos += new Vector2( 12, 0 );
+		Position = Position.LerpTo( pos / new Vector2( Screen.Width, Screen.Height ), RealTime.Delta * 10f );
+
+		if ( Position.x < 0.5f )
+		{
+			TooltipPanel.Style.Left = Length.Percent( Position.x * 100f );
+			TooltipPanel.Style.Right = Length.Undefined;
+		}
+		else
+		{
+			TooltipPanel.Style.Right = Length.Percent( ( 1f - Position.x ) * 100f );
+			TooltipPanel.Style.Left = Length.Undefined;
+		}
+
+		if ( Position.y < 0.5f )
+		{
+			TooltipPanel.Style.Top = Length.Percent( Position.y * 100f );
+			TooltipPanel.Style.Bottom = Length.Undefined;
+		}
+		else
+		{
+			TooltipPanel.Style.Bottom = Length.Percent( ( 1f - Position.y ) * 100f );
+			TooltipPanel.Style.Top = Length.Undefined;
+		}
+
+	}
+
+	public static void Show ( RenderFragment fragment )
+	{
+		var current = Current;
+		current.Contents = fragment;
+		if ( current.TooltipPanel is not null )
+		{
+			current.TooltipPanel.Style.Opacity = 1f;
+		}
+	}
+
+	public static void Hide ()
+	{
+		var current = Current;
+
+		Hovering = null;
+		if ( current.Contents is not null )
+		{
+			current.TooltipPanel.Style.From( Styles.Default );
+		}
+		current.Contents = builder =>
+		{
+			builder?.AddAttribute( 1, "style", "" );
+		};
+		current.TooltipPanel.Style.Opacity = 0f;
+	}
+
+	protected override int BuildHash () => System.HashCode.Combine( Contents );
+}

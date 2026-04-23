@@ -1,0 +1,32 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/terrainshader.shader"
+
+	TexCoordMulti "[40.000 40.000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- HeightMap ----
+	NoiseTexture "materials/default/default_noise.tga"
+
+	//---- Terrain Textures ----
+	TextureAtHight0 "materials/simpletextures/darkwater.png"
+	TextureAtHight1 "materials/simpletextures/water.png"
+	TextureAtHight10 "materials/simpletextures/snow.png"
+	TextureAtHight2 "materials/simpletextures/sand.png"
+	TextureAtHight3 "materials/simpletextures/lightgrass.png"
+	TextureAtHight4 "materials/simpletextures/lightgrass.png"
+	TextureAtHight5 "materials/simpletextures/grass.png"
+	TextureAtHight6 "materials/simpletextures/grass.png"
+	TextureAtHight7 "materials/simpletextures/stone.png"
+	TextureAtHight8 "materials/simpletextures/stone.png"
+	TextureAtHight9 "materials/simpletextures/snow.png"
+
+	DynamicParams
+	{
+		NoiseTexture "NoiseTexture"
+	}
+}

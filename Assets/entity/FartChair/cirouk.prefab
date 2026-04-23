@@ -1,0 +1,81 @@
+{
+  "RootObject": {
+    "__guid": "c22b58eb-e652-43af-90b2-2c579923dc35",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "Cirouk",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "f2155fec-15e1-4487-aa54-deec79f0db6f",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "f2155fec-15e1-4487-aa54-deec79f0db6f",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "82fb07c9-5bde-4a90-b26f-82d62a63a953",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "47e3cef9-2ec4-4176-a923-7c02ae7faf80",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "8aa09991-2d4b-417e-9af6-664361e4bbec",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "d81eb6b1-e48b-4134-9f0c-110dcf3c3b87",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "7233cebf-4439-4905-8211-2a03e44e6574",
+          "05e19227-aff2-4215-a306-dcbc510a8389": "1a6806c7-6122-4e36-a500-964edf280b83",
+          "60c0dbc0-9f70-4e2c-9c49-47de6f5c7aff": "f88855fa-1ff8-4615-93a2-c1a7bbc83504",
+          "b52ad788-d7cb-4c07-a673-d61e1514d8c9": "2c3996ca-d4b4-4284-83d4-cd4a5380f166"
+        }
+      },
+      {
+        "__guid": "35450e53-fa36-4d13-b43a-60157bfdf5c5",
+        "__version": 2,
+        "__Prefab": "entity/fartchair/desperchair.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "510e024b-b6b7-44ab-b5b6-1079e59500f7"
+              },
+              "Property": "Rotation",
+              "Value": "0,0,-1,1.94707184E-07"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "510e024b-b6b7-44ab-b5b6-1079e59500f7": "35450e53-fa36-4d13-b43a-60157bfdf5c5",
+          "e4cfa9ab-01f4-473d-b109-7a0ca43df2ae": "04cc73d6-343f-4f0e-ac26-1494fc115620",
+          "5049b7b3-a2a5-45ef-9b19-63fd08412848": "6ccff244-2865-40c2-9c9d-1f8894cfbfad",
+          "ed161adb-cb1d-4d02-9079-ff606f9972ab": "5393d5db-3328-4054-a8f8-968b96da7c53",
+          "d561c52c-6e21-4dff-98e1-28dcc3fd6cc6": "4a026b99-7136-4dcd-8e58-9350089e3533",
+          "54152903-353d-4d2b-8eca-d2c2fbf440e6": "5ef6f75a-8a13-4fc8-b43f-5385442cafad",
+          "05e19227-aff2-4215-a306-dcbc510a8389": "4df3de34-a80c-4f3c-a1c9-06cb13618d02",
+          "60c0dbc0-9f70-4e2c-9c49-47de6f5c7aff": "59e24af3-9ff4-45c7-9697-4674c8151dea",
+          "b52ad788-d7cb-4c07-a673-d61e1514d8c9": "fd6e0373-ba2e-4d3a-9057-e2d6c59fa05c"
+        }
+      }
+    ]
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}
