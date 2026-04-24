@@ -9,7 +9,7 @@ Stuffs like 3D Models, SFX, Codes, etc. we make, edit hack, etc.
 | Assets | Author | License | Descriptions |
 | - | - | - | - |
 | aaa | bbb | ??? | aaa |
-| [Kenney.nl Public Domain stuffs](https://kenney.nl) | Kenney | CC0 | One of the few modern Public Domain assets for game developers |
+| [Kenney.nl Public Domain stuffs](https://kenney.nl) (& [his s&box](https://sbox.game/kenneynl)) | Kenney | CC0 | One of the few modern Public Domain assets for game developers |
 | [TriwaveBZ Protogen](https://odysee.com/@X0P1R4T3-33NSVREENMNT-0FFICIAL:f/BZ-Protogen-RAW:5) | TriwaveBZ | ??? | The only "Free to use" & Gratis Protogen 3D model I could find. Original Patent by CoolKoinu |
 | [`Mindless`'s Materials](https://sbox.game/mindless) | mindless | ??? | whatever this dev material this is. I hope it's Kenney's btw, who knows. Just wanna get things real quick! |
 | [Low Poly Heart Organ](https://skfb.ly/osAnP) | [Khalifa Hawill](https://sketchfab.com/khalifahawill) | CC4.0-BY | It's beating! |
@@ -56,6 +56,8 @@ Package used in Editors.
 | [MediaHelper](https://sbox.game/carsonk/mediahelpers) | Carson Kompon | MIT? | aaa |
 | ~~[Terrain Splat Generator](https://sbox.game/sturnus/terraingenerationtool)~~ | sturnus | aaa | aaa |
 | [Infinite Procedural Generation](https://sbox.game/foreignlanparty/infiniteproceduralterraingeneration/) | Foreign LAN Party | aaa | aaa |
+| [s&box iconify](https://sbox.game/mint/iconify) | Mint Studios | ??? | Razor Panel of Iconify icons. Explore set https://icones.js.org |
+| aaa | aaa | aaa | aaa |
 
 ## Utilities
 
