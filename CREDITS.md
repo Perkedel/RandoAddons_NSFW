@@ -16,6 +16,8 @@ Stuffs like 3D Models, SFX, Codes, etc. we make, edit hack, etc.
 | [Heartbeat synthetic generic sound pack](https://freesound.org/people/.name/packs/23663/) | [`.name`](https://freesound.org/people/.name/) | CC4.0-BY | Generic Soundpack of Heartbeat sound |
 | [Whoopee Cushion](https://skfb.ly/oFIup) | Andy Begg | CC4.0-BY | Whoopie Cushion. Fart Prank! |
 | [JCThornton 3D Models!!!!](https://www.patreon.com/c/jcthornton/posts) | JCThornton | ??? | Every JCThornton 3D Model he made. Legacy Pack according to [here](https://www.patreon.com/posts/wip-model-packs-116693030). |
+| [Chell but Fox Thyren](https://gamebanana.com/mods/567714) | Yojimo | CC4.0-BY-NC-ND (Default Gamebanana) | Discovered thanks to [Stokingu & VvVitekVvV P2CE ported mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3709454362). Thumbnail by [Swiwwel](https://x.com/swiwwel). 3D design sheets and assisted by [Foxpop](https://x.com/F0XnR0LL). Original fox design by [Sam Bragg](https://www.sambragg.art/). [Fox Chell mural mod by VvVitekVvV](https://gamebanana.com/mods/567815). [Original Art of Fox Chell mural by SWZTCH](https://www.furaffinity.net/view/46244928/). |
+| aaa | bbb | ??? | aaa |
 
 ## Libraries
 
@@ -65,9 +67,11 @@ Package used in Editors.
 | - | - | - | - |
 | aaa | bbb | ??? | aaa |
 | [Source2 Viewer](https://s2v.app/) | Valve Resource Format | MIT | [**Source Code!**](https://github.com/ValveResourceFormat/ValveResourceFormat) Valve's Source 2 resource file format parser, renderer, decompiler, and exporter. **For Source2**. The library component is called **ValveResourceFormat (VRF)**. [Referred by ZaqMacaw](https://steamcommunity.com/groups/CrowbarTool/discussions/0/1741139653396823076/), of vF's discussion. [Extra Decompile](https://github.com/Penguinwizzard/Source2ResourceDecompiler)? |
-| [ZaqMacaw's Crowbar](https://github.com/ZeqMacaw/Crowbar) | ZaqMacaw | [CC3.0-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/) | GoldSource and Source Engine Modding Tool. **For Source1**. [Valve's Wiki Article](https://developer.valvesoftware.com/wiki/Crowbar) |
+| [ZaqMacaw's Crowbar](https://github.com/ZeqMacaw/Crowbar) | ZaqMacaw | [CC3.0-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/) | GoldSource and Source Engine Modding Tool. **For Source1**. [Valve's Wiki Article](https://developer.valvesoftware.com/wiki/Crowbar). [Community Group about it](https://steamcommunity.com/groups/CrowbarTool) |
 | [Source2 Converter](https://github.com/REDxEYE/Source2Converter) | REDxEYE | ??? | Toolset for converting Source1 props to Source2. [Valve Wiki Hub Article how to port Source1 to Source2](https://developer.valvesoftware.com/wiki/Source_2/Docs/Porting_Legacy_Content). |
 | [Noz's Source-2-s&box Playermodel Converter](https://github.com/Noztik/Source-to-Sbox-Playermodel-Converter) | Noztik | ??? | Convert Player model from Source1 to Sandbox yey! |
+| [VTFEdit Reloaded](https://developer.valvesoftware.com/wiki/VTFEdit_Reloaded) ([Download](https://github.com/Sky-rym/VTFEdit-Reloaded/releases/latest)) | Sky-rym | GNU LGPL2 | Source1 Valve Texture Edit fork. [Source Code](https://github.com/Sky-rym/VTFEdit-Reloaded). [Old OG](https://developer.valvesoftware.com/wiki/VTFEdit) ([DL](https://nemstools.github.io/pages/VTFLib-Download.html)) |
+| aaa | bbb | ??? | aaa |
 
 ## Game Mode
 

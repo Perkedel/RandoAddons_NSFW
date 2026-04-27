@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Yojimo\u0027s Foxchell (Raw Ragdoll)",
+      "Type": "model",
+      "Org": "perkedel",
+      "Ident": "yojimo_foxchell_raw",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": [
+        "facepunch.sandbox#207507"
+      ],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/foxchell/yojimo_foxchell_gaveup-raw.vmdl"
+      }
+    }
+  }
+}

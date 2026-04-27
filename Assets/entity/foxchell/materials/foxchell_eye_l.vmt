@@ -1,0 +1,9 @@
+VertexLitGeneric
+{
+$basetexture models/player/foxchell/foxchell_eye
+$surfaceprop Flesh
+$model 1
+$halflambert 1
+
+$lightwarptexture models/player/foxchell/foxchell_lightwarp
+}

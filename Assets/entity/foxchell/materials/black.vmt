@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+$basetexture "models/player/foxchell/black"
+$model 1
+}
