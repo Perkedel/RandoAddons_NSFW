@@ -1,0 +1,10 @@
+{
+  "Prefab": "entity/fartchair/longchair.prefab",
+  "Title": "Longchair",
+  "Description": "Ridiculously Long Chair. Best could be used as a mall facility.",
+  "Category": null,
+  "IncludeCode": true,
+  "Developer": false,
+  "__references": [],
+  "__version": 0
+}

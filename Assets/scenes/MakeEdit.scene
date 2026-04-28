@@ -39962,11 +39962,11 @@
       }
     },
     {
-      "__guid": "e5f1445e-10f1-4cab-8442-b28fa65f0022",
+      "__guid": "e92ecea7-98ca-432c-8111-8345b29564a6",
       "__version": 2,
       "Flags": 0,
       "Name": "yojimo_foxchell_gaveup-raw",
-      "Position": "274.984344,-388.455811,0.0553059988",
+      "Position": "169.123352,-412.461365,0.0553059988",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -39979,7 +39979,7 @@
       "Components": [
         {
           "__type": "Sandbox.Prop",
-          "__guid": "358fe0d9-8be9-4348-8d38-484bb48ca5ca",
+          "__guid": "6b03d3f2-8918-4b85-abf5-a72a31be7ef9",
           "__enabled": true,
           "Flags": 0,
           "BodyGroups": 18446744073709551615,
@@ -40000,7 +40000,7 @@
         },
         {
           "__type": "Sandbox.SkinnedModelRenderer",
-          "__guid": "9756b009-d8f6-42ca-8cda-c2f6f414a1cf",
+          "__guid": "c4711f76-57eb-45f2-b89d-061215a3aee2",
           "__enabled": true,
           "Flags": 0,
           "AnimationGraph": null,
@@ -40045,7 +40045,7 @@
         },
         {
           "__type": "Sandbox.ModelPhysics",
-          "__guid": "8bb861c7-3adf-4c41-9ad5-eefbcdad7f51",
+          "__guid": "f5503554-cb86-457c-8e17-2d4fac69464c",
           "__enabled": true,
           "Flags": 0,
           "Bodies": [],
@@ -40070,8 +40070,8 @@
           "PhysicsWereCreated": false,
           "Renderer": {
             "_type": "component",
-            "component_id": "9756b009-d8f6-42ca-8cda-c2f6f414a1cf",
-            "go": "e5f1445e-10f1-4cab-8442-b28fa65f0022",
+            "component_id": "c4711f76-57eb-45f2-b89d-061215a3aee2",
+            "go": "e92ecea7-98ca-432c-8111-8345b29564a6",
             "component_type": "SkinnedModelRenderer"
           },
           "RigidbodyFlags": 0,
