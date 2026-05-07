@@ -2,11 +2,39 @@
 
 Welcome's Resources to get you started in s&box both Gameplay & Development
 
+## PSA! Pls read!
+
+> [!CRITICAL]
+> Critical Warning!
+> 
+> Pls never upload any assets you got from digital market & platforms (Free & Paid) OR your own  
+> with restrictions such as:
+> - `Do not make public`
+> - `Do not redistribute`
+>
+> **EVEN IF YOU SET THOSE TO `Hidden`!!**  
+> This is because s&box assets **are not encrypted**, and can be easily decompiled back to re=workable mesh, scripts, and stuffs.
+> 
+> Please respect those *artists* at least few last times. If you wanna experience with those assets, **s&box therefore is not the right game**.  
+> You may instead go to other UGC capable games such as ChilloutVR, which has encryption & no ripping allowed 🙃.
+
+<!-- Sorry, that's for legal if they ask. Your scrutiny (like breaking their rules of ones would) is your own responsibility. -->
+
 ## Playlists / Collections
 
 - [Welcome's Recommendation](https://sbox.game/perkedel/welcome_recommendation). A Very important Collection for the first timers to s&box. Welcome, Citizens!
 - [Perkedel's Favourite & Most Used Stuffs](https://sbox.game/perkedel/inuseni). Stuffs we personally used alot & would use often.
 - [Subscribe To Everything](https://sbox.game/perkedel/inuseni). Everything in s&box. Well, it's useless unfortunately, coz how Workshop works here in s&box is dedicated, not Steam's. But hey, you'll see everything atleast!
+
+## Assets
+
+- [Kenney.nl Public Domain Assets](https://kenney.nl/assets). all CC0 & Free original low poly assets! 3D & 2D.
+- [AmbientCG PBR Materials](https://ambientcg.com/)
+- [PolyHaven HDRI](https://polyhaven.com/)
+- [FreeGameAssets.com](https://www.freegameassets.com/)
+- OpenGameArt ...
+- [Textures.com](https://www.textures.com/)
+- [PolyPizza 3D Models](https://poly.pizza/)
 
 ## Guides
 
@@ -17,6 +45,11 @@ Welcome's Resources to get you started in s&box both Gameplay & Development
     - [Shapekey+](https://github.com/MichaelGlenMontague/shape_keys_plus)
     - [Blender Merge the Bones!](https://github.com/vr-voyage/blender_bones_merger). 
     - Pls check also `Get Add On` Blender Preferences!
+- [Sandking YouTube channel](https://youtube.com/@sandking-s7i). Tutorial how to s&box editor & the critical thinking way of s&box development.
+- Moar Awesomes pls!!!
+  - [SubZero's Ultimate s&box Guides](https://sbox.game/f/resources/1071/1/)
+  - [CSEliot's s&box Awesome resources](https://github.com/CSEliot/sbox-resources). Yes another s&box resources guide. [Forum](https://sbox.game/f/resources/2447/1/#post2)
+  - [Ryhon0's s&box Awesome](https://github.com/Ryhon0/awesome-sboxl) **PRIVATED**
 
 ## Random Knowledges
 
@@ -26,3 +59,12 @@ We are not sure where to put these all, our chrome tabs are accumulating!, but w
   - https://sbox.game/f/code/764/1/ from **ducc**. Yeah don't worry about him, just take the education.
 - Person
   - Carson Kompon. s&box enthusiast now an employee at Facepunch. Checkout his cool tutorials on YouTube!
+
+## Socials
+
+- [Official Facepunch s&box Discord](https://discord.gg/sbox)
+- Other Language
+  - [French](https://discord.gg/kDn4ACn3)
+  - [Russian](https://discord.gg/xgexybx)
+- [SubZero's Discord](https://discord.gg/zyEjNP3j)
+- ~~Perkedel DSCD~~
