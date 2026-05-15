@@ -100,3 +100,7 @@ Recommended Game modes
 - Dude, idk how to Random in C\#, care to help me?
   - https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp
   - https://stackoverflow.com/questions/2706500/how-do-i-generate-a-random-integer-in-c
+- [Braxen's Tips & Tricks](https://sboxtricks.dongers.net/). [Forum](https://sbox.game/f/resources/971/1/)
+- Random
+  - https://youtu.be/uL19ifC-0kA
+  - https://youtu.be/5EF7eQBur7w
