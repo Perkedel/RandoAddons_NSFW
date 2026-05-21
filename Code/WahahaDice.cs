@@ -3,9 +3,9 @@ using Sandbox;
 
 public sealed class WahahaDice : Component
 {
-	[Property] public Rigidbody rigidItself { get; set; }
-	[Property] public float UpwardForce { get; set; } = 500f;
-	[Property] public float RotationForce { get; set; } = 250f;
+	[Property,RequireComponent] public Rigidbody rigidItself { get; set; }
+	[Property] public float UpwardForce { get; set; } = 750f;
+	[Property] public float RotationForce { get; set; } = 750f;
 
 	protected override void OnAwake()
 	{
@@ -27,12 +27,24 @@ public sealed class WahahaDice : Component
 
 	public void RollTheDiceNow()
 	{
-		Log.Info( "Roll Dice" );
+		Log.Info( $"Roll Dice" );
 		if(rigidItself.IsValid())
 		{
 			var rnd = new Random();
-			//rigidItself.ApplyForce( Vector3.Up * UpwardForce );
-			rigidItself.ApplyImpulse( Vector3.Up * UpwardForce );
+			float scaleRoot = (float)Math.Cbrt( (WorldScale.x * WorldScale.y * WorldScale.z) * 1f );
+			// float scaleRoot = WorldScale.x;
+			// DONE: cube root method instead!
+			// https://stackoverflow.com/a/34090411/9079640
+			// rigidItself.ApplyForce( Vector3.Up * UpwardForce );
+			// rigidItself.ApplyImpulse( Vector3.Up * (float)Math.Pow(UpwardForce, scaleRoot));
+			// rigidItself.ApplyImpulse( Vector3.Up * (UpwardForce + scaleRoot));
+			// rigidItself.ApplyImpulse( Vector3.Up * (UpwardForce * (float)Math.Exp(scaleRoot)));
+			// rigidItself.ApplyImpulse( Vector3.Up * (UpwardForce * (float)Math.Pow(scaleRoot,2)));
+			// rigidItself.ApplyForce( Vector3.Up * UpwardForce * (scaleRoot * 50f) );
+			// rigidItself.ApplyForce( Vector3.Up * UpwardForce * (float)Math.Pow(50f,scaleRoot) );
+			// rigidItself.ApplyForce( Vector3.Up * (float)Math.Pow(UpwardForce,scaleRoot) * 50f );
+			// rigidItself.ApplyForce( Vector3.Up * UpwardForce * (50f * scaleRoot) );
+			rigidItself.ApplyForce( Vector3.Up * UpwardForce * (50f * rigidItself.Mass) );
 			rigidItself.ApplyTorque( new Vector3(rnd.NextSingle() * RotationForce,rnd.NextSingle() * RotationForce,rnd.NextSingle() * RotationForce) );
 		}
 	}

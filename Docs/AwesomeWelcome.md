@@ -50,6 +50,7 @@ Welcome's Resources to get you started in s&box both Gameplay & Development
   - [SubZero's Ultimate s&box Guides](https://sbox.game/f/resources/1071/1/)
   - [CSEliot's s&box Awesome resources](https://github.com/CSEliot/sbox-resources). Yes another s&box resources guide. [Forum](https://sbox.game/f/resources/2447/1/#post2)
   - [Ryhon0's s&box Awesome](https://github.com/Ryhon0/awesome-sboxl) **PRIVATED**
+  - [MMD to s&box??](https://steamcommunity.com/sharedfiles/filedetails/?id=3196678585)
 
 ## Random Knowledges
 

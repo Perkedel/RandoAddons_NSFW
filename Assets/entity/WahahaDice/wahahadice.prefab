@@ -74,6 +74,7 @@
         "OnComponentUpdate": null,
         "OverrideMassCenter": false,
         "RigidbodyFlags": 0,
+        "SleepThreshold": 2,
         "StartAsleep": false
       },
       {
@@ -87,9 +88,14 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "rigidItself": null,
-        "RotationForce": 250,
-        "UpwardForce": 500
+        "rigidItself": {
+          "_type": "component",
+          "component_id": "097b2f9b-b6e9-4a86-b786-e5f9446c9be5",
+          "go": "d3972606-2d8c-4026-a782-637e90cf6b1a",
+          "component_type": "Rigidbody"
+        },
+        "RotationForce": 750,
+        "UpwardForce": 750
       },
       {
         "__type": "Sandbox.ModelCollider",
@@ -117,7 +123,7 @@
         "SurfaceVelocity": "0,0,0"
       },
       {
-        "__type": "Button",
+        "__type": "Sandbox.Mapping.Button",
         "__guid": "8c481639-23ad-495a-8d2f-1cc8c43a27ac",
         "__enabled": true,
         "Flags": 0,
@@ -150,71 +156,30 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "OnPressed": null,
-        "OnSound": "sounds/kenney/ui/ui.popup.message.open.sound",
-        "OnStateChanged": {
-          "__version": 9,
-          "__guid": "e4624706-74c2-4749-8624-0a131c14677b",
-          "__changeId": 7,
-          "UserData": {
-            "Title": "On State Changed",
-            "ReferencedComponentTypes": [
-              "WahahaDice"
-            ]
-          },
-          "Variables": [],
-          "Nodes": [
+        "OnPressed": {
+          "body": [
             {
-              "Id": 0,
-              "Type": "input",
-              "UserData": {
-                "Position": "-24,12"
-              }
-            },
-            {
-              "Id": 3,
-              "Type": "call",
-              "Properties": {
-                "_isStatic": false,
-                "_name": "RollTheDiceNow",
-                "_type": "WahahaDice"
+              "$type": "ivk",
+              "InvokeType": "Member",
+              "TargetComponent": {
+                "t": "Direct",
+                "cv": {
+                  "_type": "component",
+                  "component_id": "30d22c90-e8bd-419a-8324-ababc9689895",
+                  "go": "d3972606-2d8c-4026-a782-637e90cf6b1a",
+                  "component_type": "WahahaDice"
+                }
               },
-              "UserData": {
-                "Position": "204,24"
-              }
-            },
-            {
-              "Id": 4,
-              "Type": "scene.get",
-              "Properties": {
-                "T": "WahahaDice"
-              },
-              "UserData": {
-                "Position": "-36,96"
-              }
-            }
-          ],
-          "Links": [
-            {
-              "SrcId": 0,
-              "SrcName": "_signal",
-              "DstId": 3,
-              "DstName": "_signal"
-            },
-            {
-              "SrcId": 4,
-              "SrcName": "_result",
-              "DstId": 3,
-              "DstName": "_target"
-            },
-            {
-              "SrcId": 0,
-              "SrcName": "_target",
-              "DstId": 4,
-              "DstName": "_this"
+              "Member": "WahahaDice.RollTheDiceNow",
+              "Arguments": [],
+              "ReturnVariable": null
             }
           ]
         },
+        "OnReleased": null,
+        "OnSound": "sounds/kenney/ui/ui.popup.message.open.sound",
+        "OnTurnedOff": null,
+        "OnTurnedOn": null,
         "ResetTime": 1,
         "TooltipDescription": "Roll this dice now",
         "TooltipDescriptionOff": "",

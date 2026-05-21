@@ -13,6 +13,18 @@ public sealed class PlayerModelCommand : Component
 		// 	Myself = Scene.Directory.FindByName("").First().GetComponent<PlayerController>();
 
 		// }
+
+	}
+
+	protected override void OnStart()
+	{
+		// PlayerController obtaine = Scene.Directory.FindByName( "" ).First().GetComponent<PlayerController>();
+		// PlayerController obtaine = Scene.Directory.FindComponentByGuid("").
+		// if(obtaine.IsValid)
+		// 	if ( !obtaine.IsProxy )
+		// 	{
+		// 		Myself = obtaine;
+		// 	}
 	}
 
 	protected override void OnUpdate()

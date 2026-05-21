@@ -1,4 +1,4 @@
-<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
 {
 	rootNode = 
 	{
@@ -265,7 +265,7 @@
 						note = "This only matters if your model has eye bones.\n\nThese two custom attachments should be position to be in the middle of each eye. If your eye, when the player is looking forward, is tilted too far downwards or upwards then adjust the Y axis in Relative Angles."
 						parent_bone = "head"
 						relative_origin = [ 10.25, 9.6, -3.6 ]
-						relative_angles = [ 0.0, 70.0, 90.0 ]
+						relative_angles = [ 0.0, 90.0, 90.0 ]
 						weight = 1.0
 						ignore_rotation = false
 					},
@@ -274,7 +274,7 @@
 						name = "eye_L_forward_custom"
 						parent_bone = "head"
 						relative_origin = [ 10.25, 9.6, 3.6 ]
-						relative_angles = [ 0.0, 70.0, 90.0 ]
+						relative_angles = [ 0.0, 90.0, 90.0 ]
 						weight = 1.0
 						ignore_rotation = false
 					},
@@ -372,20 +372,6 @@
 					{
 						_class = "Prefab"
 						target_file = "models/citizen_human/prefabs/human_gamedatalist.vmdl_prefab"
-					},
-				]
-			},
-			{
-				_class = "ClothShapeList"
-				children = 
-				[
-					{
-						_class = "Prefab"
-						target_file = "models/citizen_human/prefabs/human_clothshapelist_lower.vmdl_prefab"
-					},
-					{
-						_class = "Prefab"
-						target_file = "models/citizen_human/prefabs/human_clothshapelist_upper.vmdl_prefab"
 					},
 				]
 			},
