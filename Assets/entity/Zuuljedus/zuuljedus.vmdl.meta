@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Zuuljedus (PlayerModel)",
+      "Type": "model",
+      "Org": "perkedel",
+      "Ident": "zuuljedus_playermodel",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": [
+        "facepunch.sandbox#265925"
+      ],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/zuuljedus/zuuljedus.vmdl"
+      }
+    }
+  }
+}

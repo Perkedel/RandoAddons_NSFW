@@ -1,0 +1,11 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "entity/zuuljedus/material/rudiment.shader"
+
+	Texture_ps_0 "entity/zuuljedus/textures/outfit_onepiece.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}
