@@ -12,12 +12,16 @@ We also make the Surface be like so, coz it feels perfect for Physics Gun, or wh
 
 - Use Physics Gun to drag & drop. It'll bounce sporadically that eventually stops on a surface, giving Physical Bouncing Pseudorandom effect.
 - ~~Interact. Make it jump and roll~~ Coming soon.
+- Resize with Tool Gun set to `🍄 Resizer`. 
+  - For Dice which has Interact to Roll, we also have automatic force compensation system since sizes affects its mass right away. We simply adjust the total force against reported mass in its Rigidbody.
 
 ## Board Game
 
 There's board game. This is basically salvaged from our DiceGlow again.
 
 Big shoutout to [Keianai](https://github.com/Keiannai/Prop-Game-Table-System-for-CVR) for the board game system for CVR yey.
+
+<!--But the board & pawn themselves were remade from scratch. Idk, we uh.. yueah.-->
 
 ### Change Image
 
