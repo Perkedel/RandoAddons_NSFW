@@ -5,9 +5,9 @@ Here it is. The founder of Co-founder DNB, Zuuljedus.
 > [!WARNING]  
 > Alert: **NSFW**, fully skinned!
 
-It took me hours just to get her working as PlayerModel swapable avatar. Here guide, & the fork of port tools. Giant Shoutout to BobMacU & Noztik, yey!
+It took me hours just to get her working as PlayerModel swapable avatar. [Here guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3665997623&searchtext=port), & the fork of [port tools](https://github.com/BobmacU/CustomModel-2-Sbox). Giant Shoutout to **BobMacU & Noztik**, yey!
 
-If you ask me why she's so tall, she is. It's intentional. Zuuljedus is really really tall!
+If you ask me why she's so tall, she is. It's intentional. **Zuuljedus is really really tall**!
 
 ## Lore
 
