@@ -7,7 +7,8 @@ Here it is. The founder of Co-founder DNB, Zuuljedus.
 
 It took me hours just to get her working as PlayerModel swapable avatar. [Here guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3665997623&searchtext=port), & the fork of [port tools](https://github.com/BobmacU/CustomModel-2-Sbox). Giant Shoutout to **BobMacU & Noztik**, yey!
 
-If you ask me why she's so tall, she is. It's intentional. **Zuuljedus is really really tall**!
+If you ask me why she's so tall, she is. It's intentional. **Zuuljedus is really really tall**! Don't believe me? [Here source code](/Assets/src/Vroid/Zuuljedus.vroid). Open it up with Pixiv Vroid!  
+Trust me, you play with her, you'd be her bolster doll 🤣🤣🤣🤣🤣🤣🤣! But hey, at least you can sleep inbetween and listen to her 🫀 heart lol! But be warned, **she's married**, with Panfesir, her former co-worker who also joined DNB Governing Body the same time.
 
 ## Lore
 
