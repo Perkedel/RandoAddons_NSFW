@@ -15,7 +15,7 @@ Layer0
 	//---- Color ----
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "materials/kenney.nl/PrototypeTextures/Dark/texture_01.png"
+	TextureColor "materials/kenney.nl/prototypetextures/dark/texture_02.png"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -35,6 +35,6 @@ Layer0
 
 	//---- Texture Coordinates ----
 	g_vTexCoordOffset "[0.000 0.000]"
-	g_vTexCoordScale "[32.000 32.000]"
+	g_vTexCoordScale "[1.000 1.000]"
 	g_vTexCoordScrollSpeed "[0.000 0.000]"
 }

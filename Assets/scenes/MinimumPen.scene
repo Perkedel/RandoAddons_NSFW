@@ -50,6 +50,14 @@
           {
             "Target": {
               "Type": "GameObject",
+              "IdValue": "a7cc0c87-1f70-4ebb-8da1-4ca8503781a1"
+            },
+            "Property": "Enabled",
+            "Value": false
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
               "IdValue": "5f1c1da6-15c9-4acd-8026-6b6b641e0d10"
             },
             "Property": "Position",
@@ -80,6 +88,33 @@
         "a0be49ee-627b-4d97-9a51-152c50d8cac3": "7c4052ca-cb90-4343-bbd5-b22e93936408",
         "70b81bd3-a9b5-4678-bd72-fe0a24fb73e7": "066da74e-0319-48cd-b680-7338211ea42b",
         "f118e248-c210-4f72-93e8-95e9f00abae1": "15f48ed4-fc8b-4dc9-9573-9da88b521876"
+      }
+    },
+    {
+      "__guid": "7065da12-a1a0-44b1-94d1-e712df0f37e1",
+      "__version": 2,
+      "__Prefab": "entity/common/penfarm_new.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "36b5936e-2017-47d2-a865-c8290a99ae9a": "7065da12-a1a0-44b1-94d1-e712df0f37e1",
+        "43c40a61-3a11-4641-9862-293a2f76354b": "9fae1104-11b9-4ca0-93cb-1498d625025b",
+        "638f790d-07d1-4a05-9e06-3f377dc09765": "a240810d-8b36-4898-90bf-fac4d64d1401",
+        "a92ed630-f1a6-4fa8-b68c-e3b85661d66d": "5ecd3f4d-84d5-4747-9285-70462a419594",
+        "5dd25374-b2c5-4061-9dac-f08dcda295a1": "9bde4371-c7c0-4b68-a155-77ac7d8fd633",
+        "c3828ebb-93e7-4234-96ff-8ae53fbaebf4": "51a924ce-e02c-4b73-9574-ee70776780ec",
+        "3a57e1a9-bf1b-424a-8a8f-8521edf4034e": "ec292204-8e1a-40cc-be93-44500baad5ab",
+        "4c0b8be8-b084-4e4c-b691-bea35862c9f8": "7c4d2bd7-70e4-47c9-9d3f-1500e4949d41",
+        "1f181faf-799e-4c32-86ef-4d93a386e3a1": "6b26c15c-0c88-481b-9a99-0239785be7a3",
+        "27028f62-5513-4bf0-a291-cce18f4efb74": "4787caa2-c4e1-403c-9476-41cba4f01209",
+        "a2a55978-172f-420d-87b7-eb607fbcf064": "e6338817-8827-44a4-9938-fec52d16eeb5",
+        "ecc5e768-de09-41ae-9cd6-880e302a32a4": "78e24bcd-96ee-491c-ab96-f05b9844fdc7",
+        "813196bd-9f38-4e1b-8393-ae5c64bb874a": "83617879-620b-403e-b013-25bb307a3eab",
+        "786d4cdd-5b0e-40f5-92d8-21dfa3ac6076": "a5087332-7a40-4c3f-8d57-7ccba40ac464"
       }
     },
     {
@@ -506,7 +541,13 @@
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
-          "OnComponentUpdate": null
+          "OnComponentUpdate": null,
+          "Penfarm": {
+            "_type": "component",
+            "component_id": "a5087332-7a40-4c3f-8d57-7ccba40ac464",
+            "go": "7065da12-a1a0-44b1-94d1-e712df0f37e1",
+            "component_type": "Penfarmer"
+          }
         }
       ],
       "Children": []
@@ -618,12 +659,14 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "d3047113-a044-4635-8cc3-92edfb3fbd60"
+        }
+      },
+      "Sandbox.SelectionSetsSystem": {
+        "Data": {
+          "SelectionSets": []
         }
       }
     }
@@ -632,7 +675,7 @@
   "Title": "Minimal Pen",
   "Description": "Minimum Test Map\n\nUse this map to test anything minimally, with minimum overhead as much as possible.",
   "__references": [
-    "facepunch.sandbox#204182"
+    "facepunch.sandbox#265925"
   ],
   "__version": 3
 }

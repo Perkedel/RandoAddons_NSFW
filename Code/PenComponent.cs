@@ -7,10 +7,21 @@ public sealed class PenComponent : Component
 	// Dude, coding on s&box is still fucking different wtf?!?!?!?!?!?
 	// I thought it's about similar like Unity back in my college 🗿..
 
+	[Property] Penfarmer Penfarm { get; set; }
+	static PenComponent Self { get; set; }
+
 	// protected override void OnStart() // where tf is Start in s&box ffs!!!??
 	protected override void OnStart()
 	{
-		Log.Info("This is Minimal Pen. Welcome to Minimal Pen.");
+		Log.Info( "This is Minimal Pen. Welcome to Minimal Pen." );
+
+		// if ( !Self.IsValid ) Self = this;
+		Self = this;
+
+		// if(!penfarm.IsValid)
+		// {
+		// 	Penfarm = Scene.Directory.FindByName( "penfarm_new" ).First().GetComponent<Penfarmer>();
+		// }
 
 		// ✅, Jesus Christ on Innova! Took me the fuck while! Lucky guess!
 
@@ -23,9 +34,9 @@ public sealed class PenComponent : Component
 		// https://sbox.game/dev/doc/assets/file-system
 		// https://asset.party/api/Sandbox.FileSystem.Data **GONE**
 		if ( !FileSystem.Data.FileExists( "hello.txt" ) )
-    		FileSystem.OrganizationData.WriteAllText( "minFolder/hello.txt", "Hello, world!" );
+			FileSystem.OrganizationData.WriteAllText( "minFolder/hello.txt", "Hello, world!" );
 
-      	var hello = FileSystem.Data.ReadAllText( "hello.txt" );
+		var hello = FileSystem.Data.ReadAllText( "hello.txt" );
 	}
 
 	protected override void OnUpdate()
@@ -36,14 +47,42 @@ public sealed class PenComponent : Component
 	// Tutorial Console Commands!
 
 	[ConCmd( "test", ConVarFlags.Server )]
-	public static void TestCmd( Connection caller , string arg)
+	public static void TestCmd( Connection caller, string arg )
 	{
-		Log.Info( "The caller is: " + caller.DisplayName  + ". Yeah " + arg);
+		Log.Info( "The caller is: " + caller.DisplayName + ". Yeah " + arg );
 	}
 
-	[ConCmd("hello")]
-    public static void HelloCommand( string name = "citizen" )
-    {
-        Log.Info( $"Hello there {name}!" );
-    }
+	[ConCmd( "hello" )]
+	public static void HelloCommand( string name = "citizen" )
+	{
+		Log.Info( $"Hello there {name}!" );
+	}
+
+	[ConCmd( "penfarm", ConVarFlags.Server )]
+	public static void PenfarmCommand(Connection caller, string args, string which)
+	{
+		Log.Info( $"(PENFARM) Hello, {caller.DisplayName}, as you wish!: {args} {which}" );
+
+		// if(Self.Penfarm.IsValid)
+		// {
+		// 	Self.Penfarm.EnableObject( args == "enable"? true : args == "disable"? false: true, which );
+		// }
+		switch(args)
+		{
+			case "enable":
+				if(Self.Penfarm.IsValid)
+				{
+					Self.Penfarm.EnableObject( true, which );
+				}
+				break;
+			case "disable":
+				if(Self.Penfarm.IsValid)
+				{
+					Self.Penfarm.EnableObject( false, which );
+				}
+				break;
+			default:
+				break;
+		}
+	}
 }
