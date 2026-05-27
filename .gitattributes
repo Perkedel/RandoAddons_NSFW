@@ -1,2 +1,82 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Incoming, https://steamcommunity.com/sharedfiles/filedetails/?id=3716094787
+# S&Box file types.
+*.scene filter=lfs diff=lfs merge=lfs -text
+*.vpk filter=lfs diff=lfs merge=lfs -text
+*.pak filter=lfs diff=lfs merge=lfs -text
+*.map filter=lfs diff=lfs merge=lfs -text
+*.resource filter=lfs diff=lfs merge=lfs -text
+*.prefab filter=lfs diff=lfs merge=lfs -text
+
+*.vmap filter=lfs diff=lfs merge=lfs -text
+*.vmap_lighting filter=lfs diff=lfs merge=lfs -text
+*.vmap_nav filter=lfs diff=lfs merge=lfs -text
+
+# Materials / Shaders / VFX
+*.vmat filter=lfs diff=lfs merge=lfs -text
+*.vfx filter=lfs diff=lfs merge=lfs -text
+*.vpcf filter=lfs diff=lfs merge=lfs -text
+
+# 3D Models
+*.vmdl filter=lfs diff=lfs merge=lfs -text
+*.vmdl_phys filter=lfs diff=lfs merge=lfs -text
+
+*.dmx filter=lfs diff=lfs merge=lfs -text
+*.vox filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.collada filter=lfs diff=lfs merge=lfs -text
+*.dae filter=lfs diff=lfs merge=lfs -text
+*.dxf filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.jas filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+*.ply filter=lfs diff=lfs merge=lfs -text
+*.stl filter=lfs diff=lfs merge=lfs -text
+*.glb filter=lfs diff=lfs merge=lfs -text
+
+# Animation
+*.vmdl_anim filter=lfs diff=lfs merge=lfs -text
+*.anim filter=lfs diff=lfs merge=lfs -text
+*.animgraph filter=lfs diff=lfs merge=lfs -text
+*.motion filter=lfs diff=lfs merge=lfs -text
+*.smd filter=lfs diff=lfs merge=lfs -text
+
+# GPU
+*.dds filter=lfs diff=lfs merge=lfs -text
+*.ktx filter=lfs diff=lfs merge=lfs -text
+*.ktx2 filter=lfs diff=lfs merge=lfs -text
+*.basis filter=lfs diff=lfs merge=lfs -text
+
+# Image / Texture
+*.bmp filter=lfs diff=lfs merge=lfs -text
+*.exr filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.hdr filter=lfs diff=lfs merge=lfs -text
+*.iff filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.pict filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.tif filter=lfs diff=lfs merge=lfs -text
+*.tiff filter=lfs diff=lfs merge=lfs -text
+*.vtex filter=lfs diff=lfs merge=lfs -text
+
+# Audio
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.flac filter=lfs diff=lfs merge=lfs -text
+*.aiff filter=lfs diff=lfs merge=lfs -text
+*.aac filter=lfs diff=lfs merge=lfs -text
+*.vsnd filter=lfs diff=lfs merge=lfs -text
+
+# Video
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+
+# Multi Media
+*.ogg filter=lfs diff=lfs merge=lfs -text
