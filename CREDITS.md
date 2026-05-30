@@ -104,3 +104,4 @@ Recommended Game modes
 - Random
   - https://youtu.be/uL19ifC-0kA
   - https://youtu.be/5EF7eQBur7w
+  - https://steamcommunity.com/sharedfiles/filedetails/?id=3716094787 a `.gitattributes`
