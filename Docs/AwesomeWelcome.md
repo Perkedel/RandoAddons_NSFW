@@ -46,6 +46,7 @@ Welcome's Resources to get you started in s&box both Gameplay & Development
     - [Blender Merge the Bones!](https://github.com/vr-voyage/blender_bones_merger). 
     - Pls check also `Get Add On` Blender Preferences!
 - [Sandking YouTube channel](https://youtube.com/@sandking-s7i). Tutorial how to s&box editor & the critical thinking way of s&box development.
+- [Red Eagle Studio Community s&box Docs](https://sbox.redeaglestudios.org/). [yey](https://sbox.game/f/resources/1870/1/)! [Source Code](https://github.com/RedEagleStudios/sbox-docs).
 - Moar Awesomes pls!!!
   - [SubZero's Ultimate s&box Guides](https://sbox.game/f/resources/1071/1/)
   - [CSEliot's s&box Awesome resources](https://github.com/CSEliot/sbox-resources). Yes another s&box resources guide. [Forum](https://sbox.game/f/resources/2447/1/#post2)
