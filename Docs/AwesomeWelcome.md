@@ -28,9 +28,15 @@ Welcome's Resources to get you started in s&box both Gameplay & Development
 
 ## Basics
 
-- Sandbox Mode.
-- [Code Together](https://sbox.game/bionicbooger/code_together). Share your screen to other citizens. [Source Code](https://github.com/Mykol-Word/code-together).
-  - [Use the screen streaming tool](https://github.com/Mykol-Word/ct-screen-server). It broadcast your screen into WebSocket which will be picked up by the game and streamed to all Citizens in the session.
+Here is some basic game you can check out, since our Collection can grow.
+
+- [Sandbox Mode](https://sbox.game/facepunch/sandbox). The core of it all, like back in the days.
+- [Testbed](https://sbox.game/facepunch/testbed/). API test in s&box.
+- [Other Facepunch Stuffs](https://sbox.game/facepunch). You should also check them out for more references.
+- [Code Together](https://sbox.game/bionicbooger/code_together). Share your screen to other Citizens. [Source Code](https://github.com/Mykol-Word/code-together).
+  - [Use the screen streaming tool](https://github.com/Mykol-Word/ct-screen-server). It broadcast your screen into WebSocket which will be picked up by the game and streamed to all Citizens in the session. **Choose your window or monitor wisely!**
+- [Thumbnail Studio](https://sbox.game/sunless/thumbnail_studio). Build thumbnail using everything in s&box.
+- [Testpen](https://sbox.game/perkedel/testpen). We are also learning how to do s&box development. Here are our findings there.
 
 ## Assets
 
@@ -67,6 +73,8 @@ We are not sure where to put these all, our chrome tabs are accumulating!, but w
   - https://sbox.game/f/code/764/1/ from **ducc**. Yeah don't worry about him, just take the education.
 - Person
   - Carson Kompon. s&box enthusiast now an employee at Facepunch. Checkout his cool tutorials on YouTube!
+- Some assets
+  - https://sbox.game/f/general/2930/1/
 
 ## Socials
 
