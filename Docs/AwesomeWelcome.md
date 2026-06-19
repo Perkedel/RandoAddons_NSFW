@@ -26,6 +26,12 @@ Welcome's Resources to get you started in s&box both Gameplay & Development
 - [Perkedel's Favourite & Most Used Stuffs](https://sbox.game/perkedel/inuseni). Stuffs we personally used alot & would use often.
 - [Subscribe To Everything](https://sbox.game/perkedel/inuseni). Everything in s&box. Well, it's useless unfortunately, coz how Workshop works here in s&box is dedicated, not Steam's. But hey, you'll see everything atleast!
 
+## Basics
+
+- Sandbox Mode.
+- [Code Together](https://sbox.game/bionicbooger/code_together). Share your screen to other citizens. [Source Code](https://github.com/Mykol-Word/code-together).
+  - [Use the screen streaming tool](https://github.com/Mykol-Word/ct-screen-server). It broadcast your screen into WebSocket which will be picked up by the game and streamed to all Citizens in the session.
+
 ## Assets
 
 - [Kenney.nl Public Domain Assets](https://kenney.nl/assets). all CC0 & Free original low poly assets! 3D & 2D.
