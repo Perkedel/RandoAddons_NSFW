@@ -71,6 +71,7 @@ We are not sure where to put these all, our chrome tabs are accumulating!, but w
 
 - Coding tip
   - https://sbox.game/f/code/764/1/ from **ducc**. Yeah don't worry about him, just take the education.
+  - https://steamcommunity.com/sharedfiles/filedetails/?id=3716777451 Multimesh models!!! How to make models consisting of multiple mesh files.
 - Person
   - Carson Kompon. s&box enthusiast now an employee at Facepunch. Checkout his cool tutorials on YouTube!
 - Some assets
