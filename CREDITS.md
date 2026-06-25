@@ -13,6 +13,7 @@ Stuffs like 3D Models, SFX, Codes, etc. we make, edit hack, etc.
 | [TriwaveBZ Protogen](https://odysee.com/@X0P1R4T3-33NSVREENMNT-0FFICIAL:f/BZ-Protogen-RAW:5) | TriwaveBZ | ??? | The only "Free to use" & Gratis Protogen 3D model I could find. Original Patent by CoolKoinu |
 | [`Mindless`'s Materials](https://sbox.game/mindless) | mindless | ??? | whatever this dev material this is. I hope it's Kenney's btw, who knows. Just wanna get things real quick! |
 | [Low Poly Heart Organ](https://skfb.ly/osAnP) | [Khalifa Hawill](https://sketchfab.com/khalifahawill) | CC4.0-BY | It's beating! |
+| [Heart ♥️](https://sbox.game/rezo/heartP) | [Equinox](https://sbox.game/rezo) | ??? | Just a heart! |
 | [Heartbeat synthetic generic sound pack](https://freesound.org/people/.name/packs/23663/) | [`.name`](https://freesound.org/people/.name/) | CC4.0-BY | Generic Soundpack of Heartbeat sound |
 | [Whoopee Cushion](https://skfb.ly/oFIup) | Andy Begg | CC4.0-BY | Whoopie Cushion. Fart Prank! |
 | [JCThornton 3D Models!!!!](https://www.patreon.com/c/jcthornton/posts) | JCThornton | ??? | Every JCThornton 3D Model he made. Legacy Pack according to [here](https://www.patreon.com/posts/wip-model-packs-116693030). |
@@ -43,6 +44,10 @@ Package used in Editors.
 | [sand git](https://sbox.game/meesles/sandgit) | meesles | ??? | A Git tab bar |
 | [git client](https://sbox.game/brax/gitclient) | brax | ??? | A Git tab bar |
 | [Tree Assets Browser](https://sbox.game/evilinc/treeassetsbrowser) | Evil inc. | ??? | aaa |
+| [Razor UI Designer](https://sbox.game/sklmr/razordesigner) | xazware & sakulmore | ??? | Drag & Drop Razor UI Designer |
+| [Goo](https://sbox.game/xaz/goo/) | xazware | ??? | All-in-one C# UI Framework |
+| [Hit Shapes](https://sbox.game/xaz/hit_shapes) | xazware | ??? | shape region |
+| [Sbox UI Designer](https://sbox.game/kikozl/sbox_ui_designer) | kikozl | ??? | design UI |
 | [Fab Quixel Bridge](...) | divined | ??? | aaa |
 | [Source 1 BSP Import](...) | divined | ??? | aaa |
 | [File-Lib](...) | Workbot 3000 | ??? | aaa |
