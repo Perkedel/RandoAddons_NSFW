@@ -34,7 +34,8 @@ Package used in Editors.
 
 > [!NOTE]
 > Legends:
-> - `~~BROKEN~~`. Striked thru = broken, and has been deleted from this project.
+> - `~~BROKEN~~`. Striked thru = broken, and has been deleted from this project.  
+> - `☠️ Bad License`. Skeleton Bone = Bad License, contains license that legally demonetize our stuffs, and has been deleted from this project.
 
 | Library | Author | License | Descriptions |
 | - | - | - | - |
@@ -53,7 +54,7 @@ Package used in Editors.
 | [File-Lib](...) | Workbot 3000 | ??? | aaa |
 | [Zed Editor Support](https://sbox.game/umblestudio/zed_editor) | umble studio | ??? | aaa |
 | [ToeKneeRed's Components](https://github.com/ToeKneeRED/sbox-simplecomponents) | ToeKneeRed | CC0 | Top Simple Components |
-| [Small Fish Shrmimple Libraries](https://sbox.game/fish/~packages?type=library): [Character Controller](https://sbox.game/fish/scc), [Ragdoll](https://sbox.game/fish/shrimple_ragdolls), [Pawns](https://sbox.game/fish/sp) | Small Fish | MIT License | [GitHub Profile](https://github.com/Small-Fish-Dev). There are: [Ragdolls](https://github.com/Small-Fish-Dev/Shrimple-Ragdolls), [Character Controller](https://github.com/Small-Fish-Dev/shrimple_character_controller), [Pawns](https://github.com/Small-Fish-Dev/shrimple-pawns), |
+| [Small Fish Shrmimple Libraries](https://sbox.game/fish/~packages?type=library): ☠️ [Character Controller](https://sbox.game/fish/scc) (Asset has **CC4.0-BY-NC**), [Ragdoll](https://sbox.game/fish/shrimple_ragdolls), [Pawns](https://sbox.game/fish/sp) | Small Fish | MIT License | [GitHub Profile](https://github.com/Small-Fish-Dev). There are: [Ragdolls](https://github.com/Small-Fish-Dev/Shrimple-Ragdolls), [Character Controller](https://github.com/Small-Fish-Dev/shrimple_character_controller), [Pawns](https://github.com/Small-Fish-Dev/shrimple-pawns), |
 | [Snap to Vertex](https://sbox.game/resync/snaptovertex) | resync | aaa | aaa |
 | [Shadergraph Extras](https://sbox.game/ali3nsystems/lib-shader_graph_extras) | Ali3n Systems | aaa | ShaderGraph Extras guys! [Source Code](https://github.com/Ali3nSystems/Shader-Graph-Extras-for-sbox) |
 | [ShaderGraph Plus Shrimple Fork](https://sbox.game/quack/shadergraphplus) | Quack Cola | aaa | [Source Code](https://github.com/QuackCola/ShaderGraphPlus) |
@@ -64,6 +65,7 @@ Package used in Editors.
 | ~~[Terrain Splat Generator](https://sbox.game/sturnus/terraingenerationtool)~~ | sturnus | aaa | aaa |
 | [Infinite Procedural Generation](https://sbox.game/foreignlanparty/infiniteproceduralterraingeneration/) | Foreign LAN Party | aaa | aaa |
 | [s&box iconify](https://sbox.game/mint/iconify) | Mint Studios | ??? | Razor Panel of Iconify icons. Explore set https://icones.js.org |
+| ☠️ [Clearly Vehicle Controller](https://sbox.game/clearly/cavc) | Clearly | ???, asset contains **CC3.0-BY-NC** | Vehicle Controller |
 | aaa | aaa | aaa | aaa |
 
 ## Utilities
