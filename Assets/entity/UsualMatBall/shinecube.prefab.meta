@@ -2,22 +2,21 @@
   "publish": {
     "Enabled": true,
     "ProjectConfig": {
-      "Title": "Zuuljedus (PlayerModel)",
-      "Type": "model",
+      "Title": "Shinecube",
+      "Type": "prefab",
       "Org": "perkedel",
-      "Ident": "zuuljedus_playermodel",
+      "Ident": "shinecube",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": null,
-      "EditorReferences": [
-        "facepunch.sandbox#285684"
-      ],
+      "EditorReferences": null,
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "entity/zuuljedus/zuuljedus.vmdl",
-        "ParentPackage": "facepunch.sandbox"
+        "SingleAssetSource": "entity/usualmatball/shinecube.prefab",
+        "ParentPackage": "facepunch.sandbox",
+        "AssetLicense": "CC_BYSA"
       }
     }
   }

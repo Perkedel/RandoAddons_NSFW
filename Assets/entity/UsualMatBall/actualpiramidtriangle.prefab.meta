@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Pyramid of Cubes (Prefab)",
+      "Type": "prefab",
+      "Org": "perkedel",
+      "Ident": "actualpiramidtriangle_prefab",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/usualmatball/actualpiramidtriangle.prefab",
+        "ParentPackage": "facepunch.sandbox",
+        "AssetLicense": "CC_BYSA"
+      }
+    }
+  }
+}

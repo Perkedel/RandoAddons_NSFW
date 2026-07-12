@@ -2,21 +2,19 @@
   "publish": {
     "Enabled": true,
     "ProjectConfig": {
-      "Title": "Zuuljedus (PlayerModel)",
-      "Type": "model",
+      "Title": "Pyramid Test for Box3D",
+      "Type": "map",
       "Org": "perkedel",
-      "Ident": "zuuljedus_playermodel",
+      "Ident": "piramidatest",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": null,
-      "EditorReferences": [
-        "facepunch.sandbox#285684"
-      ],
+      "EditorReferences": null,
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "entity/zuuljedus/zuuljedus.vmdl",
+        "SingleAssetSource": "scenes/piramidatest.scene",
         "ParentPackage": "facepunch.sandbox"
       }
     }

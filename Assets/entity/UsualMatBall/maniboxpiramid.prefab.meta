@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Jericho Wall of Cubes (Prefab)",
+      "Type": "prefab",
+      "Org": "perkedel",
+      "Ident": "maniboxpiramid_prefab",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/usualmatball/maniboxpiramid.prefab",
+        "ParentPackage": "facepunch.sandbox",
+        "AssetLicense": "CC_BYSA"
+      }
+    }
+  }
+}
