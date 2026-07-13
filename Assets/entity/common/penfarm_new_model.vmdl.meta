@@ -1,0 +1,24 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Penfarm New Model",
+      "Type": "model",
+      "Org": "local",
+      "Ident": "penfarm_new_model",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": [
+        "facepunch.sandbox#285684"
+      ],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/common/penfarm_new_model.vmdl",
+        "ParentPackage": "facepunch.sandbox"
+      }
+    }
+  }
+}

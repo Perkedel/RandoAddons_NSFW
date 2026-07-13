@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Blockfloor",
+      "Type": "prefab",
+      "Org": "perkedel",
+      "Ident": "blockfloor",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/common/mustfloor/blockfloor.prefab",
+        "ParentPackage": "facepunch.sandbox",
+        "AssetLicense": "CC_BYSA"
+      }
+    }
+  }
+}

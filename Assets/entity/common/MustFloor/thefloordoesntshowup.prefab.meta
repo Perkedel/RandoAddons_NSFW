@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Floor Doesn\u0027t Show Up Prefab",
+      "Type": "prefab",
+      "Org": "perkedel",
+      "Ident": "thefloordoesntshowup",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "entity/common/mustfloor/thefloordoesntshowup.prefab",
+        "ParentPackage": "facepunch.sandbox",
+        "AssetLicense": "CC_BYSA"
+      }
+    }
+  }
+}

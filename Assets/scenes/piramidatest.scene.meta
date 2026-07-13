@@ -9,7 +9,15 @@
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
-      "PackageReferences": null,
+      "PackageReferences": [
+        "perkedel/thefloordoesntshowup",
+        "perkedel/blockfloor",
+        "perkedel/actualpiramidtriangle_prefab",
+        "perkedel/maniboxpiramid_prefab",
+        "perkedel/smoothcube",
+        "perkedel/penfarm_wider",
+        "perkedel/penfarm_wider_model"
+      ],
       "EditorReferences": null,
       "Mounts": null,
       "IsStandaloneOnly": false,
