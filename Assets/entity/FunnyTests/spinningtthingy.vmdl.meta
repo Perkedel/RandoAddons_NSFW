@@ -2,19 +2,21 @@
   "publish": {
     "Enabled": true,
     "ProjectConfig": {
-      "Title": "Wahaha Dice Prop",
+      "Title": "Spinning \u0022T\u0022 thingy model",
       "Type": "model",
       "Org": "perkedel",
-      "Ident": "wahahadice_vmdl",
+      "Ident": "spinningtthingy_vmdl",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
       "PackageReferences": null,
-      "EditorReferences": null,
+      "EditorReferences": [
+        "facepunch.sandbox#285684"
+      ],
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "entity/wahahadice/wahahadice.vmdl",
+        "SingleAssetSource": "entity/funnytests/spinningtthingy.vmdl",
         "ParentPackage": "facepunch.sandbox",
         "AssetLicense": "CC_BYSA"
       }

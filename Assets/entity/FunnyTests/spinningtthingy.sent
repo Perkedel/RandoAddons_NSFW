@@ -1,0 +1,10 @@
+{
+  "Prefab": "entity/funnytests/spinningtthingy.prefab",
+  "Title": "Spinning \"T\" thingy",
+  "Description": "To test Gyroscopic effect emulated by Box3D this s&box uses",
+  "Category": "Toys & Fun",
+  "IncludeCode": true,
+  "Developer": false,
+  "__references": [],
+  "__version": 0
+}

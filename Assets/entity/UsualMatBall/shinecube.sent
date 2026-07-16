@@ -1,0 +1,10 @@
+{
+  "Prefab": "entity/usualmatball/shinecube.prefab",
+  "Title": "Shinecube",
+  "Description": "Shader Tester: Shine Cube",
+  "Category": "Toys & Fun",
+  "IncludeCode": true,
+  "Developer": false,
+  "__references": [],
+  "__version": 0
+}

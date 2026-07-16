@@ -2,10 +2,10 @@
   "publish": {
     "Enabled": true,
     "ProjectConfig": {
-      "Title": "Wahaha Dice Prop",
-      "Type": "model",
+      "Title": "Smoothball Material",
+      "Type": "material",
       "Org": "perkedel",
-      "Ident": "wahahadice_vmdl",
+      "Ident": "smoothball_mat",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
@@ -14,7 +14,7 @@
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "entity/wahahadice/wahahadice.vmdl",
+        "SingleAssetSource": "materials/perkedel/smoothball.vmat",
         "ParentPackage": "facepunch.sandbox",
         "AssetLicense": "CC_BYSA"
       }

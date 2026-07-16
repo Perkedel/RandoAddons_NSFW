@@ -2,10 +2,10 @@
   "publish": {
     "Enabled": true,
     "ProjectConfig": {
-      "Title": "Wahaha Dice Prop",
-      "Type": "model",
+      "Title": "Usualball (Prefab)",
+      "Type": "prefab",
       "Org": "perkedel",
-      "Ident": "wahahadice_vmdl",
+      "Ident": "usualball_prefab",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
@@ -14,7 +14,7 @@
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "entity/wahahadice/wahahadice.vmdl",
+        "SingleAssetSource": "entity/usualmatball/usualball.prefab",
         "ParentPackage": "facepunch.sandbox",
         "AssetLicense": "CC_BYSA"
       }

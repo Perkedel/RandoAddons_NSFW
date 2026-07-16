@@ -2,10 +2,10 @@
   "publish": {
     "Enabled": true,
     "ProjectConfig": {
-      "Title": "Wahaha Dice Prop",
-      "Type": "model",
+      "Title": "Jericho Wall of Cubes (Entity)",
+      "Type": "sent",
       "Org": "perkedel",
-      "Ident": "wahahadice_vmdl",
+      "Ident": "maniboxpiramid_entity",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
@@ -14,9 +14,8 @@
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "entity/wahahadice/wahahadice.vmdl",
-        "ParentPackage": "facepunch.sandbox",
-        "AssetLicense": "CC_BYSA"
+        "SingleAssetSource": "entity/usualmatball/maniboxpiramid.sent",
+        "ParentPackage": "facepunch.sandbox"
       }
     }
   }
