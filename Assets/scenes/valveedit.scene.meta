@@ -2,21 +2,21 @@
   "publish": {
     "Enabled": true,
     "ProjectConfig": {
-      "Title": "anLegacyValveEdit",
+      "Title": "I\u0027m trying Legacy Hammer map editor!",
       "Type": "map",
       "Org": "perkedel",
-      "Ident": "valveedit_vmap",
+      "Ident": "valveedit",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
-      "PackageReferences": [],
-      "EditorReferences": [
-        "facepunch.sandbox#312480"
+      "PackageReferences": [
+        "perkedel.valveedit_vmap"
       ],
+      "EditorReferences": null,
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "scenes/valveedit.vmap",
+        "SingleAssetSource": "scenes/valveedit.scene",
         "ParentPackage": "facepunch.sandbox"
       }
     }

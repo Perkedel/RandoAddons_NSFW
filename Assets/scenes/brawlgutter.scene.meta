@@ -2,21 +2,19 @@
   "publish": {
     "Enabled": true,
     "ProjectConfig": {
-      "Title": "anLegacyValveEdit",
+      "Title": "Brawl Gutter Combat Tester",
       "Type": "map",
       "Org": "perkedel",
-      "Ident": "valveedit_vmap",
+      "Ident": "brawlgutter",
       "Schema": 0,
       "IncludeSourceFiles": false,
       "Resources": null,
-      "PackageReferences": [],
-      "EditorReferences": [
-        "facepunch.sandbox#312480"
-      ],
+      "PackageReferences": null,
+      "EditorReferences": null,
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "scenes/valveedit.vmap",
+        "SingleAssetSource": "scenes/brawlgutter.scene",
         "ParentPackage": "facepunch.sandbox"
       }
     }
