@@ -1,0 +1,20 @@
+C:/Program Files/Krita (x64)/bin/ffmpeg.exe -hide_banner -y -y -r 24 -start_number 0 -start_number_range 1 -i W:/starring codes/sANDbox Project/randoaddon/Assets/src/Krita/bingkai%04d.png -c:v libopenh264 -b:v 5000k W:/starring codes/sANDbox Project/randoaddon/Assets/src/Krita/anAnimaTes.mp4
+=====================================================
+Input #0, image2, from 'W:/starring codes/sANDbox Project/randoaddon/Assets/src/Krita/bingkai%04d.png':
+  Duration: 00:00:00.52, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba64be(pc, gbr/unknown/unknown), 3840x2160 [SAR 9448:9448 DAR 16:9], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libopenh264))
+Press [q] to stop, [?] for help
+[libopenh264 @ 000001e5fde630c0] [OpenH264] this = 0x000001E583FED730, Warning:layerId(0) doesn't support profile(578), change to UNSPECIFIC profile
+[libopenh264 @ 000001e5fde630c0] [OpenH264] this = 0x000001E583FED730, Warning:bEnableFrameSkip = 0,bitrate can't be controlled for RC_QUALITY_MODE,RC_BITRATE_MODE and RC_TIMESTAMP_MODE without enabling skip frame.
+Output #0, mp4, to 'W:/starring codes/sANDbox Project/randoaddon/Assets/src/Krita/anAnimaTes.mp4':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 3840x2160 [SAR 1:1 DAR 16:9], q=2-31, 5000 kb/s, 24 fps, 12288 tbn
+      Metadata:
+        encoder         : Lavc61.19.101 libopenh264
+      Side data:
+        cpb: bitrate max/min/avg: 5000000/0/5000000 buffer size: 0 vbv_delay: N/A
+frame=    8 fps=0.0 q=-0.0 size=       0KiB time=00:00:00.33 bitrate=   1.2kbits/s speed=0.665x    [out#0/mp4 @ 000001e5fde4aac0] video:104KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.845132%
+frame=   13 fps=0.0 q=-0.0 Lsize=     104KiB time=00:00:00.54 bitrate=1579.1kbits/s speed=0.712x    

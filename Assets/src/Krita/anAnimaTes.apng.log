@@ -1,0 +1,16 @@
+C:/Program Files/Krita (x64)/bin/ffmpeg.exe -hide_banner -y -y -r 24 -start_number 0 -start_number_range 1 -i W:/starring codes/sANDbox Project/randoaddon/Assets/src/Krita/bingkai%04d.png -f apng -pred none -plays 0 W:/starring codes/sANDbox Project/randoaddon/Assets/src/Krita/anAnimaTes.apng
+=====================================================
+Input #0, image2, from 'W:/starring codes/sANDbox Project/randoaddon/Assets/src/Krita/bingkai%04d.png':
+  Duration: 00:00:00.52, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba64be(pc, gbr/unknown/unknown), 3840x2160 [SAR 9448:9448 DAR 16:9], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> apng (native))
+Press [q] to stop, [?] for help
+Output #0, apng, to 'W:/starring codes/sANDbox Project/randoaddon/Assets/src/Krita/anAnimaTes.apng':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: apng, rgba64be(pc, gbr/unknown/unknown, progressive), 3840x2160 [SAR 9448:9448 DAR 16:9], q=2-31, 200 kb/s, 24 fps, 24 tbn
+      Metadata:
+        encoder         : Lavc61.19.101 apng
+frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    frame=    3 fps=3.0 q=-0.0 size=      69KiB time=00:00:00.12 bitrate=4530.9kbits/s speed=0.125x    frame=    5 fps=3.3 q=-0.0 size=      77KiB time=00:00:00.20 bitrate=3015.4kbits/s speed=0.138x    frame=    8 fps=4.0 q=-0.0 size=      92KiB time=00:00:00.33 bitrate=2251.4kbits/s speed=0.165x    frame=   11 fps=4.3 q=-0.0 size=     109KiB time=00:00:00.45 bitrate=1951.6kbits/s speed=0.181x    [out#0/apng @ 0000019a4e5ec380] video:129KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.064879%
+frame=   13 fps=4.9 q=-0.0 Lsize=     130KiB time=00:00:00.54 bitrate=1959.0kbits/s speed=0.202x    
